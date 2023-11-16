@@ -2,6 +2,7 @@ name: Problem Report
 description: Describe a PR
 title: "[PR]: "
 labels: Analysis, Comment, PR
+assignees: ''
 body:
   - type: markdown
     attributes:
@@ -18,9 +19,7 @@ body:
       placeholder: https://github.com/embention/Embention/issues/1
     validations:
       required: false
-  | Severity | Priority |
-  |----------|----------|
-  |  - type: dropdown
+  - type: dropdown
     id: Severity
     attributes:
       label: Severity
@@ -31,7 +30,8 @@ body:
         - 4 (Minor)
         - 5 (No effect)
     validations:
-      required: true        |  - type: dropdown
+      required: true
+  - type: dropdown
     id: Priority
     attributes:
       label: Priority
@@ -40,7 +40,7 @@ body:
         - 2 (Medium)
         - 3 (Low)
     validations:
-      required: true        |
+      required: true
   - type: markdown
     attributes:
       value: |
