@@ -10,14 +10,14 @@ body:
         https://documentation.embention.net/062/es/latest/index.html
         Procedimiento Problem Report:
         https://documentation.embention.net/411/en/latest/index.html
-        - type: textarea
-          id: Reference
-          attributes:
-            label: References
-            description: Una línea por cada URL completa de las tareas relacionadas
-            placeholder: https://github.com/embention/Embention/issues/1
-          validations:
-            required: false
+  - type: textarea
+    id: Reference
+    attributes:
+      label: References
+      description: Una línea por cada URL completa de las tareas relacionadas
+      placeholder: https://github.com/embention/Embention/issues/1
+    validations:
+      required: false
         - type: dropdown
           id: Severity
           attributes:
