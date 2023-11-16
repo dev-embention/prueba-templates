@@ -10,89 +10,89 @@ body:
         https://documentation.embention.net/062/es/latest/index.html
         Procedimiento Problem Report:
         https://documentation.embention.net/411/en/latest/index.html
-  - type: textarea
-    id: Reference
-    attributes:
-      label: References
-      description: Una línea por cada URL completa de las tareas relacionadas
-      placeholder: https://github.com/embention/Embention/issues/1
-    validations:
-      required: false
-  - type: dropdown
-    id: Severity
-    attributes:
-      label: Severity
-      options:
-        - 1 (Catastrophic)
-        - 2 (Hazardous)
-        - 3 (Major)
-        - 4 (Minor)
-        - 5 (No effect)
-    validations:
-      required: true
-  - type: dropdown
-    id: Priority
-    attributes:
-      label: Priority
-      options:
-        - 1 (High)
-        - 2 (Medium)
-        - 3 (Low)
-    validations:
-      required: true
-  - type: markdown
-    attributes:
-      value: |
-        ## Configuration
-  - type: dropdown
-    id: HW
-    attributes:
-      label: What hardware are you seeing the problem on?
-      multiple: true
-      options:
-        - 1xVeronte 4.0
-        - 1xVeronte 4.5
-        - 1xVeronte 4.8
-  - type: dropdown
-    id: FW
-    attributes:
-      label: What firmware are you seeing the problem on?
-      multiple: true
-      options:
-        - 6.4
-        - 6.8
-        - 6.12
-  - type: dropdown
-    id: APP
-    attributes:
-      label: What App are you seeing the problem on?
-      multiple: true
-      options:
-        - 1xVerontePDIBuilder
-        - 1xVerontePDICalibration
-        - 1xVerontePDITuning
-  - type: textarea
-    id: Setup
-    attributes:
-      label: Setup/Environment
-      description: If apply, Specific setup details
-  - type: textarea
-    id: Config_Files
-    attributes:
-      label: Configuration files
-      description: If apply, Attached .zip file
-  - type: textarea
-    id: Problem_Description
-    attributes:
-      label: Problem Description
-      description: Problem/bug description
-  - type: textarea
-    id: Steps_reproduce
-    attributes:
-      label: Steps to reproduce
-      description: If known, details to reproduce the failure, URLs, screenShoots, Traceback errors, printed errors, ...
-  - type: textarea
-    id: Expected_results
-    attributes:
-      label: Expected results
-      description: Functional expected result
+        - type: textarea
+          id: Reference
+          attributes:
+            label: References
+            description: Una línea por cada URL completa de las tareas relacionadas
+            placeholder: https://github.com/embention/Embention/issues/1
+          validations:
+            required: false
+        - type: dropdown
+          id: Severity
+          attributes:
+            label: Severity
+            options:
+              - 1 (Catastrophic)
+              - 2 (Hazardous)
+              - 3 (Major)
+              - 4 (Minor)
+              - 5 (No effect)
+          validations:
+            required: true
+        - type: dropdown
+          id: Priority
+          attributes:
+            label: Priority
+            options:
+              - 1 (High)
+              - 2 (Medium)
+              - 3 (Low)
+          validations:
+            required: true
+        - type: markdown
+          attributes:
+            value: |
+              ## Configuration
+        - type: dropdown
+          id: HW
+          attributes:
+            label: What hardware are you seeing the problem on?
+            multiple: true
+            options:
+              - 1xVeronte 4.0
+              - 1xVeronte 4.5
+              - 1xVeronte 4.8
+        - type: dropdown
+          id: FW
+          attributes:
+            label: What firmware are you seeing the problem on?
+            multiple: true
+            options:
+              - 6.4
+              - 6.8
+              - 6.12
+        - type: dropdown
+          id: APP
+          attributes:
+            label: What App are you seeing the problem on?
+            multiple: true
+            options:
+              - 1xVerontePDIBuilder
+              - 1xVerontePDICalibration
+              - 1xVerontePDITuning
+        - type: textarea
+          id: Setup
+          attributes:
+            label: Setup/Environment
+            description: If apply, Specific setup details
+        - type: textarea
+          id: Config_Files
+          attributes:
+            label: Configuration files
+            description: If apply, Attached .zip file
+        - type: textarea
+          id: Problem_Description
+          attributes:
+            label: Problem Description
+            description: Problem/bug description
+        - type: textarea
+          id: Steps_reproduce
+          attributes:
+            label: Steps to reproduce
+            description: If known, details to reproduce the failure, URLs, screenShoots, Traceback errors, printed errors, ...
+        - type: textarea
+          id: Expected_results
+          attributes:
+            label: Expected results
+            description: Functional expected result
