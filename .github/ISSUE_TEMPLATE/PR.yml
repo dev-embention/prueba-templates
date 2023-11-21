@@ -11,7 +11,9 @@ body:
         
   - type: markdown
     attributes:
-      value: "## Hardware Description"
+      value: |
+        ## Hardware Description
+        ----
   - type: dropdown
     id: Hardware
     attributes:
@@ -42,7 +44,9 @@ body:
       placeholder: 1xVeronte SN 4041, CEX SN 1500, ...
   - type: markdown
     attributes:
-      value: "## Firmware Description"
+      value: |
+        ## Firmware Description
+        -----
   - type: input
     id: Fw_num
     attributes:
@@ -51,7 +55,9 @@ body:
       placeholder: 1xVeronte 6.12.68, CEX 6.12.60, ...
   - type: markdown
     attributes:
-      value: "## Software Description"
+      value: |
+        ## Software Description
+        -----
   - type: dropdown
     id: APP
     attributes:
@@ -84,7 +90,9 @@ body:
       placeholder: VeronteLink 6.12.22, 1xVerontePDIBuilder 6.12.44, ...
   - type: markdown
     attributes:
-      value: "## Configuration Files"
+      value: |
+        ## Configuration Files
+        -----
   - type: textarea
     id: Config_Files
     attributes:
@@ -106,5 +114,6 @@ body:
   - type: markdown
     attributes:
       value: |
+        -----
         Thank you for taking this time to report it.
         ![Embention_Logo](https://www.embention.com/wp-content/webp-express/webp-images/doc-root/wp-content/themes/embention/images/header-logo-embention.png.webp)
