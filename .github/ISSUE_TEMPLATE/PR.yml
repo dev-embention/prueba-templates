@@ -49,10 +49,7 @@ body:
     attributes:
       label: What hardware are you seeing the problem on?
       multiple: true
-      options:
-        - 1xVeronte 4.0
-        - 1xVeronte 4.5
-        - 1xVeronte 4.8
+      options: {1xVeronte: ['4.0', '4.5', '4.8'], PCS: ['2.0', '2.1']}
   - type: dropdown
     id: FW
     attributes:
