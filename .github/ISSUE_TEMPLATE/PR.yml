@@ -15,8 +15,7 @@ body:
   - type: dropdown
     id: Hardware
     attributes:
-      label: |
-        # Products
+      label: Product: 
       description: Select all Products which were involved during the issue.
       multiple: true
       options:
@@ -39,7 +38,7 @@ body:
   - type: input
     id: Serial_Num
     attributes:
-      label: Serial Number
+      label: Serial Number:
       description: Please specify the Serial Number of all of the products selected above.
       placeholder: 1xVeronte SN 4041, CEX SN 1500, ...
   - type: markdown
@@ -49,7 +48,7 @@ body:
   - type: input
     id: Fw_num
     attributes:
-      label: Firmware Version
+      label: Firmware Version:
       description: Please specify the Firmware Version for all of the products selected above.
       placeholder: 1xVeronte 6.12.68, CEX 6.12.60, ...
   - type: markdown
@@ -59,7 +58,8 @@ body:
   - type: dropdown
     id: APP
     attributes:
-      label: What App are you seeing the problem on?
+      label: Apps:
+      description: What App are you seeing the problem on?
       multiple: true
       options:
         - VeronteLink
