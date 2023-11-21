@@ -12,8 +12,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Hardware Description
         ----
+        ## Hardware Description
   - type: dropdown
     id: Hardware
     attributes:
@@ -45,8 +45,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Firmware Description
         -----
+        ## Firmware Description
   - type: input
     id: Fw_num
     attributes:
@@ -56,8 +56,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Software Description
         -----
+        ## Software Description
   - type: dropdown
     id: APP
     attributes:
@@ -91,8 +91,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Configuration Files
         -----
+        ## Configuration Files
   - type: textarea
     id: Config_Files
     attributes:
