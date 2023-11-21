@@ -15,7 +15,7 @@ body:
   - type: dropdown
     id: Hardware
     attributes:
-      label: Select all Prodcucts which were involved during the issue.
+      label: Select all Products which were involved during the issue.
       multiple: true
       options:
         - 1xVeronte Autopilot
@@ -38,7 +38,7 @@ body:
     id: Serial_Num
     attributes:
       label: Serial Number
-      description: Please specify the serial number of all of the products selected above.
+      description: Please specify the Serial Number of all of the products selected above.
       placeholder: 1xVeronte SN 4041, CEX SN 1500, ...
   - type: markdown
     attributes:
