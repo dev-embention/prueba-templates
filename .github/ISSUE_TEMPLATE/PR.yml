@@ -15,7 +15,8 @@ body:
   - type: dropdown
     id: Hardware
     attributes:
-      label: "# Products" 
+      label: |
+        # Products
       description: Select all Products which were involved during the issue.
       multiple: true
       options:
