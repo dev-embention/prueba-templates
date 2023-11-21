@@ -1,84 +1,101 @@
 name: Problem Report
-description: Describe a PR
+description: Describe a Problem report
 title: "[PR]: "
-labels: Analysis, Comment, PR
+labels: Analysis, Comment, PR, Support
 body:
   - type: markdown
     attributes:
-      value: |
-        Procedimiento para Crear Issues:
-        https://documentation.embention.net/062/es/latest/index.html
-        Procedimiento Problem Report:
-        https://documentation.embention.net/411/en/latest/index.html
-  - type: textarea
-    id: Reference
-    attributes:
-      label: References
-      description: Una línea por cada URL completa de las tareas relacionadas
-      placeholder: https://github.com/embention/Embention/issues/1
-    validations:
-      required: false
-  - type: dropdown
-    id: Severity
-    attributes:
-      label: Severity
-      options:
-        - 1 (Catastrophic)
-        - 2 (Hazardous)
-        - 3 (Major)
-        - 4 (Minor)
-        - 5 (No effect)
-    validations:
-      required: true
-  - type: dropdown
-    id: Priority
-    attributes:
-      label: Priority
-      options:
-        - 1 (High)
-        - 2 (Medium)
-        - 3 (Low)
-    validations:
-      required: true
+      value: ![Embention Logo](https://img2.freepng.es/20180606/ija/kisspng-embention-sistemas-inteligentes-sl-unmanned-aerial-5b17d9c8bb6da4.7804303115282897367677.jpg)
   - type: markdown
     attributes:
-      value: |
-        ## Configuration
-  - type: dropdown
-    id: HW
+      value: "We're sorry that you have encountered an issue with one of our products.
+             "Thank you for taking this time to report it."
+             "Please provide as much detail as possible so we can better aid you in solving this."
+             -----
+  - type: markdown
     attributes:
-      label: What hardware are you seeing the problem on?
-      multiple: true
-      options: 
-      - hardware: {1xVeronte: ['4.0', '4.5', '4.8'], PCS: ['2.0', '2.1']}
+      value: "## Hardware Description"
   - type: dropdown
-    id: FW
+    id: Hardware
     attributes:
-      label: What firmware are you seeing the problem on?
+      label: Select all Prodcucts which were involved during the issue.
       multiple: true
       options:
-        - 6.4
-        - 6.8
-        - 6.12
+        - 1xVeronte Autopilot
+        - 4xVeronte Autopilot
+        - SIL
+        - BCS
+        - PCS
+        - MCS
+        - Gimbal Camera
+        - Tracking Antenna
+        - BEC
+        - CEX
+        - MEX
+        - Veronte Stick Expander
+        - MC01
+        - MC110
+        - MC24
+        - Other
+  - type: textarea
+    id: Serial_Num
+    attributes:
+      label: Serial Number
+      description: Please specify the serial number of all of the products selected above.
+      placeholder: 1xVeronte SN 4041, CEX SN 1500, ...
+  - type: markdown
+    attributes:
+      value: "## Firmware Description"
+  - type: textarea
+    id: Fw_num
+    attributes:
+      label: Firmware Version
+      description: Please specify the Firmware Version for all of the products selected above.
+      placeholder: 1xVeronte 6.12.68, CEX 6.12.60, ...
+  - type: markdown
+    attributes:
+      value: "## Software Description"
   - type: dropdown
     id: APP
     attributes:
       label: What App are you seeing the problem on?
       multiple: true
       options:
-        - 1xVerontePDIBuilder
-        - 1xVerontePDICalibration
-        - 1xVerontePDITuning
+        - VeronteLink
+        - VeronteHIL
+        - VeronteOps
+        - VeronteFDR
+        - VeronteUpdater
+        - 1x PDIBuilder
+        - 1x PDICalibration
+        - 1x PDITuning
+        - 4x PDIBuilder
+        - BCS PDIBuilder
+        - Gimbal Studio
+        - CEX PDIBuilder
+        - MEX PDIBuilder
+        - VSE Application
+        - MC01B PDIBuilder
+        - MC01S PDIBuilder
+        - MC110 PDIBuilder
+        - Other
   - type: textarea
-    id: Setup
+    id: Software_version
     attributes:
-      label: Setup/Environment
-      description: If apply, Specific setup details
+      label: App version
+      description: Please specify the version of all of the Apps selected above.
+      placeholder: VeronteLink 6.12.22, 1xVerontePDIBUilder 6.12.44, ...
+  - type: markdown
+    attributes:
+      value: "## Configuration Files"
   - type: textarea
     id: Config_Files
     attributes:
       label: Configuration files
-      description: If apply, Attached .zip file
+      description: If apply, Attach a .zip file for the configurations
+  - type: markdown
+    attributes:
+      value: "## Problem Description"
   - type: textarea
     id: Problem_Description
     attributes:
@@ -89,8 +106,3 @@ body:
     attributes:
       label: Steps to reproduce
       description: If known, details to reproduce the failure, URLs, screenShoots, Traceback errors, printed errors, ...
-  - type: textarea
-    id: Expected_results
-    attributes:
-      label: Expected results
-      description: Functional expected result
