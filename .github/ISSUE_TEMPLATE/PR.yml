@@ -12,7 +12,6 @@ body:
         We're sorry that you have encountered an issue with one of our products.
         Thank you for taking this time to report it.
         Please provide as much detail as possible so we can better aid you in solving this.
-        
         -----
   - type: markdown
     attributes:
