@@ -34,7 +34,7 @@ body:
         - MC110
         - MC24
         - Other
-  - type: textarea
+  - type: input
     id: Serial_Num
     attributes:
       label: Serial Number
@@ -43,7 +43,7 @@ body:
   - type: markdown
     attributes:
       value: "## Firmware Description"
-  - type: textarea
+  - type: input
     id: Fw_num
     attributes:
       label: Firmware Version
@@ -76,7 +76,7 @@ body:
         - MC01S PDIBuilder
         - MC110 PDIBuilder
         - Other
-  - type: textarea
+  - type: input
     id: Software_version
     attributes:
       label: App version
