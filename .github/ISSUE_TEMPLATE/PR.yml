@@ -8,7 +8,6 @@ body:
       value: |
         We're sorry that you have encountered an issue with one of our products.
         Please fill the following template in as much detail as possible so we can better aid you in solving this.
-        
   - type: markdown
     attributes:
       value: |
@@ -16,7 +15,8 @@ body:
   - type: dropdown
     id: Hardware
     attributes:
-      label: Select all Products which were involved during the issue.
+      label: "# Products" 
+      description: Select all Products which were involved during the issue.
       multiple: true
       options:
         - 1xVeronte Autopilot
