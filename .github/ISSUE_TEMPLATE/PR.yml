@@ -81,7 +81,7 @@ body:
     attributes:
       label: App version
       description: Please specify the version of all of the Apps selected above.
-      placeholder: VeronteLink 6.12.22, 1xVerontePDIBUilder 6.12.44, ...
+      placeholder: VeronteLink 6.12.22, 1xVerontePDIBuilder 6.12.44, ...
   - type: markdown
     attributes:
       value: "## Configuration Files"
