@@ -5,13 +5,14 @@ labels: Analysis, Comment, PR, Support
 body:
   - type: markdown
     attributes:
-      value: ![Embention Logo](https://img2.freepng.es/20180606/ija/kisspng-embention-sistemas-inteligentes-sl-unmanned-aerial-5b17d9c8bb6da4.7804303115282897367677.jpg)
+      value: ![Embention_Logo](https://img2.freepng.es/20180606/ija/kisspng-embention-sistemas-inteligentes-sl-unmanned-aerial-5b17d9c8bb6da4.7804303115282897367677.jpg)
   - type: markdown
     attributes:
       value: |
         We're sorry that you have encountered an issue with one of our products.
         Thank you for taking this time to report it.
         Please provide as much detail as possible so we can better aid you in solving this.
+        
         -----
   - type: markdown
     attributes:
