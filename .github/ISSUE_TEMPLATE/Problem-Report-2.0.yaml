@@ -45,28 +45,12 @@ body:
       required: true
   - type: textarea
     attributes:
-      label: HW name/version
-      description: If apply, E.g.  Veronte AP 4.8
-    validations:
-      required: false
-  - type: textarea
-    attributes:
-      label: FW version
-      description: If apply, E.g.  Veronte 6.8.55
-    validations:
-      required: false
-  - type: textarea
-    attributes:
-      label: APP name/version
-      description: If apply, E.g.  1xPDI Builder 6.8.53
-    validations:
-      required: false
-  - type: textarea
-    attributes:
-      label: Setup/Environment
-      description: If apply, E.g.  Specific setup details
-    validations:
-      required: false
+      label: Configuration
+      value: |
+          - | **HW name/version** | <!-- If apply, E.g.:  Veronte AP 4.8 --> |
+          - | **FW version** | <!-- If apply, E.g.: Veronte 6.8.55 --> |
+          - | **APP name/version** | <!-- If apply, 1xPDI Builder 6.8.53 --> |
+          - | **Setup/Environment** | <!-- If apply, Specific setup details --> |
   - type: textarea
     attributes:
       label: Config files
@@ -75,14 +59,20 @@ body:
       required: false
   - type: textarea
     attributes:
-      label: Description
-      description: |
-          - Problem description
-          - Steps to reproduce
-          - Expected results
-          - Config files
-      value: |
-          - Problem/bug description
-          - If known, details to reproduce the failure, URLs, screenShoots, Traceback errors, printed errors, ...
-          - Functional expected result
-          -  If apply, Attached .zip file
+      label: Problem description
+      description: <!-- Problem/bug description -->
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: <!-- If known, details to reproduce the failure, URLs, screenShoots, Traceback errors, printed errors, ... -->
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Expected results
+      description: <!-- Functional expected result -->
+    validations:
+      required: false
+
