@@ -24,12 +24,12 @@ body:
       label: Select Severity of the Problem Report
       multiple: false
       options:
-        - Catastrophic
-        - Hazardous
-        - Major
-        - Minor
-        - No effect
-        - Not detected
+        - 1. Catastrophic
+        - 2. Hazardous
+        - 3. Major
+        - 4. Minor
+        - 5. No effect
+        - 6. Not detected
     validations:
       required: true
   - type: dropdown
@@ -38,9 +38,9 @@ body:
       label: Select Priority of the Problem Report
       multiple: false
       options:
-        - High
-        - Medium
-        - Low
+        - 1. High
+        - 2. Medium
+        - 3. Low
     validations:
       required: true
   - type: textarea
@@ -80,7 +80,20 @@ body:
       value:
         Config files 
         Problem description
-        Steps to reproduc
+        Steps to reproduce
         Expected results
     validations:
       required: false
+  - type: textarea
+    attributes:
+      label: Description
+      description: |
+          - Problem description
+          - Steps to reproduce
+          - Expected results
+          - Config files
+      value: |
+          - Problem/bug description
+          - If known, details to reproduce the failure, URLs, screenShoots, Traceback errors, printed errors, ...
+          - Functional expected result
+          -  If apply, Attached .zip file
