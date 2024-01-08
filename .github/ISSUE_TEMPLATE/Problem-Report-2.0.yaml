@@ -1,0 +1,86 @@
+name: Problem Report
+description: Describe a PR
+title: "PR: "
+labels: ["Analysis", "Comment", "PR"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    attributes:
+      label: References
+      description: <!-- Una línea por cada URL completa de las tareas relacionadas -->
+      value: 
+        <!-- Procedimiento para Crear Issues -->
+        <!-- https://documentation.embention.net/062/es/latest/index.html  -->
+        <!-- Procedimiento Problem Report -->
+        <!-- https://documentation.embention.net/411/en/latest/index.html  -->
+    validations:
+      required: false
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Select Severity of the Problem Report
+      multiple: false
+      options:
+        - Catastrophic
+        - Hazardous
+        - Major
+        - Minor
+        - No effect
+        - Not detected
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Select Priority of the Problem Report
+      multiple: false
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: HW name/version
+      description: If apply, E.g.  Veronte AP 4.8
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: FW version
+      description: If apply, E.g.  Veronte 6.8.55
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: APP name/version
+      description: If apply, E.g.  1xPDI Builder 6.8.53
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Setup/Environment
+      description: If apply, E.g.  Specific setup details
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Config files
+      description: If apply, E.g.  Attached .zip file 
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Description
+      description: <!-- Una línea por cada URL completa de las tareas relacionadas -->
+      value:
+        Config files 
+        Problem description
+        Steps to reproduc
+        Expected results
+    validations:
+      required: false
