@@ -47,10 +47,12 @@ body:
     attributes:
       label: Configuration
       value: |
-          - | **HW name/version** | <!-- If apply, E.g.:  Veronte AP 4.8 --> |
-          - | **FW version** | <!-- If apply, E.g.: Veronte 6.8.55 --> |
-          - | **APP name/version** | <!-- If apply, 1xPDI Builder 6.8.53 --> |
-          - | **Setup/Environment** | <!-- If apply, Specific setup details --> |
+          |  |   |
+          | - | - |          
+          | **HW name/version** | <!-- If apply, E.g.:  Veronte AP 4.8 --> |
+          | **FW version** | <!-- If apply, E.g.: Veronte 6.8.55 --> |
+          | **APP name/version** | <!-- If apply, 1xPDI Builder 6.8.53 --> |
+          | **Setup/Environment** | <!-- If apply, Specific setup details --> |
   - type: textarea
     attributes:
       label: Config files
@@ -60,19 +62,19 @@ body:
   - type: textarea
     attributes:
       label: Problem description
-      description: <!-- Problem/bug description -->
+      description: Problem/bug description
     validations:
       required: false
   - type: textarea
     attributes:
       label: Steps to reproduce
-      description: <!-- If known, details to reproduce the failure, URLs, screenShoots, Traceback errors, printed errors, ... -->
+      description: If known, details to reproduce the failure, URLs, screenShoots, Traceback errors, printed errors, ...
     validations:
       required: false
   - type: textarea
     attributes:
       label: Expected results
-      description: <!-- Functional expected result -->
+      description: Functional expected result
     validations:
       required: false
 
