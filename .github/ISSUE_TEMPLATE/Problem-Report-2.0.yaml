@@ -76,17 +76,6 @@ body:
   - type: textarea
     attributes:
       label: Description
-      description: <!-- Una línea por cada URL completa de las tareas relacionadas -->
-      value:
-        Config files 
-        Problem description
-        Steps to reproduce
-        Expected results
-    validations:
-      required: false
-  - type: textarea
-    attributes:
-      label: Description
       description: |
           - Problem description
           - Steps to reproduce
