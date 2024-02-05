@@ -1,5 +1,5 @@
 ---
-name: RMA #####
+name: Prueba #####
 about: Prueba
 title: 'PRUEBA PRIVADA'
 labels: Analysis, Comment
