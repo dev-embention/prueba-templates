@@ -10,43 +10,24 @@ body:
     validations:
       required: false
   - type: textarea
-    id: description
+    id: products
     attributes:
-      label: Description
-      placeholder: Product description
+      label: List products
+      placeholder: Complete list products to purchase
       value: | 
               | Campo | Detallar |
               | --- | --- |
-              | **Ref.Int.** | ... |
-              | **Descripción :exclamation:** | ... | 
-              | **Familia :grey_exclamation:** | ... | 
-              | **Esp.Requeridas :grey_exclamation:**  | ... | 
-              | **Proy./Dpto :exclamation:** | ... | 
-              | **Cantidad :exclamation:** | 1 centralita y diría que 7 cámaras | 
-              | **Plazo :exclamation:** | ... |
-              | **Es el repuesto de un componente dañado (si/no):exclamation:** | ... |
+              | **Product :exclamation:** | ... | 
+              | **Quantity :exclamation:** | ... |
+              | **Analytic Account :exclamation:** | ... |
+              | **Analytic Tags :exclamation:** | ... |
+              | **URL: exclamation:** | ... |
     validations:
       required: true
   - type: input
     id: department
     attributes:
       label: Project/Department
-    validations:
-      required: true
-  - type: input
-    id: quantity
-    attributes:
-      label: Quantity
-    validations:
-      required: true
-  - type: input
-    attributes:
-      label: Analytic Account
-    validations:
-      required: true
-  - type: input
-    attributes:
-      label: Analytic Tags
     validations:
       required: true
   - type: dropdown
