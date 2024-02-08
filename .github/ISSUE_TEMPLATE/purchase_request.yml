@@ -1,7 +1,7 @@
 name: Purchases Template
 description: Request a Purchase
 title: "[Solicitud de compra] "
-labels: ["Analysis","Comment","Compras"]
+labels: ["Analysis","Comment","Purchases"]
 body:
   - type: textarea
     id: products
