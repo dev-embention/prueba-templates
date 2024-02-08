@@ -1,7 +1,7 @@
 name: Purchases Template
 description: Request a Purchase
 title: "[Solicitud de compra] "
-labels: ["Analysis","Comment","Purchases"]
+labels: ["Analysis","Comment","Compras"]
 body:
   - type: input
     id: reference
@@ -21,7 +21,7 @@ body:
               | **Quantity :exclamation:** | ... |
               | **Analytic Account :exclamation:** | ... |
               | **Analytic Tags :exclamation:** | ... |
-              | **URL: exclamation:** | ... |
+              | **URL :exclamation:** | ... |
     validations:
       required: true
   - type: input
