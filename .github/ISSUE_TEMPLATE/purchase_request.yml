@@ -7,6 +7,8 @@ body:
     id: reference
     attributes:
       label: Internal Reference
+    validations:
+      required: false
   - type: textarea
     id: description
     attributes:
@@ -33,7 +35,7 @@ body:
       required: true
   - type: input
     attributes:
-      label: Analytic Tags_
+      label: Analytic Tags
     validations:
       required: true
   - type: dropdown
