@@ -3,12 +3,6 @@ description: Request a Purchase
 title: "[Solicitud de compra] "
 labels: ["Analysis","Comment","Compras"]
 body:
-  - type: input
-    id: reference
-    attributes:
-      label: Internal Reference
-    validations:
-      required: false
   - type: textarea
     id: products
     attributes:
@@ -18,6 +12,7 @@ body:
       value: | 
               | Campo | Detallar |
               | --- | --- |
+              | **Internal References :** | ... | 
               | **Product :exclamation:** | ... | 
               | **Quantity :exclamation:** | ... |
               | **Analytic Account :exclamation:** | ... |
