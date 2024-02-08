@@ -1,0 +1,55 @@
+name: Purchases Template
+description: Request a Purchase
+title: "[Solicitud de compra] "
+labels: ["Analysis","Comment","Purchases"]
+body:
+  - type: input
+    id: reference
+    attributes:
+      label: Internal Reference
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      placeholder: Product description
+    validations:
+      required: true
+  - type: input
+    id: department
+    attributes:
+      label: Project/Department
+    validations:
+      required: true
+  - type: input
+    id: quantity
+    attributes:
+      label: Quantity
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Analytic Account
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Analytic Tags_
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Deadline
+      multiple: false
+      options:
+        - No time
+        - ASAP
+        - 1 week
+        - 2 weeks
+        - 1 month
+      default: 0
+      validations:
+        required: true
+  - type: checkboxes
+    attributes:
+      label: Replacement of damaged component
+      description: Check if it's a replacement of damaged component
