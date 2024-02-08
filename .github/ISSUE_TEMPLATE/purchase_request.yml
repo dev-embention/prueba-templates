@@ -13,6 +13,7 @@ body:
     id: products
     attributes:
       label: List products
+      description: ":exclamation:   Campo de obligatoria cumplimentación, en todo caso"
       placeholder: Complete list products to purchase
       value: | 
               | Campo | Detallar |
@@ -20,7 +21,7 @@ body:
               | **Product :exclamation:** | ... | 
               | **Quantity :exclamation:** | ... |
               | **Analytic Account :exclamation:** | ... |
-              | **Analytic Tags :exclamation:** | ... |
+              | **Analytic Tags :** | ... |
               | **URL :exclamation:** | ... |
     validations:
       required: true
