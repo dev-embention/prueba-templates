@@ -14,7 +14,7 @@ body:
     attributes:
       label: Description
       placeholder: Product description
-      description: "| Campo | Detallar |
+      value: | Campo | Detallar |
                     | --- | --- |
                     | **Ref.Int.** | ... |
                     | **Descripción :exclamation:** | ... | 
@@ -23,7 +23,7 @@ body:
                     | **Proy./Dpto :exclamation:** | ... | 
                     | **Cantidad :exclamation:** | 1 centralita y diría que 7 cámaras | 
                     | **Plazo :exclamation:** | ... |
-                    | **Es el repuesto de un componente dañado (si/no):exclamation:** | ... |"
+                    | **Es el repuesto de un componente dañado (si/no):exclamation:** | ... |
     validations:
       required: true
   - type: input
