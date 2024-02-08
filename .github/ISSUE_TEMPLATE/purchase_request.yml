@@ -22,7 +22,7 @@ body:
               | **Quantity :exclamation:** | ... |
               | **Analytic Account :exclamation:** | ... |
               | **Analytic Tags :** | ... |
-              | **URL :exclamation:** | ... |
+              | **URL :** | ... |
     validations:
       required: true
   - type: input
