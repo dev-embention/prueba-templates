@@ -49,8 +49,8 @@ body:
         - 2 weeks
         - 1 month
       default: 0
-      validations:
-        required: true
+    validations:
+      required: true
   - type: checkboxes
     attributes:
       label: Replacement of damaged component
