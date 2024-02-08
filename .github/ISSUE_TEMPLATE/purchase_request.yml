@@ -14,16 +14,17 @@ body:
     attributes:
       label: Description
       placeholder: Product description
-      value: | Campo | Detallar |
-                    | --- | --- |
-                    | **Ref.Int.** | ... |
-                    | **Descripción :exclamation:** | ... | 
-                    | **Familia :grey_exclamation:** | ... | 
-                    | **Esp.Requeridas :grey_exclamation:**  | ... | 
-                    | **Proy./Dpto :exclamation:** | ... | 
-                    | **Cantidad :exclamation:** | 1 centralita y diría que 7 cámaras | 
-                    | **Plazo :exclamation:** | ... |
-                    | **Es el repuesto de un componente dañado (si/no):exclamation:** | ... |
+      value: | 
+              | Campo | Detallar |
+              | --- | --- |
+              | **Ref.Int.** | ... |
+              | **Descripción :exclamation:** | ... | 
+              | **Familia :grey_exclamation:** | ... | 
+              | **Esp.Requeridas :grey_exclamation:**  | ... | 
+              | **Proy./Dpto :exclamation:** | ... | 
+              | **Cantidad :exclamation:** | 1 centralita y diría que 7 cámaras | 
+              | **Plazo :exclamation:** | ... |
+              | **Es el repuesto de un componente dañado (si/no):exclamation:** | ... |
     validations:
       required: true
   - type: input
