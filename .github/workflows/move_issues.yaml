@@ -1,0 +1,63 @@
+name: Project automations
+on:
+  issues:
+    types:
+      - opened
+      - reopened
+      - closed
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - review_requested
+      - closed
+
+# map fields with customized labels
+env:
+  todo: Todo
+  done: Done
+  in_progress: In Progress
+
+jobs:
+  issue_opened_or_reopened:
+    name: issue_opened_or_reopened
+    runs-on: ubuntu-latest
+    if: github.event_name == 'issues' && (github.event.action == 'opened' || github.event.action == 'reopened')
+    steps:
+      - name: Move issue to ${{ env.todo }} # New issues
+        uses: leonsteinhaeuser/project-beta-automations@v2.1.0
+        with:
+          gh_token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
+          #user: sample-user
+          organization: dev-embention
+          project_id: 2
+          resource_node_id: ${{ github.event.issue.node_id }}
+          status_value: ${{ env.todo }} # Target status
+  issue_closed:
+    name: issue_closed
+    runs-on: ubuntu-latest
+    if: github.event_name == 'issues' && github.event.action == 'closed'
+    steps:
+      - name: Moved issue to ${{ env.done }}
+        uses: leonsteinhaeuser/project-beta-automations@v2.1.0
+        with:
+          gh_token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
+          # user: sample-user
+          organization: dev-embention
+          project_id: 2
+          resource_node_id: ${{ github.event.issue.node_id }}
+          status_value: ${{ env.done }} # Target status
+  issue_inprogress:
+    name: issue_inprogress
+    runs-on: ubuntu-latest
+    if: github.event_name == 'issues' && github.event.issue_comment.author_association == 'member'
+    steps:
+      - name: Moved issue to ${{ env.in_progress }}
+        uses: leonsteinhaeuser/project-beta-automations@v2.1.0
+        with:
+          gh_token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
+          # user: sample-user
+          organization: dev-embention
+          project_id: 2
+          resource_node_id: ${{ github.event.issue.node_id }}
+          status_value: ${{ env.in_progress }} # Target status
