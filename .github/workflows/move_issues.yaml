@@ -1,16 +1,16 @@
 name: Project automations
 on:
+  workflow_call:
+    secrets:
+      GH_TOKEN_MOVE_ISSUES
+        required: true
   issues:
     types:
       - opened
       - reopened
       - closed
-  pull_request:
-    types:
-      - opened
-      - reopened
-      - review_requested
-      - closed
+  issue_comment:
+    types: created
 
 # map fields with customized labels
 env:
@@ -50,7 +50,7 @@ jobs:
   issue_inprogress:
     name: issue_inprogress
     runs-on: ubuntu-latest
-    if: github.event_name == 'issues' && github.event.issue_comment.author_association == 'member'
+    if: github.event_name == 'issues' && github.event.issue_comment.action == 'created' && github.event.issue_comment.author_association == 'MEMBER'
     steps:
       - name: Moved issue to ${{ env.in_progress }}
         uses: leonsteinhaeuser/project-beta-automations@v2.1.0
