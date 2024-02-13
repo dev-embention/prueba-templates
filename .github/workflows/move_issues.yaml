@@ -58,7 +58,7 @@ jobs:
         if: github.event_name == 'issue_comment'
         uses: actions-cool/check-user-permission@v2
         with:
-          require: 'write'
+          require: 'admin'
       - name: Moved issue to ${{ env.ans }}
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
         if: ${{ steps.checkUser.outputs.check-result == 'true' }}
@@ -71,7 +71,7 @@ jobs:
           status_value: ${{ env.ans }} # Target status
       - name: Moved issue to ${{ env.not_ans }}
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
-        if: ${{ steps.is_organization_member.outputs.result == 'false' }}
+        if: ${{ steps.checkUser.outputs.result == 'false' }}
         with:
           gh_token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
           # user: sample-user
