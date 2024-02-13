@@ -54,7 +54,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check member
-        id: is_organization_member
+        id: checkUser
         if: github.event_name == 'issue_comment'
         uses: actions-cool/check-user-permission@v2
         with:
