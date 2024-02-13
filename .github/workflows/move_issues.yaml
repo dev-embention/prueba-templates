@@ -1,9 +1,5 @@
 name: Project automations
 on:
-  workflow_call:
-    secrets:
-      GH_TOKEN_MOVE_ISSUES
-        required: true
   issues:
     types:
       - opened
