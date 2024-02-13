@@ -22,7 +22,7 @@ jobs:
     if: github.event_name == 'issues' && (github.event.action == 'opened' || github.event.action == 'reopened')
     steps:
       - name: Move issue to ${{ env.todo }} # New issues
-        uses: leonsteinhaeuser/project-beta-automations@v2.1.0
+        uses: leonsteinhaeuser/project-beta-automations@v2.2.1
         with:
           gh_token: ${{ env.GH_TOKEN }}
           #user: sample-user
@@ -36,7 +36,7 @@ jobs:
     if: github.event_name == 'issues' && github.event.action == 'closed'
     steps:
       - name: Moved issue to ${{ env.done }}
-        uses: leonsteinhaeuser/project-beta-automations@v2.1.0
+        uses: leonsteinhaeuser/project-beta-automations@v2.2.1
         with:
           gh_token: ${{ secrets.GH_TOKEN }}
           # user: sample-user
@@ -50,7 +50,7 @@ jobs:
     if: github.event_name == 'issue_comment' && github.event.comment.author_association == 'MEMBER'
     steps:
       - name: Moved issue to ${{ env.in_progress }}
-        uses: leonsteinhaeuser/project-beta-automations@v2.1.0
+        uses: leonsteinhaeuser/project-beta-automations@v2.2.1
         with:
           gh_token: ${{ secrets.GH_TOKEN }}
           # user: sample-user
