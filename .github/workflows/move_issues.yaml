@@ -56,14 +56,12 @@ jobs:
       - name: Check member
         id: is_organization_member
         if: github.event_name == 'issue_comment'
-        uses: JamesSingleton/is-organization-member@1.0.1
+        uses: actions-cool/check-user-permission@v2
         with:
-          organization: ${{ env.organization }}
-          username: ${{ github.event.issue.user.login }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          require: 'write'
       - name: Moved issue to ${{ env.ans }}
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
-        if: ${{ steps.is_organization_member.outputs.result == 'true' }}
+        if: ${{ steps.checkUser.outputs.check-result == 'true' }}
         with:
           gh_token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
           # user: sample-user
@@ -81,22 +79,3 @@ jobs:
           project_id: 2
           resource_node_id: ${{ github.event.issue.node_id }}
           status_value: ${{ env.not_ans }} # Target status
-  issue_probe:
-    name: issue_probe
-    runs-on: ubuntu-latest
-    if: github.event_name == 'issue_comment'
-    steps:
-      - id: get-members
-        uses: GuillaumeFalourd/github-team-members@v1
-        with:
-          org_slug: dev-embention
-          team_slug: Embention
-          token: ${{ secrets.GITHUB_TOKEN }}
-  
-      - if: steps.get-members.outputs.actor-belongs-team == 'true'
-        run: echo "${{ github.actor }} belongs to Team"
-        shell: bash
-        
-      - if: steps.get-members.outputs.actor-belongs-team == 'false'
-        run: echo "${{ github.actor }} doesn't belong to Team"
-        shell: bash
