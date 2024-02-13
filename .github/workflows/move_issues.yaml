@@ -61,7 +61,7 @@ jobs:
           token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
       - name: Moved issue to ${{ env.in_progress }}
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
-        if: ${{ steps.is_organization_member.outputs.result == 'false' }}
+        if: ${{ steps.is_organization_member.outputs.result == 'true' }}
         with:
           gh_token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
           # user: sample-user
