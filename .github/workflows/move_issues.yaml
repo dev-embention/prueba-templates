@@ -60,7 +60,7 @@ jobs:
         with:
           organization: ${{ env.organization }}
           username: ${{ github.event.issue.user.login }}
-          token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Moved issue to ${{ env.ans }}
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
         if: ${{ steps.is_organization_member.outputs.result == 'false' }}
@@ -81,3 +81,13 @@ jobs:
           project_id: 2
           resource_node_id: ${{ github.event.issue.node_id }}
           status_value: ${{ env.not_ans }} # Target status
+  issue_probe:
+    name: issue_probe
+    runs-on: ubuntu-latest
+    if: github.event_name == 'issue_comment'
+    steps:
+      - name: Debug Comment
+        run: |
+          echo "Event name: ${{ github.event_name }}"
+          echo "Author association: ${{ github.event.comment.author_association }}"
+          echo "Author association: ${{ github.event.comment.user.login }}"
