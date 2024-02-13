@@ -63,7 +63,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Moved issue to ${{ env.ans }}
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
-        if: ${{ steps.is_organization_member.outputs.result == 'false' }}
+        if: ${{ steps.is_organization_member.outputs.result == 'true' }}
         with:
           gh_token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
           # user: sample-user
@@ -73,7 +73,7 @@ jobs:
           status_value: ${{ env.ans }} # Target status
       - name: Moved issue to ${{ env.not_ans }}
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
-        if: ${{ steps.is_organization_member.outputs.result == 'true' }}
+        if: ${{ steps.is_organization_member.outputs.result == 'false' }}
         with:
           gh_token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
           # user: sample-user
@@ -86,8 +86,17 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'issue_comment'
     steps:
-      - name: Debug Comment
-        run: |
-          echo "Event name: ${{ github.event_name }}"
-          echo "Author association: ${{ github.event.comment.author_association }}"
-          echo "Author association: ${{ github.event.comment.user.login }}"
+      - id: get-members
+        uses: GuillaumeFalourd/github-team-members@v1
+        with:
+          org_slug: dev-embention
+          team_slug: Embention
+          token: ${{ secrets.GITHUB_TOKEN }}
+  
+      - if: steps.get-members.outputs.actor-belongs-team == 'true'
+        run: echo "${{ github.actor }} belongs to Team"
+        shell: bash
+        
+      - if: steps.get-members.outputs.actor-belongs-team == 'false'
+        run: echo "${{ github.actor }} doesn't belong to Team"
+        shell: bash
