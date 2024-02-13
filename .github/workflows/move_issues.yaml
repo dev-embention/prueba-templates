@@ -68,4 +68,4 @@ jobs:
       - name: Debug Comment
         run: |
           echo "Event name: ${{ github.event_name }}"
-          echo "Author association: ${{ github.event.comment.user.type }}"
+          echo "Author association: ${{ github.event.comment.user.login }}"
