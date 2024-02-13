@@ -13,6 +13,8 @@ env:
   todo: Todo
   done: Done
   in_progress: In Progress
+  ans: Answered
+  not_ans: Not Answered
   organization: dev-embention
 
 jobs:
@@ -54,12 +56,22 @@ jobs:
       - name: Check member
         id: is_organization_member
         if: github.event_name == 'issue_comment'
-        uses: JamesSingleton/is-organization-member@1.0.0
+        uses: JamesSingleton/is-organization-member@1.0.1
         with:
           organization: ${{ env.organization }}
           username: ${{ github.event.issue.user.login }}
           token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
-      - name: Moved issue to ${{ env.in_progress }}
+      - name: Moved issue to ${{ env.ans }}
+        uses: leonsteinhaeuser/project-beta-automations@v2.2.1
+        if: ${{ steps.is_organization_member.outputs.result == 'false' }}
+        with:
+          gh_token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
+          # user: sample-user
+          organization: ${{ env.organization }}
+          project_id: 2
+          resource_node_id: ${{ github.event.issue.node_id }}
+          status_value: ${{ env.ans }} # Target status
+      - name: Moved issue to ${{ env.not_ans }}
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
         if: ${{ steps.is_organization_member.outputs.result == 'true' }}
         with:
@@ -68,14 +80,4 @@ jobs:
           organization: ${{ env.organization }}
           project_id: 2
           resource_node_id: ${{ github.event.issue.node_id }}
-          status_value: ${{ env.in_progress }} # Target status
-  issue_probe:
-    name: issue_probe
-    runs-on: ubuntu-latest
-    if: github.event_name == 'issue_comment'
-    steps:
-      - name: Debug Comment
-        run: |
-          echo "Event name: ${{ github.event_name }}"
-          echo "Author association: ${{ github.event.comment.user.email }}"
-          echo "Author association: ${{ github.event.comment.user.id }}"
+          status_value: ${{ env.not_ans }} # Target status
