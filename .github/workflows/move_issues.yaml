@@ -68,12 +68,31 @@ jobs:
                 }
               }
             }
-          }'
+          }' > project_data.json
 
           curl -X POST \
-            -H "Authorization: bearer ${{ secrets.GH_TOKEN_MOVE_ISSUES }}" \
+            -H "Authorization: bearer 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" \
             -d "{\"query\": \"$QUERY\"}" \
             https://api.github.com/graphql
+
+          echo 'PROJECT_ID='$(jq '.data.organization.projectV2.id' project_data.json) >> $GITHUB_ENV
+
+          # Extract option ID for specified column name
+          OPTION_ID=$(jq -r '.data.organization.projectV2.fields.nodes[]
+                         | select(.name == "Status")
+                         | .options[]
+                         | select(.name == env.COLUMN_NAME)
+                         | .id' project_data.json)
+          
+          # Extract status corresponding to the option ID
+          STATUS=$(jq -r --arg OPTION_ID "$OPTION_ID" '.data.organization.projectV2.fields.nodes[]
+                         | select(.name == "Status")
+                         | .options[]
+                         | select(.id == $OPTION_ID)
+                         | .name' project_data.json)
+          
+          # Set status as environment variable
+          echo "STATUS=$STATUS" >> $GITHUB_ENV
   issue_inprogress:
     name: issue_inprogress
     runs-on: ubuntu-latest
