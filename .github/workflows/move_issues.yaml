@@ -43,8 +43,8 @@ jobs:
       - name: Get status column
         run: |
           QUERY='query {
-            organization(login: "organization_name") {
-              projectV2(number: project_number) {
+            organization(login: "${{ env.organization }}") {
+              projectV2(number: ${{ env.project }}) {
                 columns(first: 20) {
                   nodes {
                     id
