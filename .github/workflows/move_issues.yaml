@@ -42,7 +42,7 @@ jobs:
     steps:
       - name: Get status column
         run: |
-          gh api graphql -H "Authorization: token secrets.GH_TOKEN_MOVE_ISSUES" -f query='query {
+          gh api graphql -H "Authorization: token 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" -f query='query {
             organization(login: "${{ env.organization }}") {
               projectV2(number: ${{ env.project }}) {
                 columns(first: 20) {
