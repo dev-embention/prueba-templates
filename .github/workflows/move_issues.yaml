@@ -42,9 +42,9 @@ jobs:
     steps:
       - name: Get status column
         run: |
-          gh api graphql -H "Authorization: token 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" -f query='query {
-            organization(login: "${{ env.organization }}") {
-              projectV2(number: ${{ env.project }}) {
+          QUERY='query {
+            organization(login: "organization_name") {
+              projectV2(number: project_number) {
                 columns(first: 20) {
                   nodes {
                     id
@@ -69,6 +69,12 @@ jobs:
               }
             }
           }' > project_data.json
+
+          curl -X POST \
+            -H "Authorization: bearer secrets.GH_TOKEN_MOVE_ISSUES" \
+            -d "{\"query\": \"$QUERY\"}" \
+            https://api.github.com/graphql
+            
           echo 'PROJECT_ID='$(jq '.data.organization.projectV2.id' project_data.json) >> $GITHUB_ENV
           OPTION_ID=$(jq -r '.data.organization.projectV2.fields.nodes[]
                | select(.name == "Status")
