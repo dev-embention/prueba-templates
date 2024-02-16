@@ -15,7 +15,6 @@ env:
   in_progress: In Progress
   ans: Answered
   not_ans: Not Answered
-  GH_TOKEN: secrets.GH_TOKEN_MOVE_ISSUES
   organization: dev-embention
   project: 2
 
@@ -43,7 +42,7 @@ jobs:
     steps:
       - name: Get status column
         run: |
-          gh api graphql -f query='query {
+          gh api graphql -H "Authorization: token secrets.GH_TOKEN_MOVE_ISSUES -f query='query {
             organization(login: "${{ env.organization }}") {
               projectV2(number: ${{ env.project }}) {
                 columns(first: 20) {
@@ -97,7 +96,7 @@ jobs:
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
         if: steps.checkUser.outputs.user-permission == 'write' || steps.checkUser.outputs.user-permission == 'admin'
         with:
-          gh_token: ${{ env.GH_TOKEN }}
+          gh_token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
           # user: sample-user
           organization: ${{ env.organization }}
           project_id: ${{ env.project }}
@@ -107,7 +106,7 @@ jobs:
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
         if: steps.checkUser.outputs.user-permission == 'read'
         with:
-          gh_token: ${{ env.GH_TOKEN }}
+          gh_token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
           # user: sample-user
           organization: ${{ env.organization }}
           project_id: ${{ env.project }}
