@@ -15,6 +15,7 @@ env:
   in_progress: In Progress
   ans: Answered
   not_ans: Not Answered
+  GH_TOKEN: secrets.GH_TOKEN_MOVE_ISSUES
   organization: dev-embention
   project: 2
 
