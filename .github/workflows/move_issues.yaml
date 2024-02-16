@@ -97,6 +97,7 @@ jobs:
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
         if: steps.checkUser.outputs.user-permission == 'write' || steps.checkUser.outputs.user-permission == 'admin'
         with:
+          unset: gh_token
           gh_token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
           # user: sample-user
           organization: ${{ env.organization }}
