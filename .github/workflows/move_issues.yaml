@@ -108,7 +108,7 @@ jobs:
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
         if: steps.checkUser.outputs.user-permission == 'write' || steps.checkUser.outputs.user-permission == 'admin'
         with:
-          gh_token: ${{ env.GH_TOKEN }}
+          # gh_token: ${{ env.GH_TOKEN }}
           # user: sample-user
           organization: ${{ env.organization }}
           project_id: ${{ env.project }}
@@ -118,7 +118,7 @@ jobs:
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
         if: steps.checkUser.outputs.user-permission == 'read'
         with:
-          gh_token: ${{ env.GH_TOKEN }}
+          # gh_token: ${{ env.GH_TOKEN }}
           # user: sample-user
           organization: ${{ env.organization }}
           project_id: ${{ env.project }}
