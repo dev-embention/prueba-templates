@@ -38,10 +38,10 @@ jobs:
           project_id: ${{ env.project }}
           resource_node_id: ${{ github.event.issue.node_id }}
           status_value: ${{ env.todo }} # Target status
-  issue_closed:
+  stale:
     name: issue_done
     runs-on: ubuntu-latest
-    if: github.event_name == 'issues' && github.event.labels.name == 'Client'
+    if: github.event.labels.name == 'Client'
     steps:
       - name: Get status column
         uses: actions/stale@v9
@@ -50,6 +50,15 @@ jobs:
           close-issue-message: 'This issue was closed because it has been stalled for 5 days with no activity.'
           days-before-stale: 1
           days-before-close: 1
+      - name: Moved issue to ${{ env.done }}
+        uses: leonsteinhaeuser/project-beta-automations@v2.2.1
+        with:
+          gh_token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
+          # user: sample-user
+          organization: ${{ env.organization }}
+          project_id: ${{ env.project }}
+          resource_node_id: ${{ github.event.issue.node_id }}
+          status_value: ${{ env.done }} # Target status
   issue_inprogress:
     name: issue_inprogress
     runs-on: ubuntu-latest
