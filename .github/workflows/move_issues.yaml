@@ -8,7 +8,7 @@ on:
   issue_comment:
     types: created
   schedule:
-    - cron: '00 15 * * *'
+    - cron: '20 15 * * *'
 
 # map fields with customized labels
 env:
@@ -38,18 +38,47 @@ jobs:
           project_id: ${{ env.project }}
           resource_node_id: ${{ github.event.issue.node_id }}
           status_value: ${{ env.todo }} # Target status
-  stale:
+  issue_done:
     name: issue_done
     runs-on: ubuntu-latest
     if: github.event.labels.name == 'Client'
     steps:
-      - name: Get status column
-        uses: actions/stale@v9
+      - uses: octokit/graphql-action@v2.2.25
+        id: get_status
         with:
-          stale-issue-message: 'This issue is stale because it has been open 30 days with no activity. Remove stale label or comment or this will be closed in 5 days.'
-          close-issue-message: 'This issue was closed because it has been stalled for 5 days with no activity.'
-          days-before-stale: 1
-          days-before-close: 1
+          query: |
+            query ($org:String!,$project:String!) {
+              organization(login: $org,project:$project) {
+                 projectV2(number: ${{ env.project }}) {
+                  columns(first: 20) {
+                    nodes {
+                      id
+                      name
+                      cards {
+                        nodes {
+                          content {
+                            ... on Issue {
+                              title
+                              state
+                              labels(first: 5) {
+                                nodes {
+                                  name
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            } > project_data.json
+          org: ${{ env.organization }}
+          project: ${{ env.project }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
+      - run: "echo 'latest release: ${{ steps.get_status.outputs.data }}'"
       - name: Moved issue to ${{ env.done }}
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
         with:
