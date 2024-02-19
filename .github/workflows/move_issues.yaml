@@ -57,7 +57,11 @@ jobs:
                           ... on Issue {
                             title
                             url
-                            state: OPEN
+                            state {
+                              ... on IssueState {
+                                OPEN
+                              }
+                            }
                             assignees(first: 10) {
                               nodes {
                                 login
