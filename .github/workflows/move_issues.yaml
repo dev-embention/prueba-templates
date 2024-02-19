@@ -49,20 +49,58 @@ jobs:
             query {
               organization(login: "dev-embention") {
                  projectV2(number:${{ env.project }}) {
-                  columns(first: 20) {
-                    nodes {
-                      id
-                      name
-                      cards {
-                        nodes {
-                          content {
-                            ... on Issue {
-                              title
-                              state
-                              labels(first: 5) {
-                                nodes {
+                  ... on ProjectV2 {
+                    items(last: 20) {
+                      nodes {
+                        id
+                        content {
+                          ... on Issue {
+                            title
+                            url
+                            state
+                            assignees(first: 10) {
+                              nodes {
+                                login
+                              }
+                            }
+                          }
+                        }
+                        fieldValues(first: 20) {
+                          nodes {
+                            ... on ProjectV2ItemFieldSingleSelectValue {
+                              field {
+                                ... on ProjectV2SingleSelectField {
                                   name
                                 }
+                              }
+                              name
+                              id
+                            }
+                            ... on ProjectV2ItemFieldLabelValue {
+                              labels(first: 20) {
+                                nodes {
+                                  id
+                                  name
+                                }
+                              }
+                            }
+                            ... on ProjectV2ItemFieldTextValue {
+                              text
+                              id
+                              updatedAt
+                              creator {
+                                url
+                              }
+                            }
+                            ... on ProjectV2ItemFieldMilestoneValue {
+                              milestone {
+                                id
+                              }
+                            }
+                            ... on ProjectV2ItemFieldRepositoryValue {
+                              repository {
+                                id
+                                url
                               }
                             }
                           }
