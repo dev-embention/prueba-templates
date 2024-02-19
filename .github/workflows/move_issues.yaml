@@ -7,6 +7,8 @@ on:
       - closed
   issue_comment:
     types: created
+  schedule:
+    - cron: '20 15 * * *'
 
 # map fields with customized labels
 env:
@@ -39,60 +41,15 @@ jobs:
   issue_closed:
     name: issue_done
     runs-on: ubuntu-latest
+    if: github.event_name == 'issues' && github.event.labels.name == 'Client'
     steps:
       - name: Get status column
-        run: |
-          QUERY='query {
-            organization(login: "${{ env.organization }}") {
-              projectV2(number: ${{ env.project }}) {
-                columns(first: 20) {
-                  nodes {
-                    id
-                    name
-                    cards {
-                      nodes {
-                        content {
-                          ... on Issue {
-                            title
-                            state
-                            labels(first: 5) {
-                              nodes {
-                                name
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }' > project_data.json
-
-          curl -X POST \
-            -H "Authorization: bearer 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" \
-            -d "{\"query\": \"$QUERY\"}" \
-            https://api.github.com/graphql
-
-          echo 'PROJECT_ID='$(jq '.data.organization.projectV2.id' project_data.json) >> $GITHUB_ENV
-
-          # Extract option ID for specified column name
-          OPTION_ID=$(jq -r '.data.organization.projectV2.fields.nodes[]
-                         | select(.name == "Status")
-                         | .options[]
-                         | select(.name == env.COLUMN_NAME)
-                         | .id' project_data.json)
-          
-          # Extract status corresponding to the option ID
-          STATUS=$(jq -r --arg OPTION_ID "$OPTION_ID" '.data.organization.projectV2.fields.nodes[]
-                         | select(.name == "Status")
-                         | .options[]
-                         | select(.id == $OPTION_ID)
-                         | .name' project_data.json)
-          
-          # Set status as environment variable
-          echo "STATUS=$STATUS" >> $GITHUB_ENV
+        uses: actions/stale@v9
+        with:
+          stale-issue-message: 'This issue is stale because it has been open 30 days with no activity. Remove stale label or comment or this will be closed in 5 days.'
+          close-issue-message: 'This issue was closed because it has been stalled for 5 days with no activity.'
+          days-before-stale: 1
+          days-before-close: 1
   issue_inprogress:
     name: issue_inprogress
     runs-on: ubuntu-latest
