@@ -74,7 +74,7 @@ jobs:
               }
             }
             variables: |
-              org: ${{ env.organization }}
+              org: "${{ env.organization }}"
               project: ${{ env.project }}
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
