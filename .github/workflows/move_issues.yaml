@@ -73,9 +73,9 @@ jobs:
                 }
               }
             } > project_data.json
-          variables:
-            org: ${{ env.organization }}
-            project: ${{ env.project }}
+            variables:
+              org: ${{ env.organization }}
+              project: ${{ env.project }}
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
       - run: "echo 'latest release: ${{ steps.get_status.outputs.data }}'"
