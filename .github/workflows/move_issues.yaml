@@ -47,8 +47,8 @@ jobs:
         with:
           query: |
             query ($org:String!,$project:String!) {
-              organization(login: $org,project:$project) {
-                 projectV2(number: ${{ env.project }}) {
+              organization(login: $org) {
+                 projectV2(number: project:$project) {
                   columns(first: 20) {
                     nodes {
                       id
