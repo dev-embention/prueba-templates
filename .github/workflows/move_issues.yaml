@@ -71,7 +71,7 @@ jobs:
           }' > project_data.json
 
           curl -X POST \
-            -H "Authorization: bearer GH_TOKEN_MOVE_ISSUES" \
+            -H "Authorization: bearer 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" \
             -d "{\"query\": \"$QUERY\"}" \
             https://api.github.com/graphql
 
