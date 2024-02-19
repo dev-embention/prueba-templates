@@ -46,9 +46,9 @@ jobs:
         id: get_status
         with:
           query: |
-            query ($org:String!,$project:String!) {
-              organization(login: $org) {
-                 projectV2(number: $project) {
+            query {
+              organization(login: $env.organization) {
+                 projectV2(number: $env.project) {
                   columns(first: 20) {
                     nodes {
                       id
@@ -73,9 +73,6 @@ jobs:
                 }
               }
             }
-            variables: |
-              org: "${{ env.organization }}"
-              project: ${{ env.project }}
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
       - run: "echo 'latest release: ${{ steps.get_status.outputs.data }}'"
