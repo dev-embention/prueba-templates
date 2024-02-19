@@ -76,8 +76,8 @@ jobs:
             variables: |
               org: ${{ env.organization }}
               project: ${{ env.project }}
-            env:
-              GITHUB_TOKEN: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
       - run: "echo 'latest release: ${{ steps.get_status.outputs.data }}'"
       - name: Moved issue to ${{ env.done }}
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
