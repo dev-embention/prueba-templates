@@ -42,7 +42,7 @@ jobs:
     steps:
       - name: Get status column
         run: |
-          QUERY='query {
+          gh api graphql -f query='query {
             organization(login: "${{ env.organization }}") {
               projectV2(number: ${{ env.project }}) {
                 columns(first: 20) {
