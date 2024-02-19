@@ -72,7 +72,7 @@ jobs:
                   }
                 }
               }
-            } > project_data.json
+            }
             variables:
               org: ${{ env.organization }}
               project: ${{ env.project }}
