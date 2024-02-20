@@ -10,6 +10,15 @@ body:
       description: ":exclamation:   Campo de obligatoria cumplimentación, en todo caso"
       placeholder: Complete list products to purchase
       value: | 
+              # Reference
+              
+              <!-- Una línea por cada URL completa de las tareas relacionadas -->
+              <!-- Procedimiento para Crear Issues: -->
+              <!-- https://documentation.embention.net/Crear_Issue/latest/index.html  -->
+              
+              # Description
+              <!-- Prueba ejemplo -->
+
               | Campo | Detallar |
               | --- | --- |
               | **Internal References :** | ... | 
