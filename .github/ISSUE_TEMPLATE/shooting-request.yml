@@ -1,0 +1,71 @@
+name: Shooting Request
+description: Plantilla para informar sobre la realización de un shooting
+title: "[Shooting] "
+labels: ["Analysis","Comment","Marketing","Shooting"]
+body:
+  - type: textarea
+    id: Reference
+    attributes:
+      label: Reference
+      description: "Una línea por cada URL de las tareas relacionadas \n Procedimiento para Crear Issues: https://documentation.embention.net/Crear_Issue/latest/index.html"
+      validations:
+        required: true
+  - type: markdown
+    attributes:
+      value: |
+        > [!IMPORTANT]  
+        > En la medida de lo posible, avisad al departamento involucrado con mínimo 3 días de antelación.
+  - type: input
+    id: date
+    attributes:
+      label: Día de grabación*
+    validations:
+      required: true
+  - type: input
+    id: localizacion
+    attributes:
+      label: Localización*
+    validations: true
+  - type: input
+    id: citacion
+    attributes:
+      label: Hora de citación*
+      description: Hora hay que estar en la localización
+    validations: true
+  - type: input
+    id: grabacion
+    attributes:
+      label: Hora de grabación*
+      description: Cuándo empieza la sesión (de 00:00 a 00:00)
+    validations: true
+  - type: input
+    id: responsable
+    attributes:
+      label: Persona responsable*
+    validations: true
+  - type: input
+    id: mail
+    attributes:
+      label: Mail de contacto*
+    validations: true
+  - type: textarea
+    id: rest
+    attributes:
+      label: Resto del equipo que estará presente
+      validations:
+        required: true
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción del evento
+      description: "Cosas que necesitamos tener preparadas antes de la grabación (por parte del departamento involucrado)"
+      validations:
+        required: true
+  - type: textarea
+    id: otros
+    attributes:
+      label: Otros datos relevantes
+      value: |
+                *FYI:
+      validations:
+        required: true
