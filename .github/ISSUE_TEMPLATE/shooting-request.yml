@@ -57,20 +57,20 @@ body:
     id: rest
     attributes:
       label: Resto del equipo que estará presente
-      validations:
-        required: true
+    validations:
+      required: true
   - type: textarea
     id: descripcion
     attributes:
       label: Descripción del evento
       description: "Cosas que necesitamos tener preparadas antes de la grabación (por parte del departamento involucrado)"
-      validations:
-        required: true
+    validations:
+      required: true
   - type: textarea
     id: otros
     attributes:
       label: Otros datos relevantes
       value: |
                 *FYI:
-      validations:
-        required: true
+    validations:
+      required: true
