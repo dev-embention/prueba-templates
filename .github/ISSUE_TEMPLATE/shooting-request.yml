@@ -70,7 +70,15 @@ body:
     id: otros
     attributes:
       label: Otros datos relevantes
+    validations:
+      required: true
+  - type: markdown
+    attributes:
       value: |
-                *FYI:
+              ___
+  - type: textarea
+    id: fyi
+    attributes:
+      label: FYI
     validations:
       required: true
