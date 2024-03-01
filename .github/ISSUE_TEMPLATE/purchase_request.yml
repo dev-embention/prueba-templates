@@ -1,0 +1,56 @@
+name: Purchases Template
+description: Request a Purchase
+title: "[Solicitud de compra] "
+labels: ["Analysis","Comment","Purchases"]
+body:
+  - type: textarea
+    id: products
+    attributes:
+      label: List products
+      description: ":exclamation:   Campo de obligatoria cumplimentación, en todo caso"
+      placeholder: Complete list products to purchase
+      value: | 
+              # Reference
+              
+              <!-- Una línea por cada URL completa de las tareas relacionadas -->
+              <!-- Procedimiento para Crear Issues: -->
+              <!-- https://documentation.embention.net/Crear_Issue/latest/index.html  -->
+              
+              # Description
+              <!-- Prueba ejemplo -->
+
+              | Campo | Detallar |
+              | --- | --- |
+              | **Internal References :** | ... | 
+              | **Product :exclamation:** | ... | 
+              | **Quantity :exclamation:** | ... |
+              | **Analytic Account :exclamation:** | ... |
+              | **Analytic Tags :** | ... |
+              | **URL :** | ... |
+    validations:
+      required: true
+  - type: input
+    id: department
+    attributes:
+      label: Project/Department
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Deadline
+      multiple: false
+      options:
+        - No time
+        - ASAP
+        - 1 week
+        - 2 weeks
+        - 1 month
+      default: 0
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Replacement of damaged component
+      description: Check if it's a replacement of damaged component
+      options:
+        - label: Replacement?
