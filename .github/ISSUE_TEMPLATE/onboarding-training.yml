@@ -30,7 +30,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        - Todos los procedimientos se encuentran en: [Procedimientos] (https://embention.net/web#action=1236&model=emb.internal.document&view_type=list&menu_id=)
+        - Todos los procedimientos se encuentran en: [Procedimientos](https://embention.net/web#action=1236&model=emb.internal.document&view_type=list&menu_id=)
   - type: checkboxes
     attributes:
       label: Procedimientos
