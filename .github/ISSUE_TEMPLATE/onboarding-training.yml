@@ -6,13 +6,13 @@ body:
   - type: markdown
     attributes:
       value: |
-        ¡Hola!
+        > ¡Hola!
 
-        Enhorabuena por crear tu primera issue con nosotros.
+        > Enhorabuena por crear tu primera issue con nosotros.
 
-        Más abajo encontrarás también tus primeras tareas, haz check cuando hayas finalizado cada una de ellas.
+        > Más abajo encontrarás también tus primeras tareas, haz check cuando hayas finalizado cada una de ellas.
 
-        Queremos acercarte la formación inicial que te ayudará a desenvolverte en nuestro equipo y también queremos proponerte una actividad para entrar en contacto con las herramientas que emplearás en tu día a día.
+        > Queremos acercarte la formación inicial que te ayudará a desenvolverte en nuestro equipo y también queremos proponerte una actividad para entrar en contacto con las herramientas que emplearás en tu día a día.
 
         > [!IMPORTANT]
         > Te propondremos que modifiques algún procedimiento (que corrijas un error que detectes o que propongas una mejora) por lo que te pedimos que prestes especial atención.
