@@ -29,9 +29,10 @@ body:
         - label: Github y Smartgit [URL](https://drive.google.com/file/d/121jy3fmvEM1cHfEu7R7Qkr7XXPsZk53g/view?usp=drive_linkusp=drive_link)
   - type: markdown
     attributes:
-      values: |
+      value: |
         - Todos los procedimientos se encuentran en: [Procedimientos] (https://embention.net/web#action=1236&model=emb.internal.document&view_type=list&menu_id=)
   - type: checkboxes
     attributes:
+      label: Procedimientos
       options:
         - label: P.058-pauta-de-bienvenida [URL](https://documentation.embention.net/058/es/latest/index.html)
