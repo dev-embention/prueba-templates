@@ -22,7 +22,7 @@ body:
         **FORMACIÓN**
 
         Material Multimedia
-   - type: markdown
-     attributes:
+  - type: markdown
+    attributes:
       value: |
         - [ ] Bienvenida [URL](https://drive.google.com/file/d/17rJrvYWgvFT0cBqS6eCbGH8CpS76yyPD/view?usp=drive_link) 
