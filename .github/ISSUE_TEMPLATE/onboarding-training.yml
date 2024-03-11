@@ -5,7 +5,6 @@ labels: ["Analysis","Comment"]
 body:
   - type: markdown
     attributes:
-      label: Description
       value: |
         ¡Hola!
 
@@ -23,9 +22,6 @@ body:
         Material multimedia
 
         - [] Bienvenida [URL](https://drive.google.com/file/d/17rJrvYWgvFT0cBqS6eCbGH8CpS76yyPD/view?usp=drive_link)
-  - type: markdown
-    attributes:
-      label: FORMACIÓN
   - type: checkboxes
     attributes:
       label: Material multimedia
