@@ -5,7 +5,6 @@ labels: ["Analysis","Comment"]
 body:
   - type: markdown
     attributes:
-      label: Description
       value: |
         > ¡Hola!
 
@@ -19,7 +18,8 @@ body:
         > Te propondremos que modifiques algún procedimiento (que corrijas un error que detectes o que propongas una mejora) por lo que te pedimos que prestes especial atención.
   - type: markdown
     attributes:
-      label: FORMACIÓN
+      value: |
+        > FORMACIÓN
   - type: checkboxes
     attributes:
       label: Material multimedia
