@@ -35,7 +35,7 @@ body:
         - Todos los procedimientos se encuentran en: [Procedimientos](https://embention.net/web#action=1236&model=emb.internal.document&view_type=list&menu_id=)
   - type: checkboxes
     attributes:
-      label: --------------------------------------------------------------------------------------------------
+      label: ---------------------------------------------------------------------------------------------------
       options:
         - label: P.058-pauta-de-bienvenida [URL](https://documentation.embention.net/058/es/latest/index.html)
         - label: P.030-comunicacion-interna-y-externa [URL](https://documentation.embention.net/030/es/latest/index.html)
