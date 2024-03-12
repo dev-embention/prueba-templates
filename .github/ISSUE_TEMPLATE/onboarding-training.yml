@@ -30,9 +30,40 @@ body:
   - type: markdown
     attributes:
       value: |
+        Procedimientos
+
         - Todos los procedimientos se encuentran en: [Procedimientos](https://embention.net/web#action=1236&model=emb.internal.document&view_type=list&menu_id=)
   - type: checkboxes
     attributes:
-      label: Procedimientos
+      label: --------------------------------------------------------------------------------------------------
       options:
         - label: P.058-pauta-de-bienvenida [URL](https://documentation.embention.net/058/es/latest/index.html)
+        - label: P.030-comunicacion-interna-y-externa [URL](https://documentation.embention.net/030/es/latest/index.html)
+        - label: P.050-reuniones [URL](https://documentation.embention.net/050/es/latest/index.html)
+        - label: P.190-dia-de-concentracion-teletrabajo-opcional [URL](https://documentation.embention.net/190/es/latest/index.html)
+        - label: P.195-ausencias-odoo [URL](https://documentation.embention.net/195/es/latest/index.html)
+        - label: P.257-apertura-automatica-de-puertas [URL](https://documentation.embention.net/257/es/latest/index.html)
+        - label: P.389-semana-intensiva-opcional [URL](https://documentation.embention.net/389/es/latest/index.html)
+        - label: P.398-preguntas-frecuentes-rrhh [URL](https://documentation.embention.net/398/es/latest/index.html)
+        - label: P.062-crear-issue [URL](https://documentation.embention.net/062/es/latest/index.html)
+        - label: P.072-carga-de-horas-timesheets [URL](https://documentation.embention.net/072/es/latest/index.html)
+        - label: P.541-solicitud-de-servicios-it [URL](https://documentation.embention.net/541/es/latest/index.html)
+  - type: markdown
+    attributes:
+      value: |
+        Políticas
+
+        - Todos las políticas se encuentran en: [Políticas](https://embention.net/web#action=1236&model=emb.internal.document&view_type=list&menu_id=)
+  - type: checkboxes
+    attributes:
+      label: --------------------------------------------------------------------------------------------------
+      options:
+        - label: Política de Calidad [URL](https://documentation.embention.net/010/en/latest/index.html)
+        - label: PA.196-directrices-de-seguridad-de-la-informacion [URL](https://documentation.embention.net/196/en/latest/index.html)
+        - label: PA.285-physical-access-control-policy [URL](https://documentation.embention.net/285/en/latest/index.html)
+        - label: PA.287-politica-de-control-de-acceso [URL](https://documentation.embention.net/287/es/latest/index.html)
+        - label: PA.295-politica-de-contraseñas [URL](https://documentation.embention.net/295/es/latest/index.html)
+        - label: PA.442-politica-de-cultura-justa [URL](https://documentation.embention.net/442/es/latest/index.html)
+        - label: PA.474-politica-seguridad-operacional [URL](https://documentation.embention.net/474/es/latest/index.html)
+        - label: PA.544-politica-de-secreto-empresarial [URL](https://documentation.embention.net/544/es/latest/index.html)
+        - label: PA.546-politica-de-uso-de-activos-de-informacion [URL](https://documentation.embention.net/546/es/latest/index.html)
