@@ -8,7 +8,7 @@ on:
   issue_comment:
     types: created
   schedule:
-    - cron: '20 15 * * *'
+    - cron: '40 15 * * *'
 
 # map fields with customized labels
 env:
@@ -43,76 +43,14 @@ jobs:
   issue_done:
     name: issue_done
     runs-on: ubuntu-latest
+    if: github.event.issue.labels.name == "Client"
     steps:
-      - uses: octokit/graphql-action@v2.2.25
-        id: get_status
+      - uses: actions/stale@v9
         with:
-          query: |
-            query {
-              search(query: "repo:${{ github.repository }} is:issue in:title ${{ env.ISSUE_TITLE }}", type: ISSUE, first: 1) {
-                nodes {
-                  ... on Issue {
-                    id
-                  }
-                }
-              }
-            }
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
-      - run: "echo 'latest release: ${{ toJson(steps.get_status.outputs.data) }}'"
-      - name: Extract Issue ID
-        run: |
-          ISSUE_ID=$(echo "${{ steps.get_status.outputs.data }}" | jq -r '.search.nodes[0].id')
-          echo "Issue ID: $ISSUE_ID"
-      - name: Get Issue Status in Project
-        uses: octokit/graphql-action@v2.x
-        id: get_issue_status
-        with:
-          query: |
-            query {
-              node(id: "${{ steps.get_status.outputs.data }}") {
-                ... on Issue {
-                  projectCards {
-                    nodes {
-                      project {
-                        id
-                      }
-                    }
-                  }
-                }
-              }
-            }
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
-      - name: Get Project Column
-        uses: octokit/graphql-action@v2.x
-        id: get_project_column
-        with:
-          query: |
-            query {
-              node(id: "${{ steps.get_issue_status.outputs.data.node.projectCards.nodes[0].project.id }}") {
-                ... on Project {
-                  columns(first: 10) {
-                    nodes {
-                      name
-                      cards(first: 100) {
-                        nodes {
-                          content {
-                            ... on Issue {
-                              id
-                              state
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
-      - run: "echo 'latest release: ${{ steps.get_status.outputs.data }}'"
+          stale-issue-message: 'This issue is stale because it has been open 15 days with no activity. Comment or this will be closed in 7 days.'
+          close-issue-message: 'This issue was closed because it has been stalled for 7 days with no activity.'
+          days-before-stale: 14
+          days-before-close: 7
       - name: Moved issue to ${{ env.done }}
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
         with:
