@@ -59,7 +59,7 @@ jobs:
             }
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
-      - run: "echo 'latest release: ${{ steps.get_status.outputs.data }}'"
+      - run: "echo 'latest release: ${{ toJson(steps.get_status.outputs.data.search.nodes[0].id) }}'"
       - name: Get Issue Status in Project
         uses: octokit/graphql-action@v2.x
         id: get_issue_status
