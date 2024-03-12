@@ -51,60 +51,63 @@ jobs:
             query {
               search(query: "repo:${{ env.REPO_TITLE }} is:issue in:title ${{ github.event.issue.title }}", type: ISSUE, first: 20) {
                 edges {
-                  node {
-                    ... on Issue {
-                      id
-                      title
-                      url
-                      state
-                      assignees(first: 10) {
-                        nodes {
-                          login
+                  nodes {
+                    id
+                    content {
+                      ... on Issue {
+                        id
+                        title
+                        url
+                        state
+                        assignees(first: 10) {
+                          nodes {
+                            login
+                          }
                         }
                       }
-                      fieldValues(first: 20) {
-                        nodes {
-                          ... on ProjectV2ItemFieldSingleSelectValue {
-                            field {
-                              ... on ProjectV2SingleSelectField {
-                                name
-                              }
+                    }
+                    fieldValues(first: 20) {
+                      nodes {
+                        ... on ProjectV2ItemFieldSingleSelectValue {
+                          field {
+                            ... on ProjectV2SingleSelectField {
+                              name
                             }
-                            name
+                          }
+                          name
+                          id
+                        }
+                        ... on ProjectV2ItemFieldLabelValue {
+                          labels(first: 20) {
+                            nodes {
+                              id
+                              name
+                            }
+                          }
+                        }
+                        ... on ProjectV2ItemFieldTextValue {
+                           text
+                          id
+                          updatedAt
+                          creator {
+                            url
+                          }
+                        }
+                        ... on ProjectV2ItemFieldMilestoneValue {
+                          milestone {
                             id
                           }
-                          ... on ProjectV2ItemFieldLabelValue {
-                            labels(first: 20) {
-                              nodes {
-                                id
-                                name
-                              }
-                            }
-                          }
-                          ... on ProjectV2ItemFieldTextValue {
-                             text
+                        }
+                        ... on ProjectV2ItemFieldRepositoryValue {
+                          repository {
                             id
-                            updatedAt
-                            creator {
-                              url
-                            }
-                          }
-                          ... on ProjectV2ItemFieldMilestoneValue {
-                            milestone {
-                              id
-                            }
-                          }
-                          ... on ProjectV2ItemFieldRepositoryValue {
-                            repository {
-                              id
-                              url
-                            }
+                            url
                           }
                         }
                       }
                     }
                   }
-                }
+                }                }
               }
             }
         env:
