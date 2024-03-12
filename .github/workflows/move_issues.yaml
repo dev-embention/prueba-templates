@@ -63,42 +63,40 @@ jobs:
                         }
                       }
                       fieldValues(first: 20) {
-                          nodes {
-                            ... on ProjectV2ItemFieldSingleSelectValue {
-                              field {
-                                ... on ProjectV2SingleSelectField {
-                                  name
-                                }
+                        nodes {
+                          ... on ProjectV2ItemFieldSingleSelectValue {
+                            field {
+                              ... on ProjectV2SingleSelectField {
+                                name
                               }
-                              name
+                            }
+                            name
                               id
                             }
-                            ... on ProjectV2ItemFieldLabelValue {
-                              labels(first: 20) {
-                                nodes {
-                                  id
-                                  name
-                                }
+                          ... on ProjectV2ItemFieldLabelValue {
+                            labels(first: 20) {
+                              nodes {
+                                id
+                                name
                               }
                             }
-                            ... on ProjectV2ItemFieldTextValue {
-                              text
+                          }
+                          ... on ProjectV2ItemFieldTextValue {
+                            text
+                            id
+                            updatedAt
+                            creator {
+                              url
+                            }
+                          ... on ProjectV2ItemFieldMilestoneValue {
+                            milestone {
                               id
-                              updatedAt
-                              creator {
-                                url
-                              }
                             }
-                            ... on ProjectV2ItemFieldMilestoneValue {
-                              milestone {
-                                id
-                              }
-                            }
-                            ... on ProjectV2ItemFieldRepositoryValue {
-                              repository {
-                                id
-                                url
-                              }
+                          }
+                          ... on ProjectV2ItemFieldRepositoryValue {
+                            repository {
+                              id
+                              url
                             }
                           }
                         }
