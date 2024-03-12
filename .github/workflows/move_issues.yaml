@@ -49,7 +49,7 @@ jobs:
         with:
           query: |
             query {
-              search(query: "repo:dev-embention/${{ env.REPO_TITLE }} is:issue in:title ${{ github.event.issue.title }}", type: ISSUE, first: 20) {
+              search(query: "repo:${{ env.REPO_TITLE }} is:issue in:title ${{ github.event.issue.title }}", type: ISSUE, first: 20) {
                 edges {
                   node {
                     ... on Issue {
