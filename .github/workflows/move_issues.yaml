@@ -68,7 +68,7 @@ jobs:
         with:
           query: |
             query {
-              node(id: "${{ steps.search_issue.outputs.data.search.nodes[0].id }}") {
+              node(id: "${{ steps.get_status.outputs.data.search.nodes[0].id }}") {
                 ... on Issue {
                   projectCards {
                     nodes {
