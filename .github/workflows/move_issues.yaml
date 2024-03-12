@@ -49,60 +49,24 @@ jobs:
         with:
           query: |
             query {
-              search(query: "repo:${{ env.REPO_TITLE }} is:issue in:title ${{ github.event.issue.title }}", type: ISSUE, first: 20) {
+              organization(login: "dev-embention") {
+                projectV2(number:${{ env.project }}) {
+                  ... on ProjectV2 {
+                    status
+                  }
+                }
+              }
+              search(query: "repo:dev-embention/prueba-templates is:issue in:title [Solicitud de compra] Probando status", type: ISSUE, first: 20) {
                 edges {
                   node {
-                    id
-                    content {
-                      ... on Issue {
-                        id
-                        title
-                        url
-                        state
-                        assignees(first: 10) {
-                          nodes {
-                            login
-                          }
-                        }
-                      }
-                    }
-                    fieldValues(first: 20) {
-                      nodes {
-                        ... on ProjectV2ItemFieldSingleSelectValue {
-                          field {
-                            ... on ProjectV2SingleSelectField {
-                              name
-                            }
-                          }
-                          name
-                          id
-                        }
-                        ... on ProjectV2ItemFieldLabelValue {
-                          labels(first: 20) {
-                            nodes {
-                              id
-                              name
-                            }
-                          }
-                        }
-                        ... on ProjectV2ItemFieldTextValue {
-                           text
-                          id
-                          updatedAt
-                          creator {
-                            url
-                          }
-                        }
-                        ... on ProjectV2ItemFieldMilestoneValue {
-                          milestone {
-                            id
-                          }
-                        }
-                        ... on ProjectV2ItemFieldRepositoryValue {
-                          repository {
-                            id
-                            url
-                          }
+                    ... on Issue {
+                      id
+                      title
+                      url
+                      state
+                      assignees(first: 10) {
+                        nodes {
+                          login
                         }
                       }
                     }
