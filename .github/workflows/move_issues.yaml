@@ -71,8 +71,8 @@ jobs:
                               }
                             }
                             name
-                              id
-                            }
+                            id
+                          }
                           ... on ProjectV2ItemFieldLabelValue {
                             labels(first: 20) {
                               nodes {
@@ -82,12 +82,13 @@ jobs:
                             }
                           }
                           ... on ProjectV2ItemFieldTextValue {
-                            text
+                             text
                             id
                             updatedAt
                             creator {
                               url
                             }
+                          }
                           ... on ProjectV2ItemFieldMilestoneValue {
                             milestone {
                               id
