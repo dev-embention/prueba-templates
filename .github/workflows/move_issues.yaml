@@ -46,7 +46,7 @@ jobs:
         id: get_status
         with:
           query: |
-            query: ($issueTitle: String!) {
+            query ($issueTitle: String!) {
               organization(login: "dev-embention") {
                  projectV2(number:${{ env.project }}) {
                   ... on ProjectV2 {
