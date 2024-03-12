@@ -8,7 +8,7 @@ on:
   issue_comment:
     types: created
   schedule:
-    - cron: '40 15 * * *'
+    - cron: '45 14 * * *'
 
 # map fields with customized labels
 env:
