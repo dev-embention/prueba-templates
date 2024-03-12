@@ -59,7 +59,7 @@ jobs:
                             url
                             state {
                               ... on IssueState {
-                                open
+                                opened
                               }
                             }
                             assignees(first: 10) {
