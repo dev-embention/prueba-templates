@@ -167,15 +167,11 @@ jobs:
           resource_node_id: ${{ github.event.issue.node_id }}
           status_value: ${{ env.not_ans }} # Target status
       - name: Delete label from issue
-        uses: actions/github-script@v4
-        with:
-          github-token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
-          script: |
-            const issue_number = context.issue.number;
-            const octokit = github.getOctokit('${{ secrets.GH_TOKEN_MOVE_ISSUES }}');
-            octokit.issues.removeLabel({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: issue_number,
-              name: 'Client' // Specify the label you want to delete here
-            });
+        if: steps.checkUser.outputs.user-permission == 'read'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          issue_number="${{ github.event.issue.number }}"
+          label_to_delete="Client" # Specify the label you want to delete here
+          curl -X DELETE -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/${issue_number}/labels/${label_to_delete}"
