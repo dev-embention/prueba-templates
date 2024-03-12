@@ -56,9 +56,8 @@ jobs:
                         id
                         content {
                           ... on Issue {
-                            title: |
-                              "${{ github.event.issue.title }}"
-                            url
+                            title
+                            url: "{{ github.event.issue.html_issue }}"
                             state
                             assignees(first: 10) {
                               nodes {
