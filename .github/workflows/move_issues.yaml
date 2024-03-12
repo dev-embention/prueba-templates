@@ -117,7 +117,7 @@ jobs:
       - run: "echo 'latest release: ${{ steps.get_status.outputs.data }}'"
       - name: Filter issues by title
         run: |
-          issues=$(echo "${{ steps.get_status.outputs.data }}")
+          issues=$(echo "${{ steps.get_status.outputs.data }}" | jq '.data.organization.projectV2.items.nodes[]')
           echo "::set-env name=FILTERED_ISSUES::$issues"
       - name: Use filtered issues
         run: |
