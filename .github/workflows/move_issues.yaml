@@ -46,7 +46,7 @@ jobs:
         id: get_status
         with:
           query: |
-            query ($issueTitle: String!) {
+            query ($variables: String!) {
               organization(login: "dev-embention") {
                  projectV2(number:${{ env.project }}) {
                   ... on ProjectV2 {
@@ -111,8 +111,7 @@ jobs:
                 }
               }
             }
-          variables:
-            issueTitle: ${{ github.event.issue.title }}
+          variables: ${{ github.event.issue.title }}
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
       - run: "echo 'latest release: ${{ steps.get_status.outputs.data }}'"
