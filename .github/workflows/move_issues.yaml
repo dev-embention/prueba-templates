@@ -59,14 +59,14 @@ jobs:
             }
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
-      - run: "echo 'latest release: ${{ steps.get_status.outputs.data.search }}'"
+      - run: "echo 'latest release: ${{ steps.get_status.outputs.data }}'"
       - name: Get Issue Status in Project
         uses: octokit/graphql-action@v2.x
         id: get_issue_status
         with:
           query: |
             query {
-              node(id: "${{ steps.get_status.outputs.data.search.nodes[0].id }}") {
+              node(id: "${{ steps.get_status.outputs.data }}") {
                 ... on Issue {
                   projectCards {
                     nodes {
