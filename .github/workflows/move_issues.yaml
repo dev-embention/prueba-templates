@@ -19,7 +19,7 @@ env:
   not_ans: Not Answered
   organization: dev-embention
   project: 2
-  REPO_TITLE: ${{ github.event.repository }}
+  REPO_TITLE: ${{ github.repository }}
   ISSUE_TITLE: ${{ github.event.issue.title }}
   
 jobs:
