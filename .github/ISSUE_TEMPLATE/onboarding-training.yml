@@ -60,7 +60,7 @@ body:
     attributes:
       label: -------------------------------------
       options:
-        - label: Política de Calidad [URL](https://documentation.embention.net/010/en/latest/index.html)
+        - label: PA.010-politica-de-calidad [URL](https://documentation.embention.net/010/en/latest/index.html)
         - label: PA.196-directrices-de-seguridad-de-la-informacion [URL](https://documentation.embention.net/196/en/latest/index.html)
         - label: PA.285-physical-access-control-policy [URL](https://documentation.embention.net/285/en/latest/index.html)
         - label: PA.287-politica-de-control-de-acceso [URL](https://documentation.embention.net/287/es/latest/index.html)
@@ -82,11 +82,11 @@ body:
       value: |
         ¡Es hora de ponerte en marcha!
 
-        Te proponemos que localices algo a modificar en alguno de los procedimientos que has revisado.
+        Te proponemos que contribuyas a mejorar los procesos.
+        
+        Por ejemplo: que localices algo mejorar sobre el contenido de los procedimientos (algún error, falta o exceso de información, indicación confusa o contradictoria) o que hagas llegar una propuesta de mejora sobre algún proceso (algo que creas que se podría hacer mejor: simplificar el proceso, añadir algún paso que podría hacerlo más eficiente...)
 
-        Por ejemplo: algún error, falta o exceso de información, indicación confusa o contradictoria o simplemente, que hagas llegar una propuesta de mejora sobre el contenido de algún procedimiento (algo que creas que se podría hacer mejor: simplificar el proceso, añadir algún paso que podría hacerlo más eficiente...)
-
-        - [ ] Llevar a cabo modificación propuesta (realizarla, solicitar aprobación e implementarla)
+        - [ ] Llevar a cabo la acción propuesta (exponerla, solicitar aprobación e implementarla)
 
         No olvides cerrar la issue cuando acabes ni de consultarnos todas tus dudas ;)
 
