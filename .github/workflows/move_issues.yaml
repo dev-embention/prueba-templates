@@ -143,19 +143,15 @@ jobs:
           resource_node_id: ${{ github.event.issue.node_id }}
           status_value: ${{ env.ans }} # Target status
       - name: Add label to issue
-        uses: actions/github-script@v4
         if: steps.checkUser.outputs.user-permission == 'write' || steps.checkUser.outputs.user-permission == 'admin'
-        with:
-          github-token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
-          script: |
-            const issue_number = context.issue.number;
-            const octokit = github.getOctokit('${{ secrets.GH_TOKEN_MOVE_ISSUES }}');
-            octokit.issues.addLabels({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: issue_number,
-              labels: ['Client'] // Add labels you want here
-            });
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          issue_number="${{ github.event.issue.number }}"
+          curl -X POST -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/${issue_number}/labels" \
+            -d '["Client"]' # Add labels you want here
       - name: Moved issue to ${{ env.not_ans }}
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
         if: steps.checkUser.outputs.user-permission == 'read'
