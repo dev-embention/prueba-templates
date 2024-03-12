@@ -111,7 +111,7 @@ jobs:
                 }
               }
             }
-          issueTitle: "${{ github.event.issue.title }}"
+          issueTitle: ${{ replace(github.event.issue.title, '\'', '\\\'') }}
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
       - run: "echo 'latest release: ${{ steps.get_status.outputs.data }}'"
