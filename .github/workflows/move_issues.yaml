@@ -57,7 +57,8 @@ jobs:
                 }
               }
             }
-
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
       - name: Get Issue Status in Project
         uses: octokit/graphql-action@v2.x
         id: get_issue_status
@@ -76,7 +77,8 @@ jobs:
                 }
               }
             }
-
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
       - name: Get Project Column
         uses: octokit/graphql-action@v2.x
         id: get_project_column
