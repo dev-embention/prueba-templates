@@ -56,7 +56,7 @@ jobs:
                   }
                 }
               }
-              search(query: "repo:dev-embention/prueba-templates is:issue in:title [Solicitud de compra] Probando status", type: ISSUE, first: 20) {
+              search(query: "repo:${{ github.repository }} is:issue in:title ${{ github.event.issue.title }}", type: ISSUE, first: 20) {
                 edges {
                   node {
                     ... on Issue {
