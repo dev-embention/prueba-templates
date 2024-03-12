@@ -74,7 +74,7 @@ body:
     attributes:
       label: Específicas del puesto
       value: |
-        - [] Listado a rellenar por parte de tu team leader. Menciónalo aquí ________ para que le llegue la notificación.
+        - [ ] Listado a rellenar por parte de tu team leader. Menciónalo aquí ________ para que le llegue la notificación.
   - type: textarea
     id: activity
     attributes:
@@ -86,7 +86,7 @@ body:
 
         Por ejemplo: algún error, falta o exceso de información, indicación confusa o contradictoria o simplemente, que hagas llegar una propuesta de mejora sobre el contenido de algún procedimiento (algo que creas que se podría hacer mejor: simplificar el proceso, añadir algún paso que podría hacerlo más eficiente...)
 
-        - [] Llevar a cabo modificación propuesta (realizarla, solicitar aprobación e implementarla)
+        - [ ] Llevar a cabo modificación propuesta (realizarla, solicitar aprobación e implementarla)
 
         No olvides cerrar la issue cuando acabes ni de consultarnos todas tus dudas ;)
 
