@@ -3,21 +3,6 @@ description: Plantilla para crear la issue inicial en el onboarding a la empresa
 title: "[Onboarding Training] "
 labels: ["Analysis","Comment"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ¡Hola!
-
-        Enhorabuena por crear tu primera issue con nosotros.
-
-        Más abajo encontrarás también tus primeras tareas, haz check cuando hayas finalizado cada una de ellas.
-
-        Queremos acercarte la formación inicial que te ayudará a desenvolverte en nuestro equipo y también queremos proponerte una actividad para entrar en contacto con las herramientas que emplearás en tu día a día.
-
-        > [!IMPORTANT]
-        > Te propondremos que modifiques algún procedimiento (que corrijas un error que detectes o que propongas una mejora) por lo que te pedimos que prestes especial atención.
-
-        **FORMACIÓN**
   - type: textarea
     id: description
     attributes:
@@ -84,3 +69,25 @@ body:
         - label: PA.474-politica-seguridad-operacional [URL](https://documentation.embention.net/474/es/latest/index.html)
         - label: PA.544-politica-de-secreto-empresarial [URL](https://documentation.embention.net/544/es/latest/index.html)
         - label: PA.546-politica-de-uso-de-activos-de-informacion [URL](https://documentation.embention.net/546/es/latest/index.html)
+  - type: textarea
+    id: departmentProcedures
+    attributes:
+      label: Específicas del puesto
+      value: |
+        - [] Listado a rellenar por parte de tu team leader. Menciónalo aquí ________ para que le llegue la notificación.
+  - type: textarea
+    id: activity
+    attributes:
+      label: ACTIVIDAD
+      value: |
+        ¡Es hora de ponerte en marcha!
+
+        Te proponemos que localices algo a modificar en alguno de los procedimientos que has revisado.
+
+        Por ejemplo: algún error, falta o exceso de información, indicación confusa o contradictoria o simplemente, que hagas llegar una propuesta de mejora sobre el contenido de algún procedimiento (algo que creas que se podría hacer mejor: simplificar el proceso, añadir algún paso que podría hacerlo más eficiente...)
+
+        - [] Llevar a cabo modificación propuesta (realizarla, solicitar aprobación e implementarla)
+
+        No olvides cerrar la issue cuando acabes ni de consultarnos todas tus dudas ;)
+
+        ¡Bienvenido/a!
