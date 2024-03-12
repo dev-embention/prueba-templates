@@ -112,7 +112,8 @@ jobs:
                 }
               }
             }
-          issueTitle: ${{ env.ISSUE_TITLE }}
+          issueTitle: > 
+            ${{ env.ISSUE_TITLE }}
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
       - run: "echo 'latest release: ${{ steps.get_status.outputs.data }}'"
