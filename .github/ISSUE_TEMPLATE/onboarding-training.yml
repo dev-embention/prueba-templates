@@ -34,7 +34,7 @@ body:
         > [!IMPORTANT]
         > Te propondremos que modifiques algún procedimiento (que corrijas un error que detectes o que propongas una mejora) por lo que te pedimos que prestes especial atención.
 
-        **FORMACIÓN**
+        # FORMACIÓN
   - type: checkboxes
     attributes:
       label: Material multimedia
@@ -44,15 +44,15 @@ body:
         - label: Sensibilización en ISO 9001 [URL](https://drive.google.com/file/d/1GM4ynrD6R87hqdgRBWcpEEsSAurp6CDS/view?usp=drive_link)
         - label: Secreto empresarial [URL](https://drive.google.com/file/d/1bhyjMC4GKeAp6zm1PI_J9Q2yqmk7FoJa/view?usp=drive_link)
         - label: Github y Smartgit [URL](https://drive.google.com/file/d/121jy3fmvEM1cHfEu7R7Qkr7XXPsZk53g/view?usp=drive_linkusp=drive_link)
-  - type: markdown
+  - type: textarea
+    id: procedures
     attributes:
+      label: Procedimientos
       value: |
-        Procedimientos
-
         - Todos los procedimientos se encuentran en: [Procedimientos](https://embention.net/web#action=1236&model=emb.internal.document&view_type=list&menu_id=)
   - type: checkboxes
     attributes:
-      label: ---------------------------------------------------------------------------------------------------
+      label: -----------------------------------
       options:
         - label: P.058-pauta-de-bienvenida [URL](https://documentation.embention.net/058/es/latest/index.html)
         - label: P.030-comunicacion-interna-y-externa [URL](https://documentation.embention.net/030/es/latest/index.html)
@@ -65,15 +65,15 @@ body:
         - label: P.062-crear-issue [URL](https://documentation.embention.net/062/es/latest/index.html)
         - label: P.072-carga-de-horas-timesheets [URL](https://documentation.embention.net/072/es/latest/index.html)
         - label: P.541-solicitud-de-servicios-it [URL](https://documentation.embention.net/541/es/latest/index.html)
-  - type: markdown
+  - type: textarea
+    id: policies
     attributes:
+      label: Políticas
       value: |
-        Políticas
-
         - Todos las políticas se encuentran en: [Políticas](https://embention.net/web#action=1236&model=emb.internal.document&view_type=list&menu_id=)
   - type: checkboxes
     attributes:
-      label: --------------------------------------------------------------------------------------------------
+      label: -------------------------------------
       options:
         - label: Política de Calidad [URL](https://documentation.embention.net/010/en/latest/index.html)
         - label: PA.196-directrices-de-seguridad-de-la-informacion [URL](https://documentation.embention.net/196/en/latest/index.html)
