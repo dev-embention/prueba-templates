@@ -142,6 +142,20 @@ jobs:
           project_id: ${{ env.project }}
           resource_node_id: ${{ github.event.issue.node_id }}
           status_value: ${{ env.ans }} # Target status
+      - name: Add label to issue
+        uses: actions/github-script@v4
+        if: steps.checkUser.outputs.user-permission == 'write' || steps.checkUser.outputs.user-permission == 'admin'
+        with:
+          github-token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
+          script: |
+            const issue_number = context.issue.number;
+            const octokit = github.getOctokit('${{ secrets.GH_TOKEN_MOVE_ISSUES }}');
+            octokit.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue_number,
+              labels: ['Client'] // Add labels you want here
+            });
       - name: Moved issue to ${{ env.not_ans }}
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
         if: steps.checkUser.outputs.user-permission == 'read'
@@ -152,3 +166,16 @@ jobs:
           project_id: ${{ env.project }}
           resource_node_id: ${{ github.event.issue.node_id }}
           status_value: ${{ env.not_ans }} # Target status
+      - name: Delete label from issue
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
+          script: |
+            const issue_number = context.issue.number;
+            const octokit = github.getOctokit('${{ secrets.GH_TOKEN_MOVE_ISSUES }}');
+            octokit.issues.removeLabel({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue_number,
+              name: 'Client' // Specify the label you want to delete here
+            });
