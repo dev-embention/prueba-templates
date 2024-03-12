@@ -47,7 +47,7 @@ jobs:
         id: get_status
         with:
           query: |
-            query ($issueTitle: String!) {
+            query {
               organization(login: "dev-embention") {
                  projectV2(number:${{ env.project }}) {
                   ... on ProjectV2 {
@@ -56,7 +56,7 @@ jobs:
                         id
                         content {
                           ... on Issue {
-                            title
+                            title: "${{ github.event.issue.title }}"
                             url
                             state
                             assignees(first: 10) {
@@ -112,8 +112,6 @@ jobs:
                 }
               }
             }
-          issueTitle: > 
-            ${{ env.ISSUE_TITLE }}
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
       - run: "echo 'latest release: ${{ steps.get_status.outputs.data }}'"
