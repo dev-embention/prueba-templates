@@ -20,6 +20,7 @@ env:
   organization: dev-embention
   project: 2
   ISSUE_TITLE: ${{ github.event.issue.title }}
+  repository: ${{ github.event.repository }}
 
 jobs:
   issue_opened_or_reopened:
@@ -48,7 +49,7 @@ jobs:
         with:
           query: |
             query {
-              search(query: "repo:dev-embention/${{ github.event.repository }} is:issue in:title ${{ github.event.issue.title }}", type: ISSUE, first: 20) {
+              search(query: "repo:dev-embention/${{ env.repository }} is:issue in:title ${{ github.event.issue.title }}", type: ISSUE, first: 20) {
                 edges {
                   node {
                     ... on Issue {
