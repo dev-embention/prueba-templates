@@ -50,7 +50,7 @@ jobs:
           days-before-stale: 1
       - name: Moved issue to ${{ env.done }}
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
-        if: github.event.issue_comment && contains(github.event.comment.body, 'stale')
+        if: contains(github.event.comment.body, 'stale')
         with:
           gh_token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
           # user: sample-user
