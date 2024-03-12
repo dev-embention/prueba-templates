@@ -48,63 +48,17 @@ jobs:
         with:
           query: |
             query {
-              organization(login: "dev-embention") {
-                 projectV2(number:${{ env.project }}) {
-                  ... on ProjectV2 {
-                    items(last: 20) {
-                      nodes {
-                        id
-                        content {
-                          ... on Issue {
-                            title
-                            url
-                            state
-                            assignees(first: 10) {
-                              nodes {
-                                login
-                              }
-                            }
-                          }
-                        }
-                        fieldValues(first: 20) {
-                          nodes {
-                            ... on ProjectV2ItemFieldSingleSelectValue {
-                              field {
-                                ... on ProjectV2SingleSelectField {
-                                  name
-                                }
-                              }
-                              name
-                              id
-                            }
-                            ... on ProjectV2ItemFieldLabelValue {
-                              labels(first: 20) {
-                                nodes {
-                                  id
-                                  name
-                                }
-                              }
-                            }
-                            ... on ProjectV2ItemFieldTextValue {
-                              text
-                              id
-                              updatedAt
-                              creator {
-                                url
-                              }
-                            }
-                            ... on ProjectV2ItemFieldMilestoneValue {
-                              milestone {
-                                id
-                              }
-                            }
-                            ... on ProjectV2ItemFieldRepositoryValue {
-                              repository {
-                                id
-                                url
-                              }
-                            }
-                          }
+              search(query: "repo:dev-embention/${{ github.event.repository }} is:issue in:title ${{ github.event.issue.title }}", type: ISSUE, first: 20) {
+                edges {
+                  node {
+                    ... on Issue {
+                      id
+                      title
+                      url
+                      state
+                      assignees(first: 10) {
+                        nodes {
+                          login
                         }
                       }
                     }
@@ -112,7 +66,6 @@ jobs:
                 }
               }
             }
-          filters: issue_title="${{ env.ISSUE_TITLE }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
       - run: "echo 'latest release: ${{ steps.get_status.outputs.data }}'"
