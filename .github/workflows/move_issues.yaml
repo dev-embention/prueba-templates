@@ -49,7 +49,7 @@ jobs:
         with:
           query: |
             query {
-              search(query: "repo:${{ github.repository }} is:issue in:title \"${{ github.event.issue.title }}\"", type: ISSUE, first: 1) {
+              search(query: "repo:${{ github.repository }} is:issue in:title \"${{ github.event.issue.title }}", type: ISSUE, first: 1) {
                 nodes {
                   ... on Issue {
                     id
