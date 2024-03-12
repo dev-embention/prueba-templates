@@ -62,6 +62,47 @@ jobs:
                           login
                         }
                       }
+                      fieldValues(first: 20) {
+                          nodes {
+                            ... on ProjectV2ItemFieldSingleSelectValue {
+                              field {
+                                ... on ProjectV2SingleSelectField {
+                                  name
+                                }
+                              }
+                              name
+                              id
+                            }
+                            ... on ProjectV2ItemFieldLabelValue {
+                              labels(first: 20) {
+                                nodes {
+                                  id
+                                  name
+                                }
+                              }
+                            }
+                            ... on ProjectV2ItemFieldTextValue {
+                              text
+                              id
+                              updatedAt
+                              creator {
+                                url
+                              }
+                            }
+                            ... on ProjectV2ItemFieldMilestoneValue {
+                              milestone {
+                                id
+                              }
+                            }
+                            ... on ProjectV2ItemFieldRepositoryValue {
+                              repository {
+                                id
+                                url
+                              }
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 }
