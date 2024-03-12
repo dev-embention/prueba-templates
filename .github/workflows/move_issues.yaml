@@ -50,11 +50,9 @@ jobs:
           query: |
             query {
               search(query: "repo:${{ github.repository }} is:issue in:title ${{ env.ISSUE_TITLE }}", type: ISSUE, first: 1) {
-                edges {
-                  node {
-                    ... on Issue {
-                      id
-                    }
+                nodes {
+                  ... on Issue {
+                    id
                   }
                 }
               }
