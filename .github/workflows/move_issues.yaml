@@ -43,7 +43,7 @@ jobs:
   issue_done:
     name: issue_done
     runs-on: ubuntu-latest
-    if: github.event.issue.labels.name == "Client"
+    if: github.event.issue.labels.name == 'Client'
     steps:
       - uses: actions/stale@v9
         with:
