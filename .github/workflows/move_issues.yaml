@@ -8,7 +8,7 @@ on:
   issue_comment:
     types: created
   schedule:
-    - cron: '30 16 * * *'
+    - cron: '30 07 * * *'
 
 # map fields with customized labels
 env:
@@ -40,14 +40,18 @@ jobs:
           project_id: ${{ env.project }}
           resource_node_id: ${{ github.event.issue.node_id }}
           status_value: ${{ env.todo }} # Target status
-  issue_done:
-    name: issue_done
+  issue_stale:
+    name: issue_stale
     runs-on: ubuntu-latest
     steps:
       - uses: actions/stale@v9
         with:
           stale-issue-message: 'This issue is stale because it has been open 15 days with no activity. Comment or this will be closed in 7 days.'
           days-before-stale: 1
+  issue_done:
+    name: issue_done
+    runs-on: ubuntu-latest
+    steps:
       - name: Moved issue to ${{ env.done }}
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
         if: contains(github.event.comment.body, 'stale')
