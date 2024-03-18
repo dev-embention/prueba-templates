@@ -80,14 +80,22 @@ body:
     attributes:
       label: ACTIVIDAD
       value: |
-        ¡Es hora de ponerte en marcha!
+        A realizar por personas que vayan a utilizar herramientas para modificar documentación.
 
-        Te proponemos que contribuyas a mejorar los procesos.
+        - [ ] Check a realizar por parte de tu team leader. Menciónalo aquí ________ para que te indique si esta actividad de entrenamiento en modificar documentación te aplica
+
+        Atención: Si no te aplica pero has localizado algo a mejorar, por favor, házselo llegar a tu team leader :)
+
+        En caso afirmativo:
         
-        Por ejemplo: que localices algo mejorar sobre el contenido de los procedimientos (algún error, falta o exceso de información, indicación confusa o contradictoria) o que hagas llegar una propuesta de mejora sobre algún proceso (algo que creas que se podría hacer mejor: simplificar el proceso, añadir algún paso que podría hacerlo más eficiente...)
-
-        - [ ] Llevar a cabo la acción propuesta (exponerla, solicitar aprobación e implementarla)
-
-        No olvides cerrar la issue cuando acabes ni de consultarnos todas tus dudas ;)
-
+        ¡Es hora de ponerte en marcha!
+        
+        Te proponemos que localices algo a modificar o mejorar en alguno de los procedimientos que has revisado.
+        
+        Por ejemplo: algún error, falta o exceso de información, indicación confusa o contradictoria o simplemente, que hagas llegar una propuesta de mejora sobre el contenido de algún procedimiento (algo que creas que se podría hacer mejor: simplificar el proceso, añadir algún paso que podría hacerlo más eficiente...)
+        
+        - [ ] Llevar a cabo modificación propuesta (realizarla, solicitar aprobación e implementarla).
+        
+        No olvides cerrar la issue cuando acabes ni de consultarnos todas tus dudas :)
+        
         ¡Bienvenido/a!
