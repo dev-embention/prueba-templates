@@ -48,6 +48,16 @@ jobs:
         with:
           stale-issue-message: 'This issue is stale because it has been open 15 days with no activity. Comment or this will be closed in 7 days.'
           days-before-stale: 1
+      - name: Moved issue to ${{ env.done }}
+        uses: leonsteinhaeuser/project-beta-automations@v2.2.1
+        if: github.issue.labels.name == 'Stale'
+        with:
+          gh_token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
+          # user: sample-user
+          organization: ${{ env.organization }}
+          project_id: ${{ env.project }}
+          resource_node_id: ${{ github.event.issue.node_id }}
+          status_value: ${{ env.done }} # Target status
   issue_done:
     name: issue_done
     runs-on: ubuntu-latest
