@@ -1,15 +1,36 @@
 name: Project automations done
 on:
   issues:
-    types: [labeled]
+    types:
+      - opened
+      - reopened
+      - closed
+      - labeled
+  issue_comment:
+    types: created
+env:
+  todo: Todo
+  done: Done
+  in_progress: In Progress
+  ans: Answered
+  not_ans: Not Answered
+  organization: dev-embention
+  project: 2
+  REPO_TITLE: ${{ github.repository }}
+  ISSUE_TITLE: "${{ github.event.issue.title }}"
+
 jobs:
-  Move_Labeled_Issue_On_Project_Board:
+  issue_done:
+    name: issue_done
     runs-on: ubuntu-latest
     steps:
-    - uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
-      with:
-        action-token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
-        project-url: "https://github.com/orgs/dev-embention/projects/2"
-        column-name: "Done"
-        label-name: "Stale"
-        columns-to-ignore: "Answered,Not Answered,Close"
+      - name: Moved issue to ${{ env.done }}
+        uses: leonsteinhaeuser/project-beta-automations@v2.2.1
+        if: github.event.issue.labels.name == 'Stale'
+        with:
+          gh_token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
+          # user: sample-user
+          organization: ${{ env.organization }}
+          project_id: ${{ env.project }}
+          resource_node_id: ${{ github.event.issue.node_id }}
+          status_value: ${{ env.done }} # Target status
