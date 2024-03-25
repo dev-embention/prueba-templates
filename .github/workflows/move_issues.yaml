@@ -45,12 +45,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/stale@v9
+        id: build
         with:
           stale-issue-message: 'This issue is stale because it has been open 15 days with no activity. Comment or this will be closed in 7 days.'
           days-before-stale: 1
+          run: |
+            <build command>
+            echo ::set-output name=exit_code::"True"
       - name: Moved issue to ${{ env.done }}
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
-        if: github.issue.labels.name == 'Stale'
+        if: steps.build.outputs.exit_code == "True"
         with:
           gh_token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
           # user: sample-user
