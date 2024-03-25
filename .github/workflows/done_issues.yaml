@@ -26,7 +26,7 @@ jobs:
     steps:
       - name: Moved issue to ${{ env.done }}
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
-        if: github.event.sender.type == 'User' && github.event.label.name == 'Stale'
+        if: github.event.sender.type == 'Bot' && github.event.label.name == 'Stale'
         with:
           gh_token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
           # user: sample-user
