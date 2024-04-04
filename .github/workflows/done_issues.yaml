@@ -3,7 +3,11 @@ on:
   issues:
     types:
       - opened
+      - reopened
+      - closed
       - labeled
+  issue_comment:
+    types: created
 env:
   todo: Todo
   done: Done
@@ -20,40 +24,9 @@ jobs:
     name: issue_done
     runs-on: ubuntu-latest
     steps:
-      - name: Get issues labeled stale
-        run: |
-          gh api graphql -f query='
-            query($org: String!, $number: Int!) {
-              organization(login: $org){
-                projectV2(number: $number) {
-                  items(last: 20) {
-                    nodes {
-                      id
-                      content {
-                        ... on Issue {
-                          title
-                          url
-                          state
-                          labels(first: 10) {
-                            nodes {
-                              name
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }' -f org=${{ secrets.GH_TOKEN_MOVE_ISSUES }} -F number=${{ env.project }} > project_data.json
-            
-            echo 'PROJECT_ID='$(jq '.data.organization.projectV2.id' project_data.json) >> $GITHUB_ENV
-            echo 'DATE_FIELD_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Date posted") | .id' project_data.json) >> $GITHUB_ENV
-            echo 'STATUS_FIELD_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .id' project_data.json) >> $GITHUB_ENV
-            echo 'TODO_OPTION_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .options[] | select(.name=="Todo") |.id' project_data.json) >> $GITHUB_ENV
       - name: Moved issue to ${{ env.done }}
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
-        if: github.event.sender.type == 'Bot' && github.event.label.name == 'Stale'
+        if: github.event.label.name == 'Stale'
         with:
           gh_token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
           # user: sample-user
