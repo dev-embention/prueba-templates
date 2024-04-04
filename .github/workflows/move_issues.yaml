@@ -93,15 +93,6 @@ jobs:
           project_id: ${{ env.project }}
           resource_node_id: ${{ github.event.issue.node_id }}
           status_value: ${{ env.not_ans }} # Target status
-      - name: Delete label from issue
-        if: steps.checkUser.outputs.user-permission == 'read'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          issue_number="${{ github.event.issue.number }}"
-          label_to_delete="Client" # Specify the label you want to delete here
-          curl -X DELETE -H "Authorization: token $GITHUB_TOKEN" \
-            "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/${issue_number}/labels/${label_to_delete}"
       - name: Moved issue to ${{ env.ans }}
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
         if: steps.checkUser.outputs.user-permission == 'write' || steps.checkUser.outputs.user-permission == 'admin'
@@ -112,13 +103,3 @@ jobs:
           project_id: ${{ env.project }}
           resource_node_id: ${{ github.event.issue.node_id }}
           status_value: ${{ env.ans }} # Target status
-      - name: Add label to issue
-        if: steps.checkUser.outputs.user-permission == 'write' || steps.checkUser.outputs.user-permission == 'admin'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          issue_number="${{ github.event.issue.number }}"
-          curl -X POST -H "Authorization: token $GITHUB_TOKEN" \
-            -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/${issue_number}/labels" \
-            -d '["Client"]' # Add labels you want here
