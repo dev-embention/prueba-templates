@@ -26,7 +26,7 @@ jobs:
   issue_opened_or_reopened:
     name: issue_opened_or_reopened
     runs-on: ubuntu-latest
-    if: github.event_name == 'issues' && (github.event.action == 'opened' || github.event.action == 'reopened')
+    if: github.event_name == 'issues' && (github.event.action == 'opened' || github.event.action == 'reopened') && github.event.label.name == 'Support Ticket'
     steps:
       - name: Move issue to ${{ env.todo }} # New issues
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
@@ -47,8 +47,10 @@ jobs:
       - uses: actions/stale@v9
         id: build
         with:
+          any-of-issue-labels: 'Support Ticket'
           stale-issue-message: 'This issue is stale because it has been open 15 days with no activity. Comment or this will be closed in 7 days.'
           days-before-stale: 1
+          remove-issue-stale-when-updated: true
       - name: Moved issue to ${{ env.done }}
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
         if: github.event.sender.type == 'Bot' && contains(github.event.comment.body, 'stale')
@@ -79,7 +81,7 @@ jobs:
     steps:
       - name: Check member
         id: checkUser
-        if: github.event_name == 'issue_comment'
+        if: github.event_name == 'issue_comment' && github.event.label.name == 'Support Ticket'
         uses: actions-cool/check-user-permission@v2
         with:
           require: 'write'
