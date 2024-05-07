@@ -5,7 +5,7 @@ on:
       - opened
       - reopened
       - closed
-      - types: [labeled]
+      - labeled
   issue_comment:
     types: created
   schedule:
