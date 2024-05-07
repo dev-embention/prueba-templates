@@ -13,7 +13,7 @@ jobs:
 
       - name: Close stale issues
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
         run: |
           DATE=$(date -u -d "5 minutes ago" +%Y-%m-%dT%H:%M:%SZ)
           ISSUES=$(curl -s -X GET -G "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues?state=open&since=${DATE}&per_page=100" -H "Authorization: token $GITHUB_TOKEN" | jq -r '.[] | select(.pull_request == null) | .number')
