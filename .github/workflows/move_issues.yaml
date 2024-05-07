@@ -82,7 +82,7 @@ jobs:
     steps:
       - name: Check member
         id: checkUser
-        if: github.event_name == 'issue_comment' && github.event.label.name == 'Support Ticket'
+        if: github.event_name == 'issue_comment' && github.event.issue.labels.name == 'Support Ticket'
         uses: actions-cool/check-user-permission@v2
         with:
           require: 'write'
