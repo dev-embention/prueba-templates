@@ -1,0 +1,27 @@
+name: Close Stale Issues
+
+on:
+  schedule:
+    - cron: '*/5 * * * *' # Runs every 5 minutes
+
+jobs:
+  close-stale-issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Close stale issues
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATE=$(date -u -d "5 minutes ago" +%Y-%m-%dT%H:%M:%SZ)
+          ISSUES=$(curl -s -X GET -G "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues?state=open&since=${DATE}&per_page=100" -H "Authorization: token $GITHUB_TOKEN" | jq -r '.[] | select(.pull_request == null) | .number')
+          for ISSUE in $ISSUES; do
+            curl -X POST -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/$ISSUE/comments" -d '{"body":"This issue has been closed due to inactivity."}'
+            curl -X PATCH -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/$ISSUE" -d '{"state":"closed"}'
+            # Move the card associated with the issue to a specific column in the project
+            CARD_ID=$(curl -s -X GET "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/${ISSUE}" -H "Authorization: token ${GITHUB_TOKEN}" | jq -r '.id')
+            COLUMN_ID="<COLUMN_ID>" # Replace <COLUMN_ID> with the ID of the column in your project
+            curl -X POST -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.inertia-preview+json" -d '{"column_id": '$COLUMN_ID'}' "https://api.github.com/projects/columns/cards/$CARD_ID/moves"
+          done
