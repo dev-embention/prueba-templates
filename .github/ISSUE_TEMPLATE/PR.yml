@@ -13,6 +13,10 @@ body:
       value: |
         > [!TIP]
         > ### Please provide as much information as possible to better identify where the problem might originate from
+  - type: markdown
+    attributes:
+      value: |
+        ----
   - type: input
     id: Product
     attributes:
