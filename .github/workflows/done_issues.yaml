@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
       with:
-        action-token: "${{ secrets.MY_TOKEN }}"
+        action-token: "${{ secrets.GH_TOKEN_MOVE_ISSUES }}"
         project-url: "https://github.com/orgs/dev-embention/projects/2"
         column-name: "Done"
         label-name: "Stale"
