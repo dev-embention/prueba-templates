@@ -8,19 +8,6 @@ body:
       value: |
         > [!NOTE]
         > ### We're sorry that you have encountered an issue with one of our products.
-  - type: markdown
-    attributes:
-    value: |
-      > [!TIP]
-      > ### Please provide as much information as possible to better identify where the problem might originate from
-  - type: markdown
-    attributes:
-      value: |
-        # Product Description
-  - type: markdown
-    attributes:
-      value: |
-        # Product Description
   - type: input
     id: Product
     attributes:
