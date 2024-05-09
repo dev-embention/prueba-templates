@@ -98,3 +98,9 @@ body:
     attributes:
       label: "Steps to reproduce: "
       description: If known, detail the steps to reproduce the problem. Provide screenshots, Error codes, Link Session files, ...
+  - type: markdown
+    attributes:
+      value: |
+        > [!NOTE]
+        > "### Thank you for taking this time to report it."
+        ![Embention_Logo](./../Embention.png)
