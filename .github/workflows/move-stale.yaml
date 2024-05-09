@@ -2,7 +2,7 @@ name: Move Stale Issues to Done
 
 on:
   schedule:
-    - cron: "45 10 * * *"
+    - cron: "50 10 * * *"
 
 jobs:
   move-stale-issues:
@@ -22,7 +22,7 @@ jobs:
           node-version: "14"
 
       - name: Install dependencies
-        run: npm install @actions/core graphql-request
+        run: npm install @actions/core graphql-request@2.88.2
 
       - name: Move stale issues to Done column
         run: node ./move-stale-issues.js ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
