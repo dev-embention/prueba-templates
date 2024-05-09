@@ -103,4 +103,4 @@ body:
       value: |
         > [!NOTE]
         > ### Thank you for taking this time to report it.
-        ![Embention_Logo](./../Embention.png?raw=true)
+        ![Embention_Logo](./../../.github/Embention.png?raw=true)
