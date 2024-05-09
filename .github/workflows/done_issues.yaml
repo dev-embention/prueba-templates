@@ -13,4 +13,4 @@ jobs:
         project-url: "https://github.com/orgs/dev-embention/projects/2"
         column-name: "Done"
         label-name: "Stale"
-        columns-to-ignore: "New Tickets,Answered,Not Answered"
+        columns-to-ignore: "Todo,Answered,Not Answered"
