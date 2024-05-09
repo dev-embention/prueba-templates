@@ -17,12 +17,6 @@ body:
     attributes:
       value: |
         ----
-  - type: input
-    id: Product
-    attributes:
-      label: "Product: "
-      description: Please write about all products involved.
-      placeholder: 1xVeronte, CEX, PCS, SIL, ...
   - type: markdown
     attributes:
       value: |
