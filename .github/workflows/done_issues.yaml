@@ -1,36 +1,16 @@
 name: Close Stale Issues
 
 on:
-  schedule:
-    - cron: '20 13 * * *' # Runs every 5 minutes
-
+  issues:
+    types: [labeled]
 jobs:
-  close-stale-issues:
+  Move_Labeled_Issue_On_Project_Board:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Close stale issues
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
-          GITHUB_REPOSITORY_OWNER: dev-embention
-          GRAPHQL_URL: https://api.github.com/graphql
-          COLUMN_NAME: Done
-        run: |
-          DATE=$(date -u -d "5 minutes ago" +%Y-%m-%dT%H:%M:%SZ)
-          ISSUES=$(curl -s -X GET -G "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues?state=open&since=${DATE}&per_page=100" -H "Authorization: token $GITHUB_TOKEN" | jq -r '.[] | select(.pull_request == null) | .number')
-          for ISSUE in $ISSUES; do
-            # Close the issue
-            curl -X POST -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/$GITHUB_REPOSITORY/issues/$ISSUE/comments" -d '{"body":"This issue has been closed due to inactivity."}'
-            curl -X PATCH -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/$GITHUB_REPOSITORY/issues/$ISSUE" -d '{"state":"closed"}'
-            # Query for project ID and column ID using GraphQL
-            QUERY='query { repository(owner: "'$GITHUB_REPOSITORY_OWNER'", name: "'$GITHUB_REPOSITORY'") { project(number: 2) { columns(first: 10) { nodes { name id } } } } }'
-            QUERY="${QUERY/<PROJECT_NUMBER>/PUT_PROJECT_NUMBER_HERE}"
-            RESPONSE=$(curl -X POST -H "Authorization: bearer $GITHUB_TOKEN" -H "Content-Type: application/json" -d '{"query": "'"$QUERY"'"}' $GRAPHQL_URL)
-            COLUMN_NAME="Done" # Change to the appropriate column name
-            COLUMN_ID=$(echo "$RESPONSE" | jq -r '.data.repository.project.columns.nodes[] | select(.name == "'$COLUMN_NAME'") | .id')
-            # Move the card associated with the issue to the "Done" column
-            curl -X POST -H "Authorization: token $GITHUB_TOKEN" -H "Content-Type: application/json" -d '{"content_id": "'$ISSUE'", "column_id": "'$COLUMN_ID'"}' "https://api.github.com/projects/columns/cards"
-          done
+    - uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
+      with:
+        action-token: "${{ secrets.MY_TOKEN }}"
+        project-url: "https://github.com/orgs/dev-embention/projects/2"
+        column-name: "Done"
+        label-name: "Stale"
+        columns-to-ignore: "New Tickets,Answered,Not Answered"
