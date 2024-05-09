@@ -1,0 +1,28 @@
+name: Move Stale Issues to Done
+
+on:
+  schedule:
+    - cron: "0 7 * * *"
+
+jobs:
+  move-stale-issues:
+    runs-on: ubuntu-latest
+
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN_MOVE_ISSUES }} # Define the GITHUB_TOKEN environment variable here
+      GITHUB_REPOSITORY: ${{ github.repository }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Move stale issues to Done column
+        run: node move-stale-issues.js
