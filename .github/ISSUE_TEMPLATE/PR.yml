@@ -16,10 +16,6 @@ body:
   - type: markdown
     attributes:
       value: |
-        ----
-  - type: markdown
-    attributes:
-      value: |
         "# Product Description"
   - type: input
     id: Product
@@ -36,10 +32,6 @@ body:
   - type: markdown
     attributes:
       value: |
-        ----
-  - type: markdown
-    attributes:
-      value: |
         "# Firmware Description"
   - type: input
     id: Fw_version
@@ -47,10 +39,6 @@ body:
       label: "Firmware Version: "
       description: Please specify the Firmware Version for all of the products selected above.
       placeholder: 1xVeronte 6.12.68, CEX 6.12.60, ...
-  - type: markdown
-    attributes:
-      value: |
-        ----
   - type: markdown
     attributes:
       value: |
@@ -70,20 +58,12 @@ body:
   - type: markdown
     attributes:
       value: |
-        ----
-  - type: markdown
-    attributes:
-      value: |
         "# Configuration Files"
   - type: textarea
     id: Config_Files
     attributes:
       label: "Configuration files: "
       description: Please attach a .zip file for the related configurations.
-  - type: markdown
-    attributes:
-      value: |
-        ----
   - type: markdown
     attributes:
       value: |
