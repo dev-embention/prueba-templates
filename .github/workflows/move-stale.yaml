@@ -2,7 +2,7 @@ name: Move Stale Issues to Done
 
 on:
   schedule:
-    - cron: "00 09 * * *"
+    - cron: "45 09 * * *"
 
 jobs:
   move-stale-issues:
@@ -25,4 +25,4 @@ jobs:
         run: npm install
 
       - name: Move stale issues to Done column
-        run: node move-stale-issues.js
+        run: node ./move-stale-issues.js
