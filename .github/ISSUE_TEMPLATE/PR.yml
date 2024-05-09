@@ -6,47 +6,43 @@ body:
   - type: markdown
     attributes:
       value: |
-        We're sorry that you have encountered an issue with one of our products.
-        Please fill the following template in as much detail as possible so we can better aid you in solving this.
+        > [!NOTE]
+        > ### We're sorry that you have encountered an issue with one of our products.
+  - type: markdown
+    attributes:
+    value: |
+      > [!TIP]
+      > ### Please provide as much information as possible to better identify where the problem might originate from
   - type: markdown
     attributes:
       value: |
-        # Hardware Description
-  - type: dropdown
-    id: Hardware
+        ----
+  - type: markdown
+    attributes:
+      value: |
+        # Product Description
+  - type: input
+    id: Product
     attributes:
       label: "Product: "
-      description: Select all Products which were involved during the issue.
-      multiple: true
-      options:
-        - 1xVeronte Autopilot
-        - 4xVeronte Autopilot
-        - SIL
-        - BCS
-        - PCS
-        - MCS
-        - Gimbal Camera
-        - Tracking Antenna
-        - BEC
-        - CEX
-        - MEX
-        - Veronte Stick Expander
-        - MC01
-        - MC110
-        - MC24
-        - Other
+      description: Please write about all products involved.
+      placeholder: 1xVeronte, CEX, PCS, SIL, ...
   - type: input
-    id: Serial_Num
+    id: hw_Serial_Num
     attributes:
       label: "Serial Number: "
-      description: Please specify the Serial Number of all of the products selected above.
+      description: Please in the same order specify the Serial Number of all of the products from above.
       placeholder: 1xVeronte SN 4041, CEX SN 1500, ...
+  - type: markdown
+    attributes:
+      value: |
+        ----
   - type: markdown
     attributes:
       value: |
         # Firmware Description
   - type: input
-    id: Fw_num
+    id: Fw_version
     attributes:
       label: "Firmware Version: "
       description: Please specify the Firmware Version for all of the products selected above.
@@ -54,38 +50,27 @@ body:
   - type: markdown
     attributes:
       value: |
-        # Software Description
-  - type: dropdown
-    id: APP
+        ----
+  - type: markdown
     attributes:
-      label: "Apps: "
-      description: What App are you seeing the problem on?
-      multiple: true
-      options:
-        - VeronteLink
-        - VeronteHIL
-        - VeronteOps
-        - VeronteFDR
-        - VeronteUpdater
-        - 1x PDIBuilder
-        - 1x PDICalibration
-        - 1x PDITuning
-        - 4x PDIBuilder
-        - BCS PDIBuilder
-        - Gimbal Studio
-        - CEX PDIBuilder
-        - MEX PDIBuilder
-        - VSE Application
-        - MC01B PDIBuilder
-        - MC01S PDIBuilder
-        - MC110 PDIBuilder
-        - Other
+      value: |
+        # Software Description
+  - type: input
+    id: App_ver
+    attributes:
+      label: "Apps Version: "
+      description: Please specify the Applications involved.
+      placeholder: 1xVerontePDIBuilder, VeronteLink, VeronteOps, ...
   - type: input
     id: Software_version
     attributes:
       label: "App version: "
       description: Please specify the version of all of the Apps selected above.
-      placeholder: VeronteLink 6.12.22, 1xVerontePDIBuilder 6.12.44, ...
+      placeholder: 1xVerontePDIBuilder 6.12.54, VeronteLink 6.12.22, VeronteOps 6.12.34, ...
+  - type: markdown
+    attributes:
+      value: |
+        ----
   - type: markdown
     attributes:
       value: |
@@ -94,7 +79,11 @@ body:
     id: Config_Files
     attributes:
       label: "Configuration files: "
-      description: If apply, Attach a .zip file for the configurations
+      description: Please attach a .zip file for the related configurations.
+  - type: markdown
+    attributes:
+      value: |
+        ----
   - type: markdown
     attributes:
       value: |
@@ -103,15 +92,15 @@ body:
     id: Problem_Description
     attributes:
       label: "Problem Description: "
-      description: Problem/bug description
+      description: Describe in as much detail the problem encountered.
   - type: textarea
     id: Steps_reproduce
     attributes:
       label: "Steps to reproduce: "
-      description: If known, details to reproduce the failure, URLs, screenShoots, Traceback errors, printed errors, ...
+      description: If known, detail the steps to reproduce the problem. Provide screenshots, Error codes, Link Session files, ...
   - type: markdown
     attributes:
       value: |
-        -----
-        Thank you for taking this time to report it.
-        ![Embention_Logo](https://www.embention.com/wp-content/webp-express/webp-images/doc-root/wp-content/themes/embention/images/header-logo-embention.png.webp)
+        > [!NOTE]
+        > ### Thank you for taking this time to report it.
+        ![Embention_Logo](./../Embention.png)
