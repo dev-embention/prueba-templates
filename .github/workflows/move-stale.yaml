@@ -2,7 +2,7 @@ name: Move Stale Issues to Done
 
 on:
   schedule:
-    - cron: "40 10 * * *"
+    - cron: "45 10 * * *"
 
 jobs:
   move-stale-issues:
