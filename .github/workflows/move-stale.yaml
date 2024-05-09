@@ -2,7 +2,7 @@ name: Move Stale Issues to Done
 
 on:
   schedule:
-    - cron: "45 09 * * *"
+    - cron: "00 10 * * *"
 
 jobs:
   move-stale-issues:
@@ -22,7 +22,7 @@ jobs:
           node-version: "14"
 
       - name: Install dependencies
-        run: npm install
+        run: npm install @octokit/rest
 
       - name: Move stale issues to Done column
         run: node ./move-stale-issues.js
