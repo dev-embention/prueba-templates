@@ -1,52 +1,75 @@
-const { Octokit } = require("@octokit/rest");
+const { request } = require('graphql-request');
+const core = require('@actions/core');
 
-const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKEN,
-});
+const endpoint = 'https://api.github.com/graphql';
 
-async function fetchStaleIssuesAndMoveToDone() {
-  try {
-    const repo = process.env.GITHUB_REPOSITORY;
-    // Step 1: Fetch all issues with the "stale" label
-    const response = await octokit.issues.listForRepo({
-      owner: "dev-embention",
-      repo: repo,
-      labels: "stale",
-    });
-
-    const staleIssues = response.data;
-
-    // Step 2: Check if there are stale issues
-    if (staleIssues.length > 0) {
-      // Step 3: Update status in GitHub Projects to "Done"
-      const projectColumns = await octokit.projects.listColumns({
-        project_id: 2, // Replace with the ID of your GitHub Project
-      });
-
-      const doneColumn = projectColumns.data.find(
-        (column) => column.name.toLowerCase() === "done"
-      );
-
-      if (doneColumn) {
-        for (const issue of staleIssues) {
-          await octokit.projects.createCard({
-            column_id: doneColumn.id,
-            content_id: issue.id,
-            content_type: "Issue",
-          });
-
-          console.log(`Moved issue ${issue.number} to "Done" column.`);
+async function main(token) {
+  const query = `
+    query {
+      repository(owner: "dev-embention", name: ${{ process.env.GITHUB_REPOSITORY }}) {
+        projects(search: "Prueba CM", first: 1) {
+          nodes {
+            id
+            columns(first: 10) {
+              nodes {
+                name
+                id
+              }
+            }
+          }
         }
-      } else {
-        console.log("Error: 'Done' column not found.");
+        issues(labels: ["Stale"], first: 100) {
+          nodes {
+            id
+            projectCards(first: 1) {
+              nodes {
+                id
+              }
+            }
+          }
+        }
       }
-    } else {
-      console.log("No stale issues found.");
     }
+  `;
+
+  const mutation = `
+    mutation($cardId: ID!, $columnId: ID!) {
+      moveProjectCard(input: {cardId: $cardId, columnId: $columnId}) {
+        clientMutationId
+      }
+    }
+  `;
+
+  const headers = {
+    Authorization: `Bearer ${token}`
+  };
+
+  try {
+    // Query projects and issues with stale label
+    const data = await request(endpoint, query, null, headers);
+
+    if (data.repository.projects.nodes.length === 0) {
+      throw new Error("Project not found");
+    }
+
+    // Get the ID of the "Done" column
+    const doneColumnId = data.repository.projects.nodes[0].columns.nodes.find(column => column.name === "Done").id;
+
+    // For each issue, move the associated project card to the "Done" column
+    for (const issue of data.repository.issues.nodes) {
+      if (issue.projectCards.nodes.length > 0) {
+        const cardId = issue.projectCards.nodes[0].id;
+        await request(endpoint, mutation, { cardId, columnId: doneColumnId }, headers);
+        console.log(`Moved project card for issue ${issue.id} to "Done" column`);
+      }
+    }
+    core.setOutput('result', 'Success');
   } catch (error) {
-    console.error("Error:", error);
-    throw error;
+    console.error('Error:', error.response ? error.response.errors : error.message);
+    core.setFailed('Action failed');
   }
 }
+
+main(process.env.GITHUB_TOKEN);
 
 fetchStaleIssuesAndMoveToDone();
