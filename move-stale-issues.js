@@ -6,7 +6,7 @@ const endpoint = 'https://api.github.com/graphql';
 async function main(token) {
   const query = `
     query {
-      repository(owner: "dev-embention", name: ${{ process.env.GITHUB_REPOSITORY }}) {
+      repository(owner: "dev-embention", name: process.env.GITHUB_REPOSITORY) {
         projects(search: "Prueba CM", first: 1) {
           nodes {
             id
