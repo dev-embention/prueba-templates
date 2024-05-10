@@ -8,10 +8,10 @@ body:
       value: |
         ### We're sorry that you have encountered an issue with one of our products.
         ### Thank you for taking this time to report it.
-        &#8192;
+        <br/>
         > [!TIP]
         > ### Please provide as much information as possible to better identify where the problem might originate from
-        &#8192;
+        <br/>
         ----
   - type: markdown
     attributes:
@@ -99,5 +99,6 @@ body:
       value: |
         > [!NOTE]
         > ### Thank you for taking this time to report it.
+        <p align="center">
         <img src="https://www.embention.com/files/firma-embention.png" alt="drawing" width="10800"/>
-        ![Embention_logo](https://www.embention.com/files/firma-embention.png){width=100 height=100}
+        </p>
