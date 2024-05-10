@@ -6,12 +6,12 @@ body:
   - type: markdown
     attributes:
       value: |
-        ### We're sorry that you have encountered an issue with one of our products.
-        ### Thank you for taking this time to report it.
+        # Embention Problem report form
+        We're sorry that you have encountered an issue with one of our products.
+        Thank you for taking this time to report it.
         > [!TIP]
         > ### Please provide as much information as possible to better identify where the problem might originate from
         <br/><br/>
-        ----
   - type: markdown
     attributes:
       value: |
