@@ -19,11 +19,11 @@ body:
   - type: markdown
     attributes:
       value: |
-        # Product Description
+        <h1 align="center"><ins>Product Description</ins></h1>
   - type: input
     id: Product
     attributes:
-      label: <h1 align="center"><ins>Product</ins></h1>
+      label: "Product: "
       description: Please write about all products involved.
       placeholder: 1xVeronte, CEX, PCS, SIL, ...
   - type: input
