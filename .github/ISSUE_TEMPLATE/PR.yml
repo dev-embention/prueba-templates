@@ -19,7 +19,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        <h1 align="center"><ins>Product Description</ins></h1>
+        <h1 align="center">Product Description</h1>
   - type: input
     id: Product
     attributes:
@@ -39,7 +39,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        <h1 align="center"><ins>Firmware Description</ins></h1>
+        <h1 align="center">Firmware Description</h1>
   - type: input
     id: Fw_version
     attributes:
@@ -53,7 +53,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        <h1 align="center"><ins>Software Description</ins></h1>
+        <h1 align="center">Software Description</h1>
   - type: input
     id: App_ver
     attributes:
@@ -73,7 +73,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        <h1 align="center"><ins>Configuration Files</ins></h1>
+        <h1 align="center">Configuration Files</h1>
   - type: textarea
     id: Config_Files
     attributes:
@@ -86,7 +86,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        <h1 align="center"><ins>Problem Description</ins></h1>
+        <h1 align="center">Problem Description</h1>
   - type: textarea
     id: Problem_Description
     attributes:
