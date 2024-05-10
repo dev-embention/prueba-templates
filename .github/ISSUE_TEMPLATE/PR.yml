@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         <h1 align="center">Embention Problem Report Form</h1>
-        <h1 align="&#8192;</h1>
+        <h2 align="&#8192;</h2>
         
         ## We sincerely apologize for any inconvenience caused by the encountered issue and extend our gratitude for bringing it to our attention.
         > [!TIP]
