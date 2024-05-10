@@ -6,9 +6,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        <p align="center">
+        <h align="center">
         # Embention Problem report form
-        </p>
+        </h>
         
         ## We sincerely apologize for any inconvenience caused by the encountered issue and extend our gratitude for bringing it to our attention.
         > [!TIP]
