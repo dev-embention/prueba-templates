@@ -36,8 +36,6 @@ body:
     attributes:
       value: |
         <br/><br/>
-        ----
-        <br/><br/>
   - type: markdown
     attributes:
       value: |
@@ -51,8 +49,6 @@ body:
   - type: markdown
     attributes:
       value: |
-        <br/><br/>
-        ----
         <br/><br/>
   - type: markdown
     attributes:
@@ -74,8 +70,6 @@ body:
     attributes:
       value: |
         <br/><br/>
-        ----
-        <br/><br/>
   - type: markdown
     attributes:
       value: |
@@ -88,8 +82,6 @@ body:
   - type: markdown
     attributes:
       value: |
-        <br/><br/>
-        ----
         <br/><br/>
   - type: markdown
     attributes:
