@@ -12,10 +12,11 @@ body:
         &#8192;
         ### We sincerely apologize for any inconvenience caused by the encountered issue and extend our gratitude for bringing it to our attention.
         &#8192;
+        </p>
+        
         > [!TIP]
         > ### Please provide as much information as possible to better identify where the problem might originate from
         <br/><br/>
-        </p>
 
   - type: markdown
     attributes:
