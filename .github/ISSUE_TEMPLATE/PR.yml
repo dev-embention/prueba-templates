@@ -6,10 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        <h align="center">
-        # Embention Problem report form
-        </h>
-        
+        <h1 align="center">Title</h1>
         ## We sincerely apologize for any inconvenience caused by the encountered issue and extend our gratitude for bringing it to our attention.
         > [!TIP]
         > ### Please provide as much information as possible to better identify where the problem might originate from
