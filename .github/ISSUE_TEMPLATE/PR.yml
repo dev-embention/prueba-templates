@@ -6,8 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        <h1 align="center"><u>Embention Problem Report Form</u></h1>
-        <u>This text will be underlined</u>
+        <h1 align="center"><ins>Embention Problem Report Form</ins></h1>
         
         &#8192;
         &#8192;
