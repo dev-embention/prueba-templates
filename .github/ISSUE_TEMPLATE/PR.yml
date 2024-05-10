@@ -6,11 +6,10 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## We're sorry that you have encountered an issue with one of our products.
+        ### We're sorry that you have encountered an issue with one of our products.
+        &#8192;
         > [!TIP]
         > ### Please provide as much information as possible to better identify where the problem might originate from
-        &#8192;
-        &#8192;
         &#8192;
         ----
   - type: markdown
