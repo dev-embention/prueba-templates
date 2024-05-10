@@ -35,11 +35,13 @@ body:
   - type: markdown
     attributes:
       value: |
+        <br/><br/>
         ----
+        <br/><br/>
   - type: markdown
     attributes:
       value: |
-        # Firmware Description
+        <h1 align="center"><ins>Firmware Description</ins></h1>
   - type: input
     id: Fw_version
     attributes:
@@ -49,15 +51,17 @@ body:
   - type: markdown
     attributes:
       value: |
+        <br/><br/>
         ----
+        <br/><br/>
   - type: markdown
     attributes:
       value: |
-        # Software Description
+        <h1 align="center"><ins>Software Description</ins></h1>
   - type: input
     id: App_ver
     attributes:
-      label: "Apps Version: "
+      label: "Apps: "
       description: Please specify the Applications involved.
       placeholder: 1xVerontePDIBuilder, VeronteLink, VeronteOps, ...
   - type: input
@@ -69,11 +73,13 @@ body:
   - type: markdown
     attributes:
       value: |
+        <br/><br/>
         ----
+        <br/><br/>
   - type: markdown
     attributes:
       value: |
-        # Configuration Files
+        <h1 align="center"><ins>Configuration Files</ins></h1>
   - type: textarea
     id: Config_Files
     attributes:
@@ -82,11 +88,13 @@ body:
   - type: markdown
     attributes:
       value: |
+        <br/><br/>
         ----
+        <br/><br/>
   - type: markdown
     attributes:
       value: |
-        # Problem Description
+        <h1 align="center"><ins>Problem Description</ins></h1>
   - type: textarea
     id: Problem_Description
     attributes:
