@@ -23,8 +23,7 @@ body:
   - type: input
     id: Product
     attributes:
-      label: "----
-      Product: "
+      label: ----
       description: Please write about all products involved.
       placeholder: 1xVeronte, CEX, PCS, SIL, ...
   - type: input
