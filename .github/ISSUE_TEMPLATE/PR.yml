@@ -29,9 +29,7 @@ body:
   - type: input
     id: hw_Serial_Num
     attributes:
-      label: "Serial Number: "
-      "ef"
-      "fe"
+      label: "<br> Serial Number: </br>"
       description: Please in the same order specify the Serial Number of all of the products from above.
       placeholder: 1xVeronte SN 4041, CEX SN 1500, ...
   - type: markdown
