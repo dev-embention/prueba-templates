@@ -24,7 +24,7 @@ body:
     id: Product
     attributes:
       label: |
-        # 
+        # &#8192;
         Product:
       description: Please write about all products involved.
       placeholder: 1xVeronte, CEX, PCS, SIL, ...
