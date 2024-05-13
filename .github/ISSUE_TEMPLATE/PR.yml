@@ -23,13 +23,15 @@ body:
   - type: input
     id: Product
     attributes:
-      label: <hr> "Product: "
+      label: "Product: "
       description: Please write about all products involved.
       placeholder: 1xVeronte, CEX, PCS, SIL, ...
   - type: input
     id: hw_Serial_Num
     attributes:
       label: "Serial Number: "
+      "ef"
+      "fe"
       description: Please in the same order specify the Serial Number of all of the products from above.
       placeholder: 1xVeronte SN 4041, CEX SN 1500, ...
   - type: markdown
