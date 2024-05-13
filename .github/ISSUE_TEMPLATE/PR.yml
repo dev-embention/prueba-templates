@@ -30,6 +30,7 @@ body:
     id: hw_Serial_Num
     attributes:
       label: |
+        ----
         Serial Number:
       description: Please in the same order specify the Serial Number of all of the products from above.
       placeholder: 1xVeronte SN 4041, CEX SN 1500, ...
