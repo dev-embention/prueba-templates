@@ -44,7 +44,7 @@ body:
     id: Fw_version
     attributes:
       label: "Firmware Version: "
-      description: Please specify the Firmware Version for all of the products selected above.
+      description: Please specify the Firmware Version for all of the products described above.
       placeholder: 1xVeronte 6.12.68, CEX 6.12.60, ...
   - type: markdown
     attributes:
@@ -64,7 +64,7 @@ body:
     id: Software_version
     attributes:
       label: "App version: "
-      description: Please specify the version of all of the Apps selected above.
+      description: Please specify the version of all of the Applications described above.
       placeholder: 1xVerontePDIBuilder 6.12.54, VeronteLink 6.12.22, VeronteOps 6.12.34, ...
   - type: markdown
     attributes:
@@ -91,12 +91,17 @@ body:
     id: Problem_Description
     attributes:
       label: "Problem Description: "
-      description: Describe in as much detail the problem encountered.
+      description: A concise description of what you are experiencing. Provide screenshots, Error codes, Link Session files, ...
   - type: textarea
     id: Steps_reproduce
     attributes:
       label: "Steps to reproduce: "
-      description: If known, detail the steps to reproduce the problem. Provide screenshots, Error codes, Link Session files, ...
+      description: A concise description of the steps to reproduce or the tests undergone.
+  - type: textarea
+    id: Steps_reproduce
+    attributes:
+      label: "Expected results : "
+      description: A concise description of what you expected to happen.
   - type: markdown
     attributes:
       value: |
