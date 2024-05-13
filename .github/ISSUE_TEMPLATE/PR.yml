@@ -44,8 +44,8 @@ body:
     id: Fw_version
     attributes:
       label: |
-        <hr></hr>
-        Firmware Version:
+        ----
+        # Firmware Version:
       description: Please specify the Firmware Version for all of the products described above.
       placeholder: 1xVeronte 6.12.68, CEX 6.12.60, ...
   - type: markdown
