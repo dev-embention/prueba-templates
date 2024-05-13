@@ -23,7 +23,7 @@ body:
   - type: input
     id: Product
     attributes:
-      label: "Product: "
+      label: "# Product:
       description: Please write about all products involved.
       placeholder: 1xVeronte, CEX, PCS, SIL, ...
   - type: input
@@ -43,9 +43,7 @@ body:
   - type: input
     id: Fw_version
     attributes:
-      label: |
-        ----
-        # Firmware Version:
+      label: "# Firmware Version: "
       description: Please specify the Firmware Version for all of the products described above.
       placeholder: 1xVeronte 6.12.68, CEX 6.12.60, ...
   - type: markdown
@@ -59,7 +57,7 @@ body:
   - type: input
     id: App_ver
     attributes:
-      label: "Apps: "
+      label: "# Apps: "
       description: Please specify the Applications involved.
       placeholder: 1xVerontePDIBuilder, VeronteLink, VeronteOps, ...
   - type: input
