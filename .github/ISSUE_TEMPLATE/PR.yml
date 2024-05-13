@@ -57,7 +57,7 @@ body:
   - type: input
     id: App_ver
     attributes:
-      label: "# Apps: "
+      label: "Apps: "
       description: Please specify the Applications involved.
       placeholder: 1xVerontePDIBuilder, VeronteLink, VeronteOps, ...
   - type: input
