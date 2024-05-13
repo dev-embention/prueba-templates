@@ -98,7 +98,7 @@ body:
       label: "Steps to reproduce: "
       description: A concise description of the steps to reproduce or the tests undergone.
   - type: textarea
-    id: Steps_reproduce
+    id: Expected_results
     attributes:
       label: "Expected results : "
       description: A concise description of what you expected to happen.
