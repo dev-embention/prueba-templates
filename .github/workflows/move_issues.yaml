@@ -68,7 +68,7 @@ jobs:
     steps:
       - name: Moved issue to ${{ env.done }}
         uses: leonsteinhaeuser/project-beta-automations@v2.2.1
-        if: contains(github.event.comment.body, 'stale')
+        if: contains( github.event.issue.labels.*.name, 'Support Ticket') && contains( github.event.issue.labels.*.name, 'Stale')
         with:
           gh_token: ${{ secrets.GH_TOKEN_MOVE_ISSUES }}
           # user: sample-user
