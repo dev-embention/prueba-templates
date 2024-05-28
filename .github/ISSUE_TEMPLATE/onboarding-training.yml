@@ -5,7 +5,7 @@ labels: ["Analysis","Comment"]
 body:
   - type: textarea
     id: description
-    label: 
+    label: Issue
     attributes:
       value: |
         # Formación
