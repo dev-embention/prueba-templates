@@ -26,7 +26,7 @@ body:
         - Todos los procedimientos se encuentran en: [Procedimientos](https://embention.net/web#action=1236&model=emb.internal.document&view_type=list&menu_id=)
   - type: checkboxes
     attributes:
-      label: Listado
+      label: Listado procedimientos
       options:
         - label: P.058-pauta-de-bienvenida [URL](https://documentation.embention.net/058/es/latest/index.html)
         - label: P.030-comunicacion-interna-y-externa [URL](https://documentation.embention.net/030/es/latest/index.html)
@@ -47,7 +47,7 @@ body:
         - Todos las políticas se encuentran en: [Políticas](https://embention.net/web#action=1236&model=emb.internal.document&view_type=list&menu_id=)
   - type: checkboxes
     attributes:
-      label: Listado
+      label: Listado políticas
       options:
         - label: PA.010-politica-de-calidad [URL](https://documentation.embention.net/010/en/latest/index.html)
         - label: PA.196-directrices-de-seguridad-de-la-informacion [URL](https://documentation.embention.net/196/en/latest/index.html)
