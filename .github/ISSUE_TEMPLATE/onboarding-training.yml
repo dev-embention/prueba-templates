@@ -48,6 +48,7 @@ body:
         - label: P.072 - Carga de horas timesheets [URL](https://documentation.embention.net/072/es/latest/index.html)
         - label: P.541 - Solicitud de servicios IT [URL](https://documentation.embention.net/541/es/latest/index.html)
         - label: P.569 - Gestión de Skills del equipo [URL](https://documentation.embention.net/569/es/latest/index.html)
+        - label: P.441 - Plan de evacuación de incendios [URL](https://documentation.embention.net/441/es/latest/index.html)
         - label: Refleja tus skils de tu ficha empleado
   - type: textarea
     id: policies
@@ -69,6 +70,13 @@ body:
         - label: PA.544 - Politica de secreto empresarial [URL](https://documentation.embention.net/544/es/latest/index.html)
         - label: PA.546 - Politica de uso de activos de informacion [URL](https://documentation.embention.net/546/es/latest/index.html)
         - label: Cuestionario "Acceptable Uso of Assets Policy" [URL](https://embention.net/survey/start/acceptable-use-of-assets-policy-28)
+        - label: Cuestionario "Awareness Survey ISO 9001:2015 and EN 9100:2018" [URL](https://embention.net/survey/start/awareness-survey-iso-9001-2015-and-en-9100-2018-29)
+  - type: textarea
+    id: opcionales
+    attributes:
+      label: Opcionales
+      value: |
+        - También te acercamos al Roadmap de Embention [URL](https://drive.google.com/file/d/1GM4ynrD6R87hqdgRBWcpEEsSAurp6CDS/view?usp=drive_link)
   - type: textarea
     id: departmentProcedures
     attributes:
