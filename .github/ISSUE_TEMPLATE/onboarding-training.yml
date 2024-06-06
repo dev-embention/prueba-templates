@@ -11,7 +11,7 @@ body:
         # Formación
   - type: checkboxes
     attributes:
-      label: Material multimedia
+      label: Introducción
       options:
         - label: Bienvenida [URL](https://drive.google.com/file/d/17rJrvYWgvFT0cBqS6eCbGH8CpS76yyPD/view?usp=drive_link)
         - label: Roadmap Embention [URL](https://drive.google.com/file/d/1GM4ynrD6R87hqdgRBWcpEEsSAurp6CDS/view?usp=drive_link)
@@ -21,24 +21,26 @@ body:
   - type: textarea
     id: procedures
     attributes:
-      label: Procedimientos
+      label: Procedimientos Generales
       value: |
         - Todos los procedimientos se encuentran en: [Procedimientos](https://embention.net/web#action=1236&model=emb.internal.document&view_type=list&menu_id=)
   - type: checkboxes
     attributes:
       label: Listado procedimientos
       options:
-        - label: P.058-pauta-de-bienvenida [URL](https://documentation.embention.net/058/es/latest/index.html)
-        - label: P.030-comunicacion-interna-y-externa [URL](https://documentation.embention.net/030/es/latest/index.html)
-        - label: P.050-reuniones [URL](https://documentation.embention.net/050/es/latest/index.html)
-        - label: P.190-dia-de-concentracion-teletrabajo-opcional [URL](https://documentation.embention.net/190/es/latest/index.html)
-        - label: P.195-ausencias-odoo [URL](https://documentation.embention.net/195/es/latest/index.html)
-        - label: P.257-apertura-automatica-de-puertas [URL](https://documentation.embention.net/257/es/latest/index.html)
-        - label: P.389-semana-intensiva-opcional [URL](https://documentation.embention.net/389/es/latest/index.html)
-        - label: P.398-preguntas-frecuentes-rrhh [URL](https://documentation.embention.net/398/es/latest/index.html)
-        - label: P.062-crear-issue [URL](https://documentation.embention.net/062/es/latest/index.html)
-        - label: P.072-carga-de-horas-timesheets [URL](https://documentation.embention.net/072/es/latest/index.html)
-        - label: P.541-solicitud-de-servicios-it [URL](https://documentation.embention.net/541/es/latest/index.html)
+        - label: P.058 - Pauta de bienvenida [URL](https://documentation.embention.net/058/es/latest/index.html)
+        - label: P.030 - Comunicacion interna y externa [URL](https://documentation.embention.net/030/es/latest/index.html)
+        - label: P.050 - Reuniones [URL](https://documentation.embention.net/050/es/latest/index.html)
+        - label: P.190 - Dia de-concentracion teletrabajo opcional [URL](https://documentation.embention.net/190/es/latest/index.html)
+        - label: P.195 - Ausencias odoo [URL](https://documentation.embention.net/195/es/latest/index.html)
+        - label: P.257 - Apertura automatica de puertas [URL](https://documentation.embention.net/257/es/latest/index.html)
+        - label: P.389 - Semana intensiva opcional [URL](https://documentation.embention.net/389/es/latest/index.html)
+        - label: P.398 - Preguntas frecuentes RRHH [URL](https://documentation.embention.net/398/es/latest/index.html)
+        - label: P.062 - Crear issue [URL](https://documentation.embention.net/062/es/latest/index.html)
+        - label: P.072 - Carga de horas timesheets [URL](https://documentation.embention.net/072/es/latest/index.html)
+        - label: P.541 - Solicitud de servicios IT [URL](https://documentation.embention.net/541/es/latest/index.html)
+        - label: P.569 - Gestión de Skills del equipo [URL](https://documentation.embention.net/569/es/latest/index.html)
+        - label: Refleja tus skilss de tu ficha empleado
   - type: textarea
     id: policies
     attributes:
@@ -49,42 +51,23 @@ body:
     attributes:
       label: Listado políticas
       options:
-        - label: PA.010-politica-de-calidad [URL](https://documentation.embention.net/010/en/latest/index.html)
-        - label: PA.196-directrices-de-seguridad-de-la-informacion [URL](https://documentation.embention.net/196/en/latest/index.html)
-        - label: PA.285-physical-access-control-policy [URL](https://documentation.embention.net/285/en/latest/index.html)
-        - label: PA.287-politica-de-control-de-acceso [URL](https://documentation.embention.net/287/es/latest/index.html)
-        - label: PA.295-politica-de-contraseñas [URL](https://documentation.embention.net/295/es/latest/index.html)
-        - label: PA.442-politica-de-cultura-justa [URL](https://documentation.embention.net/442/es/latest/index.html)
-        - label: PA.474-politica-seguridad-operacional [URL](https://documentation.embention.net/474/es/latest/index.html)
-        - label: PA.544-politica-de-secreto-empresarial [URL](https://documentation.embention.net/544/es/latest/index.html)
-        - label: PA.546-politica-de-uso-de-activos-de-informacion [URL](https://documentation.embention.net/546/es/latest/index.html)
+        - label: PA.010 - Politica de Calidad [URL](https://documentation.embention.net/010/en/latest/index.html)
+        - label: PA.196 - Directrices de Seguridad de la Informacion [URL](https://documentation.embention.net/196/es/latest/index.html)
+        - label: PA.285 - Política de control de acceso físico [URL](https://documentation.embention.net/285/es/latest/index.html)
+        - label: PA.287 - Politica de control de acceso [URL](https://documentation.embention.net/287/es/latest/index.html)
+        - label: PA.295 - Politica de contraseñas [URL](https://documentation.embention.net/295/es/latest/index.html)
+        - label: PA.442 - Politica de cultura justa [URL](https://documentation.embention.net/442/es/latest/index.html)
+        - label: PA.474 - Politica seguridad operacional [URL](https://documentation.embention.net/474/es/latest/index.html)
+        - label: PA.544 - Politica de secreto empresarial [URL](https://documentation.embention.net/544/es/latest/index.html)
+        - label: PA.546 - Politica de uso de activos de informacion [URL](https://documentation.embention.net/546/es/latest/index.html)
   - type: textarea
     id: departmentProcedures
     attributes:
       label: Específicas del puesto
       value: |
         - [ ] Listado a rellenar por parte de tu team leader. Menciónalo aquí ________ para que le llegue la notificación.
-  - type: textarea
-    id: activity
-    attributes:
-      label: ACTIVIDAD
-      value: |
-        A realizar por personas que vayan a utilizar herramientas para modificar documentación.
-
-        - [ ] Check a realizar por parte de tu team leader. Menciónalo aquí ________ para que te indique si esta actividad de entrenamiento en modificar documentación te aplica
-
-        Atención: Si no te aplica pero has localizado algo a mejorar, por favor, házselo llegar a tu team leader :)
-
-        En caso afirmativo:
-        
-        ¡Es hora de ponerte en marcha!
-        
-        Te proponemos que localices algo a modificar o mejorar en alguno de los procedimientos que has revisado.
-        
-        Por ejemplo: algún error, falta o exceso de información, indicación confusa o contradictoria o simplemente, que hagas llegar una propuesta de mejora sobre el contenido de algún procedimiento (algo que creas que se podría hacer mejor: simplificar el proceso, añadir algún paso que podría hacerlo más eficiente...)
-        
-        - [ ] Llevar a cabo modificación propuesta (realizarla, solicitar aprobación e implementarla).
-        
+          - [ ] ....
+          
         No olvides cerrar la issue cuando acabes ni de consultarnos todas tus dudas :)
         
         ¡Bienvenido/a!
