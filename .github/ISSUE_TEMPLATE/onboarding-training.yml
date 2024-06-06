@@ -5,8 +5,8 @@ labels: ["Analysis","Comment"]
 body:
   - type: textarea
     id: description
-    label: Issue
     attributes:
+      label: Contenido
       value: |
         # Formación
   - type: checkboxes
