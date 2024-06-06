@@ -4,9 +4,17 @@ title: "[Onboarding Training] "
 labels: ["Analysis","Comment"]
 body:
   - type: textarea
+    id: refrences
+    attributes:
+      label: References
+  - type: textarea
     id: description
     attributes:
-      label: Contenido
+      label: Description
+  - type: textarea
+    id: formacion
+    attributes:
+      label: Plan de formación
       value: |
         # Formación
   - type: checkboxes
@@ -40,7 +48,7 @@ body:
         - label: P.072 - Carga de horas timesheets [URL](https://documentation.embention.net/072/es/latest/index.html)
         - label: P.541 - Solicitud de servicios IT [URL](https://documentation.embention.net/541/es/latest/index.html)
         - label: P.569 - Gestión de Skills del equipo [URL](https://documentation.embention.net/569/es/latest/index.html)
-        - label: Refleja tus skilss de tu ficha empleado
+        - label: Refleja tus skils de tu ficha empleado
   - type: textarea
     id: policies
     attributes:
@@ -60,6 +68,7 @@ body:
         - label: PA.474 - Politica seguridad operacional [URL](https://documentation.embention.net/474/es/latest/index.html)
         - label: PA.544 - Politica de secreto empresarial [URL](https://documentation.embention.net/544/es/latest/index.html)
         - label: PA.546 - Politica de uso de activos de informacion [URL](https://documentation.embention.net/546/es/latest/index.html)
+        - label: Cuestionario "Acceptable Uso of Assets Policy" [URL](https://embention.net/survey/start/acceptable-use-of-assets-policy-28)
   - type: textarea
     id: departmentProcedures
     attributes:
