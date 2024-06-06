@@ -48,8 +48,8 @@ body:
         - label: P.072 - Carga de horas timesheets [URL](https://documentation.embention.net/072/es/latest/index.html)
         - label: P.541 - Solicitud de servicios IT [URL](https://documentation.embention.net/541/es/latest/index.html)
         - label: P.569 - Gestión de Skills del equipo [URL](https://documentation.embention.net/569/es/latest/index.html)
+        - label: Refleja tus skills de tu ficha empleado
         - label: P.441 - Plan de evacuación de incendios [URL](https://documentation.embention.net/441/es/latest/index.html)
-        - label: Refleja tus skils de tu ficha empleado
   - type: textarea
     id: policies
     attributes:
