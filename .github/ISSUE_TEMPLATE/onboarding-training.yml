@@ -33,7 +33,7 @@ body:
         - label: P.058 - Pauta de bienvenida [URL](https://documentation.embention.net/058/es/latest/index.html)
         - label: P.030 - Comunicacion interna y externa [URL](https://documentation.embention.net/030/es/latest/index.html)
         - label: P.050 - Reuniones [URL](https://documentation.embention.net/050/es/latest/index.html)
-        - label: P.190 - Dia de-concentracion teletrabajo opcional [URL](https://documentation.embention.net/190/es/latest/index.html)
+        - label: P.190 - Dia de-concentracion teletrabajo opcional (consultar con el supervisor si aplica) [URL](https://documentation.embention.net/190/es/latest/index.html)
         - label: P.195 - Ausencias odoo [URL](https://documentation.embention.net/195/es/latest/index.html)
         - label: P.257 - Apertura automatica de puertas [URL](https://documentation.embention.net/257/es/latest/index.html)
         - label: P.389 - Semana intensiva opcional [URL](https://documentation.embention.net/389/es/latest/index.html)
@@ -63,8 +63,8 @@ body:
     attributes:
       label: A tener en cuenta
       value: |
-        - También te acercamos al Roadmap de Embention [URL](https://drive.google.com/file/d/1GM4ynrD6R87hqdgRBWcpEEsSAurp6CDS/view?usp=drive_link)
-        - Todos los procedimientos y políticas se encuentran en el siguiente [enlace](https://embention.net/web#action=1236&model=emb.internal.document&view_type=list&menu_id=)
+        - Toda la documentación se encuentran en el siguiente [enlace](https://embention.net/web#action=1236&model=emb.internal.document&view_type=list&menu_id=)
+        - Roadmap de Embention [URL](https://drive.google.com/file/d/1GM4ynrD6R87hqdgRBWcpEEsSAurp6CDS/view?usp=drive_link)
   - type: textarea
     id: departmentProcedures
     attributes:
