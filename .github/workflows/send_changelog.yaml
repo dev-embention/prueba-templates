@@ -18,7 +18,8 @@ jobs:
         uses: tj-actions/changed-files@v44
         with:
           # Avoid using single or double quotes for multiline patterns
-          files: docs/*.{md}
+          files: |
+            **.md
 
       - name: Run step if any file(s) in the docs folder change
         if: steps.changed-markdown-files.outputs.any_changed == 'true'
