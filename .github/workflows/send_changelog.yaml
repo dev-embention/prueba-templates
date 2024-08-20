@@ -2,9 +2,46 @@ name: Send Email on Specific MD-* Folder Change
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, edited]
+    types: 
+      - closed
+    branches:
+      - develop
 
 jobs:
+  changed_files:
+    runs-on: ubuntu-latest
+    name: Check if are changes in md files
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get all changed markdown files
+        id: changed-markdown-files
+        uses: tj-actions/changed-files@v44
+        with:
+          # Avoid using single or double quotes for multiline patterns
+          files: docs/*.{md}
+
+      - name: Run step if any file(s) in the docs folder change
+        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+        env:
+          ALL_CHANGED_FILES: ${{ steps.changed-files-specific.outputs.all_changed_files }}
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.example.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Changes detected in folder: PR #${{ github.event.number }}"
+          body: |
+            This files were modified:
+
+            ${{ env.ALL_CHANGED_FILES }}
+
+            Pull Request URL: ${{ github.event.pull_request.html_url }}
+
+            Pull Request Comment: ${{ github.event.pull_request.body }}
+          to: javier.fuster@embention.com
+          from: no-reply@embention.com
+
   send_email_if_md_changed:
     runs-on: ubuntu-latest
     steps:
