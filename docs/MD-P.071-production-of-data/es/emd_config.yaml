@@ -1,0 +1,12 @@
+traceability: "P.071"  # This field should not be modified
+title: "P.071 - Production Of Data"
+odoo_name: "production-of-data"  # This field should not be modified
+author: ["Embention Sistemas Inteligentes, S.A."]
+titlepage: true
+
+
+max_depth: 99
+numbered: false
+hidden: false
+menus:
+- file: "index.md"
