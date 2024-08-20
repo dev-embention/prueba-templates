@@ -1,0 +1,41 @@
+name: Send Email on Specific MD-* Folder Change
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+jobs:
+  send_email_if_md_changed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check for changes in MD-* folder
+        id: check_changes
+        run: |
+          # Obtenemos la carpeta afectada que empieza con 'MD-'
+          affected_folder=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E '^MD-[^/]+/' | cut -d'/' -f1 | sort | uniq)
+          if [ -n "$affected_folder" ]; then
+            echo "affected_folder=$affected_folder" >> $GITHUB_ENV
+          else
+            echo "no_md_changes=true" >> $GITHUB_ENV
+          fi
+
+      - name: Send email if MD-* folder change detected
+        if: env.no_md_changes != 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.example.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Changes detected in folder: ${{ env.affected_folder }} in PR #${{ github.event.number }}"
+          body: |
+            The folder ${{ env.affected_folder }} was modified.
+
+            Pull Request URL: ${{ github.event.pull_request.html_url }}
+
+            Pull Request Comment: ${{ github.event.pull_request.body }}
+          to: javier.fuster@embention.com
+          from: no-reply@embention.com
