@@ -24,7 +24,7 @@ body:
     id: Product
     attributes:
       label: "Product :"
-      description: Please write about all products involved.
+      description: Please write which products are involved.
       placeholder: 1xVeronte, CEX, PCS, SIL, ...
   - type: input
     id: hw_Serial_Num
@@ -58,13 +58,13 @@ body:
     id: App_ver
     attributes:
       label: "Apps: "
-      description: Please specify the Applications involved.
+      description: Please specify the Software involved.
       placeholder: 1xVerontePDIBuilder, VeronteLink, VeronteOps, ...
   - type: input
     id: Software_version
     attributes:
       label: "App version: "
-      description: Please specify the version of all of the Applications described above.
+      description: Please specify the version of all of the Software described above.
       placeholder: 1xVerontePDIBuilder 6.12.54, VeronteLink 6.12.22, VeronteOps 6.12.34, ...
   - type: markdown
     attributes:
