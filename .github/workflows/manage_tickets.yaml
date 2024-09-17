@@ -20,7 +20,5 @@ jobs:
             python -m pip install --upgrade pip
             pip install urllib3==1.26.7 requests==2.31.0
       - name: execute py script # run file
-        env:
-          TOKEN: ${{ secrets.TOKEN }}
         run: |
           python .github/workflows/manage_tickets.py
