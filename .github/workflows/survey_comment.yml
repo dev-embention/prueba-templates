@@ -1,0 +1,20 @@
+name: Survey Comment
+
+on:
+  issues:
+    types: [closed]
+
+jobs:
+  survey_comment:
+    if: contains(github.event.issue.labels.*.name, 'Support')
+    runs-on: ubuntu-latest    
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Dear Customer,\n\n One of the main objectives of Embention is to offer an excellent customer service. Your feedback is extremely valuable to us. We would appreciate it if you could spare 2 minutes to share your feedback regarding Embention support. It will really help to feed our quality management system.\n\n [Survey Link](${{ vars.SUPPORT_SURVEY}})'
+            })
