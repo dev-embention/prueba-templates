@@ -2,7 +2,7 @@ import requests
 import datetime
 
 # Configura tu token personal de GitHub y la URL del endpoint de GraphQL
-GITHUB_TOKEN = ${{ secrets.TOKEN }}
+GITHUB_TOKEN = os.environ['TOKEN']
 GITHUB_API_URL = 'https://api.github.com/graphql'
 HEADERS = {"Authorization": f"Bearer {GITHUB_TOKEN}"}
 
