@@ -1,5 +1,6 @@
 import requests
 import datetime
+import os
 
 # Configura tu token personal de GitHub y la URL del endpoint de GraphQL
 GITHUB_TOKEN = os.environ['TOKEN']
