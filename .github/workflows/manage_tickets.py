@@ -44,6 +44,12 @@ query($organization: String!, $projectNumber: Int!) {
               id
               number
               title
+              labels(first: 10) {
+                nodes {
+                  name
+                  color
+                }
+              }
               body
               state
               comments(last: 1) {
@@ -209,6 +215,13 @@ def update_project_item_status(project_id, item_id, field_id, field_value):
     result = run_query(mutation, variables)
     return result
 
+def check_labels(list_labels):
+    for labels in range(len(list_labels)):
+        if list_labels[labels]['name'] == "Support Ticket":
+            return True
+
+    return False
+
 # Función principal que procesa las issues del proyecto
 def process_issues(organization, project_number):
     variables = {"organization": organization, "projectNumber": project_number}
@@ -217,9 +230,6 @@ def process_issues(organization, project_number):
     project = data['data']['organization']['projectV2']
     project_id = project['id']
 
-
-    # Obtener los IDs de las columnas del proyecto
-    columns = get_project_columns(project_id)
 
     # Asignamos las columnas de nuestro proyecto a variables
     columns_project = project['field'] ['options']
@@ -237,12 +247,14 @@ def process_issues(organization, project_number):
 
     field_status_id = project['field'] ['id'] # Obtenemos el ID del campo 'Status'
 
-
     issues = project['items']['nodes']
 
     for issue in issues:
         issue_number = issue['content']['id']
-        card_id = issue['id']  # El ID del item dentro del proyecto, que actúa como la tarjeta
+        issue_labels = issue['content']['labels']['nodes']
+
+        check_labels_bool = check_labels(issue_labels)
+
         item_id = issue['id']  # El ID del item dentro del proyecto (la tarjeta)
 
         # Imprimir los valores de campo para depurar
@@ -271,22 +283,31 @@ def process_issues(organization, project_number):
             is_member = is_org_member(organization, comment_author)
 
         now = datetime.datetime.utcnow()
-        # Caso A: Si está "Answered"
-        if project_status == "Answered" and last_comment:
-            if is_member and (now - comment_date).days >= 7 :
-                add_issue_comment(issue_number, "This issue is stale because it has been open 15 days with no activity. Comment or this will be closed in 7 days.")
-                update_project_item_status(project_id, item_id, field_status_id, column_done_id)
+        if check_labels_bool:
+            # Casp A: Si está "New Issue"
+            if project_status == "New_Issue" and last_comment:
+                if is_member:
+                    update_project_item_status(project_id, item_id, field_status_id, column_answered_id)
+            # Caso B: Si está "Answered"
+            if project_status == "Answered" and last_comment:
+                if is_member and (now - comment_date).days >= 15 :
+                    add_issue_comment(issue_number, "This issue is stale because it has been open 15 days with no activity. Comment or this will be closed in 7 days.")
+                    update_project_item_status(project_id, item_id, field_status_id, column_done_id)
+                elif not is_member:
+                    update_project_item_status(project_id, item_id, field_status_id, column_not_answered_id)
 
-        # Caso B: Si está "Not Answered"
-        elif project_status == "Not Answered" and last_comment:
-            if is_member:
-                update_project_item_status(project_id, item_id, field_status_id, column_answered_id)
+            # Caso C: Si está "Not Answered"
+            elif project_status == "Not Answered" and last_comment:
+                if is_member:
+                    update_project_item_status(project_id, item_id, field_status_id, column_answered_id)
 
-        # Caso C: Si está "Done"
-        elif project_status == "Done" and last_comment:
-            if (now - comment_date).days >= 21:
-                #add_issue_comment(issue_number, "Issue has been marked as done after 7 days without response.")
-                close_issue(issue_number)
+            # Caso D: Si está "Done"
+            elif project_status == "Done" and last_comment:
+                if (now - comment_date).days >= 7 and last_comment['body'] == "This issue is stale because it has been open 15 days with no activity. Comment or this will be closed in 7 days.":
+                    #add_issue_comment(issue_number, "Issue has been marked as done after 7 days without response.")
+                    close_issue(issue_number)
+                elif last_comment['body'] != "This issue is stale because it has been open 15 days with no activity. Comment or this will be closed in 7 days.":
+                    update_project_item_status(project_id, item_id, field_status_id, column_not_answered_id)
 
 
 if __name__ == "__main__":
