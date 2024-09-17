@@ -21,4 +21,4 @@ jobs:
             pip install urllib3==1.26.7 requests==2.31.0
       - name: execute py script # run file
         run: |
-          manage_tickets.py
+          python manage_tickets.py
