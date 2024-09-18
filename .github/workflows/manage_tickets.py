@@ -292,12 +292,12 @@ def process_issues(organization, project_number):
                 elif not is_member:
                     update_project_item_status(project_id, item_id, field_status_id, column_sprint_id)
 
-            # Caso A: Si está "Done"
+            # Caso B: Si está "Done"
             elif project_status == "Done" and last_comment:
                 if (now - comment_date).days >= 7 and last_comment['body'] == "This issue is stale because it has been open 15 days with no activity. Comment or this will be closed in 7 days. FYI: @embention/support":
                     #add_issue_comment(issue_number, "Issue has been marked as done after 7 days without response.")
                     close_issue(issue_number)
-                elif last_comment['body'] != "This issue is stale because it has been open 15 days with no activity. Comment or this will be closed in 7 days.":
+                elif not is_member and last_comment['body'] != "This issue is stale because it has been open 15 days with no activity. Comment or this will be closed in 7 days.":
                     update_project_item_status(project_id, item_id, field_status_id, column_sprint_id)
 
 
