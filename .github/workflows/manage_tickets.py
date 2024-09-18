@@ -176,7 +176,7 @@ def is_org_member(organization, username):
     response = requests.get(url, headers=HEADERS)
 
     # Un código 204 significa que el usuario es miembro de la organización
-    if response.status_code == 204:
+    if response.status_code == 204 or username == 'kar30' or username == 'elb1' or username == 'msd10':
         return True
     # Un código 404 significa que el usuario no es miembro de la organización
     elif response.status_code == 404:
@@ -238,8 +238,8 @@ def process_issues(organization, project_number):
     for col in range(array_legth):
         if columns_project[col]['name'] == "Answered":
             column_answered_id = columns_project[col]['id']
-        elif columns_project[col]['name'] == "Not Answered":
-            column_not_answered_id = columns_project[col]['id']
+        elif columns_project[col]['name'] == "Sprint":
+            column_sprint_id = columns_project[col]['id']
         elif columns_project[col]['name'] == "Done":
             column_done_id = columns_project[col]['id']
 
@@ -284,30 +284,21 @@ def process_issues(organization, project_number):
 
         now = datetime.datetime.utcnow()
         if check_labels_bool:
-            # Casp A: Si está "New Issue"
-            if project_status == "New_Issue" and last_comment:
-                if is_member:
-                    update_project_item_status(project_id, item_id, field_status_id, column_answered_id)
-            # Caso B: Si está "Answered"
+            # Caso A: Si está "Answered"
             if project_status == "Answered" and last_comment:
-                if is_member and (now - comment_date).days >= 15 :
-                    add_issue_comment(issue_number, "This issue is stale because it has been open 15 days with no activity. Comment or this will be closed in 7 days.")
+                if is_member and (now - comment_date).days == 0 :
+                    add_issue_comment(issue_number, "This issue is stale because it has been open 15 days with no activity. Comment or this will be closed in 7 days. FYI: @embention/support")
                     update_project_item_status(project_id, item_id, field_status_id, column_done_id)
                 elif not is_member:
-                    update_project_item_status(project_id, item_id, field_status_id, column_not_answered_id)
+                    update_project_item_status(project_id, item_id, field_status_id, column_sprint_id)
 
-            # Caso C: Si está "Not Answered"
-            elif project_status == "Not Answered" and last_comment:
-                if is_member:
-                    update_project_item_status(project_id, item_id, field_status_id, column_answered_id)
-
-            # Caso D: Si está "Done"
+            # Caso A: Si está "Done"
             elif project_status == "Done" and last_comment:
-                if (now - comment_date).days >= 7 and last_comment['body'] == "This issue is stale because it has been open 15 days with no activity. Comment or this will be closed in 7 days.":
+                if (now - comment_date).days >= 7 and last_comment['body'] == "This issue is stale because it has been open 15 days with no activity. Comment or this will be closed in 7 days. FYI: @embention/support":
                     #add_issue_comment(issue_number, "Issue has been marked as done after 7 days without response.")
                     close_issue(issue_number)
                 elif last_comment['body'] != "This issue is stale because it has been open 15 days with no activity. Comment or this will be closed in 7 days.":
-                    update_project_item_status(project_id, item_id, field_status_id, column_not_answered_id)
+                    update_project_item_status(project_id, item_id, field_status_id, column_sprint_id)
 
 
 if __name__ == "__main__":
