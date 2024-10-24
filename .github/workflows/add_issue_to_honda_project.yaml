@@ -14,4 +14,4 @@ jobs:
       - uses: actions/add-to-project@v0.5.0
         with:
           project-url: https://github.com/orgs/dev-embention/projects/7
-          github-token: ${{ secrets.ORG_GH_ACTION_ADD_ISSUE_TO_PROJECT  }}
+          github-token: ${{ secrets.GH_TOKEN_MOVE_ISSUES  }}
