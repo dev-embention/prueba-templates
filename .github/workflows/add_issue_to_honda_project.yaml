@@ -1,0 +1,17 @@
+name: Add issue to project Honda-F1
+
+on:
+  issues:
+    types: [labeled]
+  pull_request:
+    types: [labeled]
+
+jobs:
+  add-to-project-honda:
+    name: Add issue to Honda project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v0.5.0
+        with:
+          project-url: https://github.com/orgs/dev-embention/projects/7
+          github-token: ${{ secrets.ORG_GH_ACTION_ADD_ISSUE_TO_PROJECT  }}
