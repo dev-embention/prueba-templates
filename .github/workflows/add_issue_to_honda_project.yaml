@@ -9,6 +9,7 @@ on:
 jobs:
   add-to-project-honda:
     name: Add issue to Honda project
+    if: github.event.label.color == '136ca0'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/add-to-project@v0.5.0
