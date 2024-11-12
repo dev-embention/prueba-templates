@@ -110,5 +110,6 @@ body:
         <p align="center">
         <img src=".github/ISSUE_TEMPLATE/PR.png" alt="drawing" width="1080"/>
         </p>
-        ![Alt text for the image](../ISSUE_TEMPLATE/PR.png)
+        ![Alt text for the image](https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/PR.png)
+
 
