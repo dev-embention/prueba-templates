@@ -110,4 +110,5 @@ body:
         <p align="center">
         <img src=".github/ISSUE_TEMPLATE/PR.png" alt="drawing" width="1080"/>
         </p>
-        ![PR_logo](./../PR.png)
+        ![Alt text for the image](../ISSUE_TEMPLATE/PR.png)
+
