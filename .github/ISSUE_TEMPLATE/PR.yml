@@ -1,11 +1,12 @@
 name: Problem Report
 description: Describe a Problem report
-title: "[PR]: "
+title:
 labels: Analysis, Comment, PR, Support
 body:
   - type: markdown
     attributes:
       value: |
+        ----
         <p align="center">
         <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/PR.png" alt="drawing" width="1080"/>
         </p>
