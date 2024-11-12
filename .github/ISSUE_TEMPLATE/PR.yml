@@ -1,6 +1,6 @@
 name: Problem Report
 description: Describe a Problem report
-title: ""
+title: "[PR] : "
 labels: Analysis, Comment, PR, Support
 body:
   - type: markdown
