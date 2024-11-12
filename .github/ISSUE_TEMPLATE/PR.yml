@@ -10,103 +10,126 @@ body:
         <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/PR.png" alt="drawing" width="1080"/>
         </p>
         <h4>We sincerely apologize for any inconvenience caused by the encountered issue and extend our gratitude for bringing it to our attention.</h4>
-        
         > [!TIP]
-        > ### Please share as many details as you can so we can better identify where the issue might originate from.
-
+        > ### Please check out our online manuals at https://manuals.embention.com/ in case your issue is already addressed there.
+        <p align="center">
+        <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/spacer.png" alt="drawing" width="1080"/>
+        </p>
+        
   - type: markdown
     attributes:
       value: |
         <h1 align="center">Product Description</h1>
+        
   - type: input
     id: Product
     attributes:
       label: "Product :"
-      description: Please write about all products involved.
+      description: Please list all products involved.
       placeholder: 1xVeronte, CEX, PCS, SIL, ...
+  
   - type: input
     id: hw_Serial_Num
     attributes:
       label: "Serial Number: "
-      description: Please in the same order specify the Serial Number of all of the products from above.
+      description: Please in the same order specify the Serial Number of all of the products listed above.
       placeholder: 1xVeronte SN 4041, CEX SN 1500, ...
+  
   - type: markdown
     attributes:
       value: |
         <br/><br/>
+  
   - type: markdown
     attributes:
       value: |
         <h1 align="center">Firmware Description</h1>
+  
   - type: input
     id: Fw_version
     attributes:
       label: "Firmware Version: "
       description: Please specify the Firmware Version for all of the products described above.
       placeholder: 1xVeronte 6.12.68, CEX 6.12.60, ...
+  
   - type: markdown
     attributes:
       value: |
-        <br/><br/>
+        <p align="center">
+        <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/spacer.png" alt="drawing" width="1080"/>
+        </p>
+  
   - type: markdown
     attributes:
       value: |
         <h1 align="center">Software Description</h1>
+  
   - type: input
     id: App_ver
     attributes:
       label: "Apps: "
       description: Please specify the Applications involved.
       placeholder: 1xVerontePDIBuilder, VeronteLink, VeronteOps, ...
+  
   - type: input
     id: Software_version
     attributes:
       label: "App version: "
-      description: Please specify the version of all of the Applications described above.
+      description: Please specify the version of all of the Applications listed above.
       placeholder: 1xVerontePDIBuilder 6.12.54, VeronteLink 6.12.22, VeronteOps 6.12.34, ...
+  
   - type: markdown
     attributes:
       value: |
-        <br/><br/>
+        <p align="center">
+        <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/spacer.png" alt="drawing" width="1080"/>
+        </p>
+  
   - type: markdown
     attributes:
       value: |
         <h1 align="center">Configuration Files</h1>
+  
   - type: textarea
     id: Config_Files
     attributes:
       label: "Configuration files: "
-      description: Please attach a .zip file for the related configurations.
+      description: Please attach a .zip file with the related PDI configuration.
+  
   - type: markdown
     attributes:
       value: |
-        <br/><br/>
+        <p align="center">
+        <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/spacer.png" alt="drawing" width="1080"/>
+        </p>
+  
   - type: markdown
     attributes:
       value: |
         <h1 align="center">Problem Description</h1>
+  
   - type: textarea
     id: Problem_Description
     attributes:
       label: "Problem Description: "
-      description: A concise description of what you are experiencing. Provide screenshots, Error codes, Link Session files, ...
+      description: A concise description of what you are experiencing. Provide screenshots, Error codes, VeronteLink Session files, ...
+  
   - type: textarea
     id: Steps_reproduce
     attributes:
       label: "Steps to reproduce: "
       description: A concise description of the steps to reproduce or the tests undergone.
+  
   - type: textarea
     id: Expected_results
     attributes:
       label: "Expected results : "
       description: A concise description of what you expected to happen.
+  
   - type: markdown
     attributes:
       value: |
         > [!NOTE]
         > ### Thank you for taking this time to report the issue.
-        <p align="center">
-        <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/PR.png" alt="drawing" width="1080"/>
-        </p>
 
 
