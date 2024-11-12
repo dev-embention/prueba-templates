@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         <p align="center">
-        <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/PR.png" alt="drawing" height="100"/>
+        <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/PR.png" alt="drawing" height="50"/>
         </p>
         
         <p align="center">
