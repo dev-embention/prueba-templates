@@ -8,11 +8,11 @@ body:
       value: |
         ----
         <p align="center">
-        <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/Support_Meeting.png" alt="drawing" width="1080"/>
+        <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/PR.png" alt="drawing" width="1080"/>
         </p>
         
         <p align="center">
-        <h4>We sincerely apologize for any inconvenience caused by the encountered issue and extend our gratitude for bringing it to our attention.</h4>
+        <h4>This template is Please fill in the following fields to fully d for bringing it to our attention.</h4>
         </p>
 
         <p align="center">
@@ -44,18 +44,6 @@ body:
       label: "Serial Number: "
       description: Please in the same order specify the Serial Number of all of the products listed above.
       placeholder: 1xVeronte SN 4041, CEX SN 1500, ...
-  
-  - type: markdown
-    attributes:
-      value: |
-        <p align="center">
-        <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/spacer.png" alt="drawing" width="1080"/>
-        </p>
-  
-  - type: markdown
-    attributes:
-      value: |
-        <h1 align="center">Firmware Description</h1>
   
   - type: input
     id: Fw_version
