@@ -6,7 +6,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        <h1 align="center"><ins>Embention Problem Report Form</ins></h1>
+        <p align="center">
+        <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/PR.png" alt="drawing" width="1080"/>
+        </p>
         <h4>We sincerely apologize for any inconvenience caused by the encountered issue and extend our gratitude for bringing it to our attention.</h4>
         &#8192;
         
@@ -110,6 +112,5 @@ body:
         <p align="center">
         <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/PR.png" alt="drawing" width="1080"/>
         </p>
-        ![test](https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/PR.png)
 
 
