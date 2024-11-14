@@ -1,0 +1,72 @@
+name: Support Meeting Request
+description: Request a support meeting
+title: "Support Meeting Request"
+labels: Analysis, Comment, Support, Support Ticket
+body:
+  - type: markdown
+    attributes:
+      value: |
+        <p align="center">
+        <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/Support_Meeting.png" alt="drawing" height="75"/>
+        </p>
+        
+        <p align="center">
+        Please fill in the following fields to assess and be able to prepare for the meeting.
+        </h4>
+        </p>
+
+        <p align="center">
+        <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/spacer.png" alt="drawing" width="1080"/>
+        </p>
+        
+        > [!NOTE]
+        > ### Support Meetings require the use of Support Hours. Please contact sales@embention.com for more information regarding this.
+        
+        <p align="center">
+        <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/spacer.png" alt="drawing" width="1080"/>
+        </p>
+        
+  - type: markdown
+    attributes:
+      value: |
+        <h1 align="center">Meeting Date and Time</h1>
+        
+  - type: input
+    id: Time
+    attributes:
+      label: "Date and Time as DD/MM/YYYY - HH:00:00 and Timezone" 
+      description: Please specify the date, hour and timezone.
+      placeholder: 30/01/2024 - 11:00:00 CET
+  
+  - type: markdown
+    attributes:
+      value: |
+        > [!WARNING]
+        > ### Specified slot is subject to support availability.
+
+  - type: markdown
+    attributes:
+      value: |
+        <p align="center">
+        <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/spacer.png" alt="drawing" width="1080"/>
+        </p>
+  
+  - type: markdown
+    attributes:
+      value: |
+        <h1 align="center">Meeting Points</h1>
+  
+  - type: textarea
+    id: Meeting_points
+    attributes:
+      label: "Meeting Points:  "
+      description: In as much detail as possible list all meeting points or related Github issues.
+      placeholder: -[] Meeting Point 1
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!NOTE]
+        > ### Thank you for taking this time to report the issue.
+
+
