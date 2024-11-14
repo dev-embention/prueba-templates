@@ -12,7 +12,7 @@ body:
         
         <p align="center">
         <h4>
-        Please fill in the following fields to assess and be able to prepare for the meeting.
+        Please fill in the following fields to assess and be able to prepare for the meeting, and we will contact back as soon as possible
         </h4>
         </p>
 
@@ -66,11 +66,5 @@ body:
         - 1.
         - 2.
         - 3.
-
-  - type: markdown
-    attributes:
-      value: |
-        > [!NOTE]
-        > ### We will contact back as soon as possible
 
 
