@@ -62,3 +62,8 @@ body:
     attributes:
       label: "Meeting Points:  "
       description: "In as much detail as possible list all meeting points or related Github issues."
+      value: |
+         - 1.
+         - 2.
+         - 3.
+         ...
