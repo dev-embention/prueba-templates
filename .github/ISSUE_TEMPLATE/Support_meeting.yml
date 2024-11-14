@@ -17,14 +17,14 @@ body:
         </p>
 
         <p align="center">
-        <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/spacer.png" alt="drawing" width="1080"/>
+        <br/>
         </p>
         
         > [!NOTE]
         > ### Support Meetings require the use of Support Hours. Please contact sales@embention.com for more information regarding this.
         
         <p align="center">
-        <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/spacer.png" alt="drawing" width="1080"/>
+        <br/>
         </p>
         
   - type: markdown
@@ -49,7 +49,7 @@ body:
     attributes:
       value: |
         <p align="center">
-        <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/spacer.png" alt="drawing" width="1080"/>
+        <br/>
         </p>
   
   - type: markdown
