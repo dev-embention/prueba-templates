@@ -1,0 +1,36 @@
+name: RMA #####
+description: Start an RMA process
+title: "RMA"
+labels: Analysis, Comment, Support, Support Ticket
+body:
+  - type: markdown
+    attributes:
+      value: |
+        <p align="center">
+        <img src="https://github.com/dev-embention/prueba-templates/raw/refs/heads/develop/.github/RMA.png" alt="drawing" height="75"/>
+        </p>
+        
+        <p align="center">
+        <h4>
+        This issue will start an RMA process for an Embention product.</br>
+        </h4>
+        </p>
+
+        <p align="center">
+        <br/>
+        </p>
+        
+        > [!INFO]
+        > ### First of all, please make sure that someone from the support team has confirmed that an RMA is needed for one of your units.
+        
+        <p align="center">
+        <br/>
+        </p>
+        
+  - type: markdown
+    attributes:
+      value: |
+        <h1>If affirmative, please download and fill the following [form](https://github.com/embention/PDITemplates/files/13176415/F.449.03.-.RMA.template.pdf).
+        The **form** contains a complete explanation of the steps necessary to complete the process, including delivery.
+        Please follow the steps and attach the completed form to a commentary in this issue.
+        Remember that it is necessary to receive an RMA number from Embention staff before sending the goods.</h1>
