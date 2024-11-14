@@ -62,7 +62,12 @@ body:
     attributes:
       label: "Meeting Points:  "
       description: In as much detail as possible list all meeting points or related Github issues.
-      placeholder: - Meeting Point 1 <br/> - Meeting Point 2
+      value: |
+      1.
+      2.
+      3.
+      ...
+    render: bash
 
   - type: markdown
     attributes:
