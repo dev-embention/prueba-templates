@@ -43,7 +43,7 @@ body:
     attributes:
       value: |
         > [!WARNING]
-        > ### Specified slot is subject to support availability.
+        > ### Specified slot is subject to Support availability.
 
   - type: markdown
     attributes:
@@ -71,6 +71,6 @@ body:
     attributes:
       value: |
         > [!NOTE]
-        > ### Thank you for taking this time to report the issue.
+        > ### We will contact back as soon as possible
 
 
