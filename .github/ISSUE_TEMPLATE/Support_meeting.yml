@@ -61,16 +61,8 @@ body:
     id: Meeting_points
     attributes:
       label: "Meeting Points:  "
-      description: In as much detail as possible list all meeting points or related Github issues.
+      description: "In as much detail as possible list all meeting points or related Github issues."
       value: |
         - 1.
         - 2.
         - 3.
-        
-  - type: markdown
-    attributes:
-      value: |
-        > [!NOTE]
-        > ### We will contact back as soon as possible
-
-
