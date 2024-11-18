@@ -34,3 +34,7 @@ body:
         The **form** contains a complete explanation of the steps necessary to complete the process, including delivery.
         Please follow the steps and attach the completed form to a commentary in this issue.
         Remember that it is necessary to receive an RMA number from Embention staff before sending the goods.</h1>
+  
+  - type: textarea
+    attributes:
+      placeholder: "Upload here the filled in RMA Template"
