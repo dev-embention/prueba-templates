@@ -7,62 +7,45 @@ body:
       value: |
         <p align="center">
         <img src=https://embention.com/files/Support_Ticket.png alt="drawing" height="75"/>
-        <br/>
+        <br><br/>
         </p>
+
+        This opens a Support Ticket for general queries or discussions regarding the Embention products. Public information can be found on our online manuals.
         
         > [!TIP]
         > ### Please check out our online manuals at https://manuals.embention.com/ in case your question is already addressed there.
+
+        > [!WARNING]
+        > ### Specific support integration of peripherals, wiring diagrams, or any dedicated work requires the use of Support Hours which can be purchased by contacting sales@embention.com.        
         
+        <p align="center">
+        <br><br/>
+        </p>
+
   - type: markdown
     attributes:
       value: |
-        <h1 align="center">Product Description</h1>
+        <h1 align="center">Related product</h1>
         
   - type: input
     id: Product
     attributes:
       label: "Product :"
-      description: Please list all products involved.
-      placeholder: 1xVeronte, CEX, PCS, SIL, ...
-  
-  - type: input
-    id: hw_Serial_Num
-    attributes:
-      label: "Serial Number: "
-      description: Please in the same order specify the Serial Number of all of the products listed above.
+      description: If applicable, please list all products involved and their Serial Numbers.
       placeholder: 1xVeronte SN 4041, CEX SN 1500, ...
   
   - type: input
     id: Fw_version
     attributes:
       label: "Firmware Version: "
-      description: Please specify the Firmware Version for all of the products described above.
+      description: If applicable, please specify the Firmware Version for all of the products described above.
       placeholder: 1xVeronte 6.12.68, CEX 6.12.60, ...
-  
-  - type: markdown
-    attributes:
-      value: |
-        <p align="center">
-        <br/>
-        </p>
-  
-  - type: markdown
-    attributes:
-      value: |
-        <h1 align="center">Software Description</h1>
   
   - type: input
     id: App_ver
     attributes:
       label: "Apps: "
-      description: Please specify the Applications involved.
-      placeholder: 1xVerontePDIBuilder, VeronteLink, VeronteOps, ...
-  
-  - type: input
-    id: Software_version
-    attributes:
-      label: "App version: "
-      description: Please specify the version of all of the Applications listed above.
+      description: If applicable, please specify the Applications involved and their version.
       placeholder: 1xVerontePDIBuilder 6.12.54, VeronteLink 6.12.22, VeronteOps 6.12.34, ...
   
   - type: markdown
@@ -81,7 +64,7 @@ body:
     id: Config_Files
     attributes:
       label: "Configuration files: "
-      description: Please attach a .zip file with the related PDI configuration.
+      description: If applicable, please attach a .zip file with the related PDI configuration.
   
   - type: markdown
     attributes:
@@ -93,30 +76,12 @@ body:
   - type: markdown
     attributes:
       value: |
-        <h1 align="center">Problem Description</h1>
+        <h1 align="center">Description</h1>
   
   - type: textarea
-    id: Problem_Description
+    id: Description
     attributes:
-      label: "Problem Description: "
-      description: A concise description of what you are experiencing. Provide screenshots, Error codes, VeronteLink Session files, ...
-  
-  - type: textarea
-    id: Steps_reproduce
-    attributes:
-      label: "Steps to reproduce: "
-      description: A concise description of the steps to reproduce or the tests undergone.
-  
-  - type: textarea
-    id: Expected_results
-    attributes:
-      label: "Expected results : "
-      description: A concise description of what you expected to happen.
-  
-  - type: markdown
-    attributes:
-      value: |
-        > [!NOTE]
-        > ### Thank you for taking this time to report the issue.
+      label: "Support Ticket description"
+      description: A concise description of the general support needed.
 
 
