@@ -65,7 +65,7 @@ body:
     attributes:
       label: "User Story"
       description: "As a:"
-      options: User, Integrator, Operator, Pilot
+      options: [User, Integrator, Operator, Pilot]
   
   - type: textarea
     id: Description
