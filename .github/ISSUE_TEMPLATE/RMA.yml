@@ -25,8 +25,10 @@ body:
         2. Attach the form to the text area below.
         3. Embention Staff will provide an RMA number and update the form.
         4. Ship the unit following the guidance on the form.
-  
+
+        <br></br>
+        
   - type: textarea
     attributes:
-      label:  
+      label: Attach bwlow
       placeholder: "Upload here the filled in RMA Template"
