@@ -3,32 +3,7 @@ description: Describe a new feature request
 title: "New Feature: "
 labels: Analysis, Comment, Support, Support Ticket
 body:
-  - type: markdown
-    attributes:
-      value: |
-        <p align="center">
-        <img src=https://embention.com/files/Feature_Request.png alt="drawing" height="75"/>
-        </p>
-
-        <p align="center">
-        <h4>
-        We thank you for your suggestion to improve the Veronte Ecosystem.<br/>
-        Please fill in the following fields to fully understand the feature request.
-        </h4>
-        </p>
-
-        <p align="center">
-        <br/>
-        </p>
-        
-        > [!IMPORTANT]
-        > ### This request will be studied by the respective department and if accepted will be introduced in a future version of the product. 
-        > ### Please note no new features can be introduced in the current version of Hardware, Software or Firmware.
-        
-        <p align="center">
-        <br/>
-        </p>
-        
+     
    - type: markdown
     attributes:
       value: |
