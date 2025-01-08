@@ -3,11 +3,11 @@ description: Describe a new feature request
 title: "New Feature: "
 labels: Analysis, Comment, Support, Support Ticket
 body:
- - type: markdown
+  - type: markdown
     attributes:
       value: |
         <p align="center">
-        <img src=https://embention.com/files/Feature_Request.png alt="drawing" height="75"/>
+        <img src=https://embention.com/files/PR.png alt="drawing" height="75"/>
         </p>
 
   - type: input
