@@ -27,10 +27,11 @@ body:
         <br/>
         </p>
         
-        If affirmative, please download and fill the following [form](https://github.com/embention/PDITemplates/files/13176415/F.449.03.-.RMA.template.pdf).
-        The **form** contains a complete explanation of the steps necessary to complete the process, including delivery.
+        <h4>If affirmative, please download and fill the following [form](https://github.com/embention/PDITemplates/files/13176415/F.449.03.-.RMA.template.pdf).</h4>
+        
+        <h4>The **form** contains a complete explanation of the steps necessary to complete the process, including delivery.
         Please follow the steps and attach the completed form to a commentary in this issue.
-        Remember that it is necessary to receive an RMA number from Embention staff before sending the goods.
+        Remember that it is necessary to receive an RMA number from Embention staff before sending the goods.</h4>
   
   - type: textarea
     attributes:
