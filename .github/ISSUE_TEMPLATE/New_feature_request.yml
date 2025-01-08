@@ -1,4 +1,4 @@
-name: Problem Report
+name: Test
 description: Describe a Problem report
 title: "[PR] : "
 labels: Analysis, Comment, PR, Support
