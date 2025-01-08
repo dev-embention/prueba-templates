@@ -18,15 +18,15 @@ body:
         
         > [!IMPORTANT]
         > ### First of all, please make sure that someone from the support team has confirmed that an RMA is needed for one of your units.
-        
-        <h4>If affirmative, please download and fill the following <a href="https://github.com/embention/PDITemplates/files/13176415/F.449.03.-.RMA.template.pdf">form</a>.</h4>
-        
-        <h4>The <b>form</b> contains a complete explanation of the steps necessary to complete the process, including delivery.</h4>
-        
-        > [!IMPORTANT]
-        > ### Remember that it is necessary to receive an RMA number from Embention staff before sending the goods.
+
+        <h4>
+        Steps:
+        1. Download and fill the following <a href="https://github.com/embention/PDITemplates/files/13176415/F.449.03.-.RMA.template.pdf">form</a>.</h4>
+        2. Attach the form to the text area below.
+        3. Embention Staff will provide an RMA number and update the form.
+        4. Ship the unit following the guidance on the form.
   
   - type: textarea
     attributes:
-      label: Upload the filled form below
+      label:  
       placeholder: "Upload here the filled in RMA Template"
