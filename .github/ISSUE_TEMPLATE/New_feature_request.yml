@@ -10,85 +10,9 @@ body:
         <img src=https://embention.com/files/Feature_Request.png alt="drawing" height="75"/>
         </p>
 
-        <p align="center">
-        <h4>
-        We thank you for your suggestion to improve the Veronte Ecosystem.<br/>
-        Please fill in the following fields to fully understand the feature request.
-        </h4>
-        </p>
-
-        <p align="center">
-        <br/>
-        </p>
-        
-        > [!IMPORTANT]
-        > ### This request will be studied by the respective department and if accepted will be introduced in a future version of the product. 
-        > ### Please note no new features can be introduced in the current version of Hardware, Software or Firmware.
-        
-        <p align="center">
-        <br/>
-        </p>
-     
-   - type: markdown
-    attributes:
-      value: |
-        <h1 align="center">Product Description</h1>
-        
   - type: input
     id: Product
     attributes:
       label: "Product :"
       description: If applicable, please indicate the product for which the feature is being suggested
       placeholder: 1xVeronte, CEX, ...
-  
-  - type: input
-    id: App_ver
-    attributes:
-      label: "Apps: "
-      description: If applicable, please indicate the Application for which the feature is being suggested
-      placeholder: 1xVerontePDIBuilder, VeronteLink, VeronteOps, ...
-  
-  - type: markdown
-    attributes:
-      value: |
-        <p align="center">
-        <br/>
-        </p>  
-  
-  - type: markdown
-    attributes:
-      value: |
-        <h1 align="center">Feature Description</h1>
-  
-  - type: dropdown
-    id: User_story
-    attributes:
-      label: "User Story"
-      description: "As a:"
-      options: User, Integrator, Operator, Pilot
-  
-  - type: textarea
-    id: Description
-    attributes:
-      label: "Description"
-      description: "I want to be ale to:"
-      placeholder: "I want to be able to enable/disable any telemetry vector"
-
-  - type: textarea
-    id: Intent
-    attributes:
-      label: "Intent"
-      description: "In order to:"
-      placeholder: "In order to free radiolink bandwith."
-  
-  - type: textarea
-    id: Detailed_description
-    attributes:
-      label: "Detailed description"
-      description: "If needed: rationale, images, diagrams..."
-  
-  - type: markdown
-    attributes:
-      value: |
-        > [!NOTE]
-        > ### Thank you for this suggestion, the Embention team will analyse it and provide feedback.
