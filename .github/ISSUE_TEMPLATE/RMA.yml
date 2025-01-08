@@ -37,4 +37,5 @@ body:
   
   - type: textarea
     attributes:
+      label: RMA_pdf
       placeholder: "Upload here the filled in RMA Template"
