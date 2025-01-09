@@ -1,6 +1,6 @@
 name: RMA #####
 description: Start an RMA process
-title: "RMA"
+title: "[RMA] :"
 labels: Analysis, Comment, Support, Support Ticket
 body:
   - type: markdown
