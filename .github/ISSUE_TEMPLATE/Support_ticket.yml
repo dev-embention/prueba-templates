@@ -1,5 +1,6 @@
 name: Support Ticket
 description: General question
+title: "[Support Ticket] : "
 labels: Analysis, Comment, Support, Support Ticket
 body:
   - type: markdown
