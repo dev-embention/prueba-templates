@@ -10,11 +10,9 @@ body:
         <img src=https://embention.com/files/sp_Support_Meeting.png alt="drawing" height="75"/>
         </p>
         
-        <p align="center">
-        <h4>
+        <h3>
         Please fill in the following fields to assess and be able to prepare for the meeting, and we will contact back as soon as possible
-        </h4>
-        </p>
+        </h3>
 
         <p align="center">
         <br/>
@@ -35,7 +33,7 @@ body:
   - type: input
     id: Time
     attributes:
-      label: "Date and Time as DD/MM/YYYY - HH:00:00 and Timezone" 
+      label: "Date and Time as DD/MM/YYYY - HH:mm:00 and Timezone" 
       description: Please specify the date, hour and timezone.
       placeholder: 30/01/2024 - 11:00:00 CET
   
@@ -66,4 +64,3 @@ body:
          - 1.
          - 2.
          - 3.
-         ...
