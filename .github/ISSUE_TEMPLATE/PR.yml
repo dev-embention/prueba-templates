@@ -10,12 +10,10 @@ body:
         <img src=https://embention.com/files/sp_PR.png alt="drawing" height="75"/>
         </p>
 
-        <p align="center">
-        <h4>
+        <h3 align="center">
         We thank you for bringing this to our attention.<br/>
         Please fill in the following fields to fully understand the issue in hand and be able to solve it as soon as possible.
-        </h4>
-        </p>
+        </h3>
 
         <p align="center">
         <br/>
@@ -37,15 +35,8 @@ body:
     id: Product
     attributes:
       label: "Product :"
-      description: Please list all products involved.
-      placeholder: 1xVeronte, CEX, PCS, SIL, ...
-  
-  - type: input
-    id: hw_Serial_Num
-    attributes:
-      label: "Serial Number: "
-      description: Please in the same order specify the Serial Number of all of the products listed above.
-      placeholder: 1xVeronte SN 4041, CEX SN 1500, ...
+      description: Please list all products involved as well as their Serial Number
+      placeholder: 1xVeronte SN 4041, CEX SN 1500, SIL, ...
   
   - type: input
     id: Fw_version
@@ -70,14 +61,7 @@ body:
     id: App_ver
     attributes:
       label: "Apps: "
-      description: Please specify the Applications involved.
-      placeholder: 1xVerontePDIBuilder, VeronteLink, VeronteOps, ...
-  
-  - type: input
-    id: Software_version
-    attributes:
-      label: "App version: "
-      description: Please specify the version of all of the Applications listed above.
+      description: Please specify the Applications involved as well as their version
       placeholder: 1xVerontePDIBuilder 6.12.54, VeronteLink 6.12.22, VeronteOps 6.12.34, ...
   
   - type: markdown
