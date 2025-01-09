@@ -32,32 +32,6 @@ body:
   - type: markdown
     attributes:
       value: |
-        <h1 align="center">Product Description</h1>
-        
-  - type: input
-    id: Product
-    attributes:
-      label: "Product :"
-      description: If applicable, please indicate the product for which the feature is being suggested
-      placeholder: 1xVeronte, CEX, ...
-  
-  - type: input
-    id: App_ver
-    attributes:
-      label: "Apps: "
-      description: If applicable, please indicate the Application for which the feature is being suggested
-      placeholder: 1xVerontePDIBuilder, VeronteLink, VeronteOps, ...
-  
-  - type: markdown
-    attributes:
-      value: |
-        <p align="center">
-        <br/>
-        </p>  
-  
-  - type: markdown
-    attributes:
-      value: |
         <h1 align="center">Feature Description</h1>
   
   - type: dropdown
