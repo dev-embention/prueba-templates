@@ -1,5 +1,5 @@
 ---
-name: Problem Report
+name: Problem Report old
 about: Report an issue you are experiencing with the system
 title: 'Problem report'
 labels: Analysis, Comment, PR, Support
