@@ -14,20 +14,22 @@ jobs:
         env:
           EMD_API_HOST: ${{ secrets.EMD_API_HOST }}
           EMD_API_KEY: ${{ secrets.JOB_EMD_API_KEY }}
-          REPO_URL: "${{ github.server_url }}/${{ github.repository }}"
-          
+        #   REPO_URL: "${{ github.server_url }}/${{ github.repository }}"
+
         run: |
-          echo "Repo URL: $REPO_URL"
           REF="release/MD-186/es/014"
           echo "Ref: $REF"
           DOC_PATH="docs/procedures/MD-P.186-edicion-de-documentacion"
-          # REPO_URL: "https://github.com/dev-embention/sw_CI_Libs_dev"
+          REPO_URL: "https://github.com/dev-embention/poc-embention-tools-1177"
+          echo "Repo URL: $REPO_URL"
 
-            curl -X POST "${EMD_API_HOST}/api/v1/doc/preview" \
+            response=$(curl -X POST "${EMD_API_HOST}/api/v1/doc/preview" \
               -H "accept: application/json" \
               -H "X-API-KEY: ${EMD_API_KEY}" \
               -H "Content-Type: application/json" \
-              -d "{\"doc_path\": \"$DOC_PATH\", \"lang\": \"es\", \"ref\": \"$REF\", \"repo_url\": \"$REPO_URL\"}"
+              -d "{\"doc_path\": \"$DOC_PATH\", \"lang\": \"es\", \"ref\": \"$REF\", \"repo_url\": \"$REPO_URL\"}")
+
+            echo "Response Code: $response"
 
       - name: Debug API Request
         run: |
