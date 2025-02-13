@@ -20,7 +20,7 @@ jobs:
           REF="release/MD-186/es/014"
           echo "Ref: $REF"
           DOC_PATH="docs/procedures/MD-P.186-edicion-de-documentacion"
-          REPO_URL: "https://github.com/dev-embention/poc-embention-tools-1177"
+          REPO_URL="https://github.com/dev-embention/poc-embention-tools-1177"
           echo "Repo URL: $REPO_URL"
 
             response=$(curl -X POST "${EMD_API_HOST}/api/v1/doc/preview" \
