@@ -19,7 +19,8 @@ jobs:
         run: |
           REF="release/MD-186/es/014"
           echo "Ref: $REF"
-          DOC_PATH="docs/procedures/MD-P.186-edicion-de-documentacion"
+          echo "EMD API HOST: $EMD_API_HOST"
+          DOC_PATH="docs/procedures/i+d/Scripts/MD-P.186-edicion-de-documentacion"
           REPO_URL="https://github.com/dev-embention/poc-embention-tools-1177"
           echo "Repo URL: $REPO_URL"
 
