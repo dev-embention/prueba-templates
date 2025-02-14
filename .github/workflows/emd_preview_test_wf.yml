@@ -12,7 +12,7 @@ jobs:
 
       - name: Call API to Generate Preview
         env:
-          EMD_API_HOST: ${{ secrets.EMD_API_HOST }}
+          EMD_API_HOST: ${{ vars.EMD_API_HOST }}
           EMD_API_KEY: ${{ secrets.JOB_EMD_API_KEY }}
         #   REPO_URL: "${{ github.server_url }}/${{ github.repository }}"
 
