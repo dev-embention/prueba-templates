@@ -11,6 +11,12 @@ body:
     id: description
     attributes:
       label: Description
+      value: |
+        > ¡Hola!
+        > 
+        > Enhorabuena por crear tu primera issue con nosotros.
+        > 
+        > Más abajo encontrarás también tus primeras tareas, haz check cuando hayas finalizado cada una de ellas. Queremos acercarte la formación inicial que te ayudará a desenvolverte en nuestro equipo.
   - type: textarea
     id: formacion
     attributes:
@@ -21,11 +27,12 @@ body:
     attributes:
       label: Introducción
       options:
-        - label: Bienvenida [URL](https://drive.google.com/file/d/17rJrvYWgvFT0cBqS6eCbGH8CpS76yyPD/view?usp=drive_link)
-        - label: Sensibilización en ISO 9001 [URL](https://drive.google.com/file/d/1YVMmp4uhIxBZ-orWx4QaYRpAVqYozoe0/view?usp=drive_link)
+        - label: Roadmap de Embention [URL](https://youtu.be/BhYad1rJIRk?si=v3M2ZaLgew0G-_P2) 
+        - label: Sensibilización en ISO 9001 y EN9100 [URL](https://www.youtube.com/watch?v=g90R6Udp6lw)
+        - label: Sensibilización norma ISO 27001 [URL](https://drive.google.com/drive/folders/1ZprC2JRkn-Ncsn1x5D1eub6_-Y47OyV1?dmr=1&ec=wgc-drive-globalnav-goto)
         - label: Cuestionario ISO9001 y EN9100  [URL](https://embention.net/survey/start/awareness-survey-iso-9001-2015-and-en-9100-2018-29)
-        - label: Secreto empresarial [URL](https://drive.google.com/file/d/1bhyjMC4GKeAp6zm1PI_J9Q2yqmk7FoJa/view?usp=drive_link)
-        - label: Github y Smartgit [URL](https://drive.google.com/file/d/121jy3fmvEM1cHfEu7R7Qkr7XXPsZk53g/view?usp=drive_linkusp=drive_link)
+        - label: Secreto empresarial [URL](https://youtu.be/uZslY-fygBI?si=mYE-4RmySoslyDMF)
+        - label: Github y Smartgit [URL](https://youtu.be/cNi-NjlZuKU?si=KoMj_pwABODoSjbV)
   - type: checkboxes
     attributes:
       label: Procedimientos Generales
@@ -43,37 +50,74 @@ body:
         - label: P.541 - Solicitud de servicios IT [URL](https://documentation.embention.net/541/es/latest/index.html)
         - label: P.569 - Gestión de Skills del equipo [URL](https://documentation.embention.net/569/es/latest/index.html)
         - label: Refleja tus skills de tu ficha empleado
+        - label: P.192 - Gestión de herramienta de software [URL](https://documentation.embention.net/192/es/latest/index.html)
         - label: P.441 - Plan de evacuación de incendios [URL](https://documentation.embention.net/441/es/latest/index.html)
+        - label: P.716 - Sesión de fotos individuales [URL](https://documentation.embention.net/716/es/latest/index.html)
+        - label: P.761 - Actualización fotografía [URL](https://documentation.embention.net/761/es/latest/index.html)
+  - type: checkboxes
+    attributes:
+      label: Feedback - Procedimientos Generales (0/5)
+      options:
+        - label: Muy insatisfecho. La formación no cumplió con las expectativas y no creo que haya aprendido lo mínimo. (1)
+        - label: Insatisfecho. La formación es algo escasa y deja importantes lagunas en la comprensión del contenido. (2)
+        - label: Formación aceptable. La formación presentó un desempeño intermedio: algunos contenidos se comunicaron con claridad y aportaron valor, mientras que otros aspectos carecieron de la profundidad necesaria, resultando en un aprendizaje parcial. (3)
+        - label: Satisfecho. La formación cumplió las expectativas, presentando los conceptos esenciales de forma clara y detallada, lo que permitió un aprendizaje robusto, aunque ciertos aspectos específicos podrían afinarse para alcanzar la perfección. (4)
+        - label: Muy satisfecho. La formación superó todas las expectativas, ofreciendo una experiencia integral y excepcional. Cada concepto se presentó de forma precisa y detallada, lo que facilitó una comprensión profunda y un dominio total de los contenidos esenciales. (5)
+  - type: textarea
+    id: Observaciones Procedimientos Generales
+    attributes:
+      label: Observaciones
   - type: checkboxes
     attributes:
       label: Políticas
       options:
-        - label: PA.010 - Politica de Calidad [URL](https://documentation.embention.net/010/en/latest/index.html)
+        - label: PA.010 - Política de Calidad [URL](https://documentation.embention.net/010/en/latest/index.html)
         - label: PA.196 - Directrices de Seguridad de la Informacion [URL](https://documentation.embention.net/196/es/latest/index.html)
         - label: PA.285 - Política de control de acceso físico [URL](https://documentation.embention.net/285/es/latest/index.html)
-        - label: PA.287 - Politica de control de acceso [URL](https://documentation.embention.net/287/es/latest/index.html)
-        - label: PA.295 - Politica de contraseñas [URL](https://documentation.embention.net/295/es/latest/index.html)
-        - label: PA.442 - Politica de cultura justa [URL](https://documentation.embention.net/442/es/latest/index.html)
-        - label: PA.474 - Politica seguridad operacional [URL](https://documentation.embention.net/474/es/latest/index.html)
-        - label: PA.544 - Politica de secreto empresarial [URL](https://documentation.embention.net/544/es/latest/index.html)
-        - label: PA.546 - Politica de uso de activos de informacion [URL](https://documentation.embention.net/546/es/latest/index.html)
+        - label: PA.287 - Política de control de acceso [URL](https://documentation.embention.net/287/es/latest/index.html)
+        - label: PA.295 - Política de contraseñas [URL](https://documentation.embention.net/295/es/latest/index.html)
+        - label: PA.442 - Política de cultura justa [URL](https://documentation.embention.net/442/es/latest/index.html)
+        - label: PA.474 - Política seguridad operacional [URL](https://documentation.embention.net/474/es/latest/index.html)
+        - label: PA.544 - Política de secreto empresarial [URL](https://documentation.embention.net/544/es/latest/index.html)
+        - label: PA.546 - Política de uso de activos de informacion [URL](https://documentation.embention.net/546/es/latest/index.html)
         - label: Cuestionario "Acceptable Uso of Assets Policy" [URL](https://embention.net/survey/start/acceptable-use-of-assets-policy-28)
+  - type: checkboxes
+    attributes:
+      label: Feedback - Políticas (0/5)
+      options:
+        - label: Muy insatisfecho. La formación no cumplió con las expectativas y no creo que haya aprendido lo mínimo. (1)
+        - label: Insatisfecho. La formación es algo escasa y deja importantes lagunas en la comprensión del contenido. (2)
+        - label: Formación aceptable. La formación presentó un desempeño intermedio: algunos contenidos se comunicaron con claridad y aportaron valor, mientras que otros aspectos carecieron de la profundidad necesaria, resultando en un aprendizaje parcial. (3)
+        - label: Satisfecho. La formación cumplió las expectativas, presentando los conceptos esenciales de forma clara y detallada, lo que permitió un aprendizaje robusto, aunque ciertos aspectos específicos podrían afinarse para alcanzar la perfección. (4)
+        - label: Muy satisfecho. La formación superó todas las expectativas, ofreciendo una experiencia integral y excepcional. Cada concepto se presentó de forma precisa y detallada, lo que facilitó una comprensión profunda y un dominio total de los contenidos esenciales. (5)
+  - type: textarea
+    id: Observaciones Políticas
+    attributes:
+      label: Observaciones
   - type: textarea
     id: opcionales
     attributes:
       label: A tener en cuenta
       value: |
         - Toda la documentación se encuentran en el siguiente [enlace](https://embention.net/web#action=1236&model=emb.internal.document&view_type=list&menu_id=)
-        - Roadmap de Embention [URL](https://drive.google.com/file/d/1GM4ynrD6R87hqdgRBWcpEEsSAurp6CDS/view?usp=drive_link)
+        - (Visualizar si todavía no lo has visto) Bienvenida [URL](https://drive.google.com/file/d/17rJrvYWgvFT0cBqS6eCbGH8CpS76yyPD/view?usp=drive_link)
+        - Cualquier duda o consulta no dudéis en contactar con el compañero @lpq2 del departamento de Calidad.
+        - Para acompañarte durante el proceso de formación, y aclarar cualquier duda o sugerencia que pueda surgir, tu team leader te asignará un buddy mencionandolo aquí: ______
+             - La función de tu buddy será:
+                 - Ayudarte a conocer los procesos y herramientas a nivel departamental 
+                 - Responder tus preguntas sobre el equipo a nivel más técnico 
+                 - Ser un apoyo general durante tu periodo de adaptación
   - type: textarea
     id: departmentProcedures
     attributes:
       label: Específicas del puesto
       value: |
         - [ ] Listado a rellenar por parte de tu team leader. Menciónalo aquí ________ para que le llegue la notificación.
-        - [ ] (Decidir si aplica) P.169 - Entrada al laboratorio y control de estaciones EPA [URL](https://documentation.embention.net/169/es/latest/index.html)
+        - [ ] (Si Aplica) P.169 - Entrada al laboratorio y control de estaciones EPA [URL](https://documentation.embention.net/169/es/latest/index.html)
           - [ ] ....
           
         No olvides cerrar la issue cuando acabes ni de consultarnos todas tus dudas :)
+
+        Entendemos que al cerrar la issue, nos haces saber que has entendido toda la información anteriormente expuesta.
         
         ¡Bienvenido/a!
