@@ -83,7 +83,7 @@ body:
         - label: Cuestionario "Acceptable Uso of Assets Policy" [URL](https://embention.net/survey/start/acceptable-use-of-assets-policy-28)
   - type: checkboxes
     attributes:
-      label: Feedback Políticas
+      label: Feedback Politicas
       options:
         - label: Muy insatisfecho. La formación no cumplió con las expectativas y no creo que haya aprendido lo mínimo. (1)
         - label: Insatisfecho. La formación es algo escasa y deja importantes lagunas en la comprensión del contenido. (2)
