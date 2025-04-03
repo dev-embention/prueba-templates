@@ -67,6 +67,7 @@ body:
     id: Observaciones Procedimientos Generales
     attributes:
       label: Observaciones
+      value: |
   - type: checkboxes
     attributes:
       label: Políticas
@@ -94,6 +95,7 @@ body:
     id: Observaciones Políticas
     attributes:
       label: Observaciones
+      value: |
   - type: textarea
     id: opcionales
     attributes:
