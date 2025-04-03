@@ -3,57 +3,6 @@ description: Plantilla para crear la issue inicial en el onboarding a la empresa
 title: "[Onboarding Training] "
 labels: ["Analysis","Comment","RRHH"]
 body:
-  - type: textarea
-    id: refrences
-    attributes:
-      label: References
-  - type: textarea
-    id: description
-    attributes:
-      label: Description
-      value: |
-        > ¡Hola!
-        > 
-        > Enhorabuena por crear tu primera issue con nosotros.
-        > 
-        > Más abajo encontrarás también tus primeras tareas, haz check cuando hayas finalizado cada una de ellas. Queremos acercarte la formación inicial que te ayudará a desenvolverte en nuestro equipo.
-  - type: textarea
-    id: formacion
-    attributes:
-      label: Plan de formación
-      value: |
-        # Formación
-  - type: checkboxes
-    attributes:
-      label: Introducción
-      options:
-        - label: Roadmap de Embention [URL](https://youtu.be/BhYad1rJIRk?si=v3M2ZaLgew0G-_P2) 
-        - label: Sensibilización en ISO 9001 y EN9100 [URL](https://www.youtube.com/watch?v=g90R6Udp6lw)
-        - label: Sensibilización norma ISO 27001 [URL](https://drive.google.com/drive/folders/1ZprC2JRkn-Ncsn1x5D1eub6_-Y47OyV1?dmr=1&ec=wgc-drive-globalnav-goto)
-        - label: Cuestionario ISO9001 y EN9100  [URL](https://embention.net/survey/start/awareness-survey-iso-9001-2015-and-en-9100-2018-29)
-        - label: Secreto empresarial [URL](https://youtu.be/uZslY-fygBI?si=mYE-4RmySoslyDMF)
-        - label: Github y Smartgit [URL](https://youtu.be/cNi-NjlZuKU?si=KoMj_pwABODoSjbV)
-  - type: checkboxes
-    attributes:
-      label: Procedimientos Generales
-      options:
-        - label: P.058 - Pauta de bienvenida [URL](https://documentation.embention.net/058/es/latest/index.html)
-        - label: P.030 - Comunicacion interna y externa [URL](https://documentation.embention.net/030/es/latest/index.html)
-        - label: P.050 - Reuniones [URL](https://documentation.embention.net/050/es/latest/index.html)
-        - label: P.190 - Dia de-concentracion teletrabajo opcional (consultar con el supervisor si aplica) [URL](https://documentation.embention.net/190/es/latest/index.html)
-        - label: P.195 - Ausencias odoo [URL](https://documentation.embention.net/195/es/latest/index.html)
-        - label: P.257 - Apertura automatica de puertas [URL](https://documentation.embention.net/257/es/latest/index.html)
-        - label: P.389 - Semana intensiva opcional [URL](https://documentation.embention.net/389/es/latest/index.html)
-        - label: P.398 - Preguntas frecuentes RRHH [URL](https://documentation.embention.net/398/es/latest/index.html)
-        - label: P.062 - Crear issue [URL](https://documentation.embention.net/062/es/latest/index.html)
-        - label: P.072 - Carga de horas timesheets [URL](https://documentation.embention.net/072/es/latest/index.html)
-        - label: P.541 - Solicitud de servicios IT [URL](https://documentation.embention.net/541/es/latest/index.html)
-        - label: P.569 - Gestión de Skills del equipo [URL](https://documentation.embention.net/569/es/latest/index.html)
-        - label: Refleja tus skills de tu ficha empleado
-        - label: P.192 - Gestión de herramienta de software [URL](https://documentation.embention.net/192/es/latest/index.html)
-        - label: P.441 - Plan de evacuación de incendios [URL](https://documentation.embention.net/441/es/latest/index.html)
-        - label: P.716 - Sesión de fotos individuales [URL](https://documentation.embention.net/716/es/latest/index.html)
-        - label: P.761 - Actualización fotografía [URL](https://documentation.embention.net/761/es/latest/index.html)
   - type: checkboxes
     attributes:
       label: Feedback Procedimientos Generales
@@ -69,20 +18,6 @@ body:
       label: Observaciones
   - type: checkboxes
     attributes:
-      label: Políticas
-      options:
-        - label: PA.010 - Política de Calidad [URL](https://documentation.embention.net/010/en/latest/index.html)
-        - label: PA.196 - Directrices de Seguridad de la Informacion [URL](https://documentation.embention.net/196/es/latest/index.html)
-        - label: PA.285 - Política de control de acceso físico [URL](https://documentation.embention.net/285/es/latest/index.html)
-        - label: PA.287 - Política de control de acceso [URL](https://documentation.embention.net/287/es/latest/index.html)
-        - label: PA.295 - Política de contraseñas [URL](https://documentation.embention.net/295/es/latest/index.html)
-        - label: PA.442 - Política de cultura justa [URL](https://documentation.embention.net/442/es/latest/index.html)
-        - label: PA.474 - Política seguridad operacional [URL](https://documentation.embention.net/474/es/latest/index.html)
-        - label: PA.544 - Política de secreto empresarial [URL](https://documentation.embention.net/544/es/latest/index.html)
-        - label: PA.546 - Política de uso de activos de informacion [URL](https://documentation.embention.net/546/es/latest/index.html)
-        - label: Cuestionario "Acceptable Uso of Assets Policy" [URL](https://embention.net/survey/start/acceptable-use-of-assets-policy-28)
-  - type: checkboxes
-    attributes:
       label: Feedback Politicas
       options:
         - label: Muy insatisfecho. La formación no cumplió con las expectativas y no creo que haya aprendido lo mínimo. (1)
@@ -94,27 +29,6 @@ body:
     id: Observaciones Políticas
     attributes:
       label: Observaciones
-  - type: textarea
-    id: opcionales
-    attributes:
-      label: A tener en cuenta
-      value: |
-        - Toda la documentación se encuentran en el siguiente [enlace](https://embention.net/web#action=1236&model=emb.internal.document&view_type=list&menu_id=)
-        - (Visualizar si todavía no lo has visto) Bienvenida [URL](https://drive.google.com/file/d/17rJrvYWgvFT0cBqS6eCbGH8CpS76yyPD/view?usp=drive_link)
-        - Cualquier duda o consulta no dudéis en contactar con el compañero @lpq2 del departamento de Calidad.
-        - Para acompañarte durante el proceso de formación, y aclarar cualquier duda o sugerencia que pueda surgir, tu team leader te asignará un buddy mencionandolo aquí: ______
-             - La función de tu buddy será:
-                 - Ayudarte a conocer los procesos y herramientas a nivel departamental 
-                 - Responder tus preguntas sobre el equipo a nivel más técnico 
-                 - Ser un apoyo general durante tu periodo de adaptación
-  - type: textarea
-    id: departmentProcedures
-    attributes:
-      label: Específicas del puesto
-      value: |
-        - [ ] Listado a rellenar por parte de tu team leader. Menciónalo aquí ________ para que le llegue la notificación.
-        - [ ] (Si Aplica) P.169 - Entrada al laboratorio y control de estaciones EPA [URL](https://documentation.embention.net/169/es/latest/index.html)
-          - [ ] ....
           
         No olvides cerrar la issue cuando acabes ni de consultarnos todas tus dudas :)
 
