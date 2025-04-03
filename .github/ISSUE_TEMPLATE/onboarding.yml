@@ -12,10 +12,6 @@ body:
         - label: Formación aceptable. La formación presentó un desempeño intermedio, algunos contenidos se comunicaron con claridad y aportaron valor, mientras que otros aspectos carecieron de la profundidad necesaria, resultando en un aprendizaje parcial. - 3
         - label: Satisfecho. La formación cumplió las expectativas, presentando los conceptos esenciales de forma clara y detallada, lo que permitió un aprendizaje robusto, aunque ciertos aspectos específicos podrían afinarse para alcanzar la perfección. - 4
         - label: Muy satisfecho. La formación superó todas las expectativas, ofreciendo una experiencia integral y excepcional. Cada concepto se presentó de forma precisa y detallada, lo que facilitó una comprensión profunda y un dominio total de los contenidos esenciales. - 5
-  - type: textarea
-    id: Observaciones Procedimientos Generales
-    attributes:
-      label: Observaciones
   - type: checkboxes
     attributes:
       label: Feedback Politicas
@@ -29,9 +25,3 @@ body:
     id: Observaciones Políticas
     attributes:
       label: Observaciones
-          
-        No olvides cerrar la issue cuando acabes ni de consultarnos todas tus dudas :)
-
-        Entendemos que al cerrar la issue, nos haces saber que has entendido toda la información anteriormente expuesta.
-        
-        ¡Bienvenido/a!
