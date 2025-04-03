@@ -91,7 +91,7 @@ body:
         - label: Satisfecho. La formación cumplió las expectativas, presentando los conceptos esenciales de forma clara y detallada, lo que permitió un aprendizaje robusto, aunque ciertos aspectos específicos podrían afinarse para alcanzar la perfección. (4)
         - label: Muy satisfecho. La formación superó todas las expectativas, ofreciendo una experiencia integral y excepcional. Cada concepto se presentó de forma precisa y detallada, lo que facilitó una comprensión profunda y un dominio total de los contenidos esenciales. (5)
   - type: textarea
-    id: observacionesPolíticas
+    id: observacionesPoliticas
     attributes:
       label: Observaciones
   - type: textarea
