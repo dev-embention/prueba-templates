@@ -48,7 +48,7 @@ body:
     attributes:
       label: Introduction
       options:
-        - label: Embention roadmap [URL](https://www.youtube.com/watch?v=D73jTwAH7y0&list=PLDZoJJnqPj4w80EilJeMwLpYRt2YnfuLp&index=4)
+        - label: Embention roadmap [URL](https://youtu.be/gqpAuGQw-kI)
         - label: Trade secret [URL](https://youtu.be/uZslY-fygBI?si=mYE-4RmySoslyDMF)
         - label: GitHub and SmartGit [URL](https://youtu.be/cNi-NjlZuKU?si=KoMj_pwABODoSjbV)
 
