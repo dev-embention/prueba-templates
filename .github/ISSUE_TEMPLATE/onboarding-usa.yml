@@ -96,11 +96,10 @@ body:
       options:
         - label: Training - AI tools [URL](https://embention.net/survey/start/training-ia-tools-1-0-79)
 
-  - type: textarea
-    id: to_keep_in_mind
+  - type: markdown
     attributes:
-      label: To Keep in Mind
       value: |
+        ## Keep in Mind
         - All documentation is available at the following [link](https://embention.net/web#action=1236&model=emb.internal.document&view_type=list&menu_id=) 
         - You can also access the **Documentation module directly from Odoo**, where all internal procedures and policies are centralized.
         - Most of our documentation is currently in Spanish. If needed, you can translate it directly in Chrome using the Google Translate browser extension.
