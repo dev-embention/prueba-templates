@@ -19,10 +19,8 @@ body:
     validations:
       required: false
 
-  - type: textarea
-    id: description
+  - type: markdown
     attributes:
-      label: Description
       value: |
         Hi!
         Congratulations on creating your first issue with us.
