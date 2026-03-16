@@ -100,35 +100,36 @@ body:
     attributes:
       value: |
         ## Keep in Mind
+        
         - All documentation is available at the following [link](https://embention.net/web#action=1236&model=emb.internal.document&view_type=list&menu_id=) 
         - You can also access the **Documentation module directly from Odoo**, where all internal procedures and policies are centralized.
         - Most of our documentation is currently in Spanish. If needed, you can translate it directly in Chrome using the Google Translate browser extension.
 
   - type: textarea
-      id: role-specific
-      attributes:
-        label: Role-Specific
-        value: |
-          
-          - [ ] To be completed by your **Team Leader** and your **TPMO**. Please mention them here: @___________ & @___________  
-          - [ ] ...
+    id: role-specific
+    attributes:
+      label: Role-Specific
+      value: |
+        - [ ] To be completed by your **Team Leader** and your **TPMO**. Please mention them here: @___________ & @___________  
+        - [ ] ...
 
   - type: textarea
-      id: biddy-assignment
-      attributes:
-        label: Buddy-Assignment
-        value: |
-          - [ ] To support you during your onboarding process, your **Team Leader** (please mention them here: @___________ ) will assign you a buddy. 
-          - **Assigned Buddy:** @____
-          - Your buddy’s role will be:
-              - Help you understand departmental processes and tools
-              - Answer your more technical team-related questions
-              - Provide general support during your adaptation period
+    id: buddy-assignment
+    attributes:
+      label: Buddy-Assignment
+      value: |
+        - [ ] To support you during your onboarding process, your **Team Leader** (please mention them here: @___________ ) will assign you a buddy. 
+        - **Assigned Buddy:** @____
+        - Your buddy’s role will be:
+            - Help you understand departmental processes and tools
+            - Answer your more technical team-related questions
+            - Provide general support during your adaptation period
 
   - type: markdown
     attributes:
       value: |
         ## Closing
+        
         Don’t forget to close the issue once you’re done and feel free to reach out with any questions :)
         
         By closing the issue, we understand that you have reviewed and understood all the information provided above.
