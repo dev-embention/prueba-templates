@@ -105,7 +105,7 @@ body:
         - Most of our documentation is currently in Spanish. If needed, you can translate it directly in Chrome using the Google Translate browser extension.
 
   - type: textarea
-      id: description
+      id: role-specific
       attributes:
         label: Role-Specific
         value: |
@@ -114,7 +114,7 @@ body:
           - [ ] ...
 
   - type: textarea
-      id: description
+      id: biddy-assignment
       attributes:
         label: Buddy-Assignment
         value: |
