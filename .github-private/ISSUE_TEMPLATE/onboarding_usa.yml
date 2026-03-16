@@ -1,0 +1,136 @@
+name: Onboarding USA Training
+description: Prueba
+title: "[Onboarding] [Job] | USA"
+labels: ["Analysis", "Comment", "RRHH", "USA"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ```
+        Ejemplo:
+        [Onboarding] [QAT] | USA
+        ```
+
+  - type: input
+    id: references
+    attributes:
+      label: References
+      placeholder: "#1234"
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      value: |
+        > Hi!
+        >
+        > Congratulations on creating your first issue with us.
+        >
+        > Below you will find your first tasks. Please check them off once you have completed each one. We want to provide you with the initial training that will help you get up to speed within your team.
+        > 
+        > Please note that most of our internal procedures are currently written in Spanish. If needed, you can use your browser’s Google Translate extension to review them in English.
+        > 
+        > The same applies to YouTube training videos — please enable English subtitles when required.
+
+  - type: checkboxes
+    id: labels_assignees
+    attributes:
+      label: Labels & Assignees
+      options:
+        - label: I have assigned this issue to myself
+        - label: I have added the department label related to my role to this issue
+        - label: I have added the country label corresponding to my location
+
+  - type: checkboxes
+    id: introduction
+    attributes:
+      label: Introduction
+      options:
+        - label: Embention roadmap [URL](https://www.youtube.com/watch?v=D73jTwAH7y0&list=PLDZoJJnqPj4w80EilJeMwLpYRt2YnfuLp&index=4)
+        - label: Trade secret [URL](https://youtu.be/uZslY-fygBI?si=mYE-4RmySoslyDMF)
+        - label: GitHub and SmartGit [URL](https://youtu.be/cNi-NjlZuKU?si=KoMj_pwABODoSjbV)
+
+  - type: checkboxes
+    id: general_procedures
+    attributes:
+      label: General Procedures
+      options:
+        - label: "P.058 - Welcome guideline [URL](https://docs.google.com/document/d/1xIwboQPKdEwRcDpPaFyZgJUZhDDGPBrvhbBwRYiIMTw/edit?usp=drive_link)"
+        - label: "P.030 - Internal and external communication [URL](https://docs.google.com/document/d/109yjBhR7VUI0GptDksxdJ5yPYQgCl0ytj022pezJL68/edit?usp=drive_link)"
+        - label: "P.050 - Meetings [URL](https://docs.google.com/document/d/1pOT4r91iwsIzORRnnM1aJLplgRzwtqnZPXSaSD_MchI/edit?usp=drive_link)"
+        - label: "P.195 - Odoo absences [URL](https://docs.google.com/document/d/1KbrqHK9TLX_cpd-b8_Ei4qIPo--bdkPWYh0fNkxUdGs/edit?usp=sharing)"
+        - label: "P.062 - Create issue [URL](https://docs.google.com/document/d/12glbqv3pcOgpX_rwoetDCoMK4gZuR3pbpE2RdTtwiqg/edit?usp=drive_link)"
+        - label: "P.072 - Timesheet entry [URL](https://docs.google.com/document/d/1GKyl3m6LcZrjDQPJuXP_zfeI-CKk0HId8qME7pdd37M/edit?usp=drive_link)"
+        - label: "P.541 - IT service request [URL](https://docs.google.com/document/d/19ynfGCuvgDhvvaMG1ZBbikMD97_zxXxzSinmQ3EoxVM/edit?usp=sharing)"
+        - label: "P.569 - Team skills management [URL](https://docs.google.com/document/d/17oH3QAIRy1D-kdQCMB_L5wx2G4w5W-LxCjvp_92fDVU/edit?usp=drive_link)"
+        - label: "Reflect your skills in your employee profile"
+        - label: "P.192 - Software tool management [URL](https://docs.google.com/document/d/1aN1R3JuyiCA3CfL0zCeMWNNxw1jEd7QcN_k_olurNns/edit?usp=drive_link)"
+        - label: "P.761 - Photo update [URL](https://docs.google.com/document/d/1w6rjh7mxUsmiIUt_YgKqcOvWKvsyU9vfFlTn1WxSGPQ/edit?usp=drive_link)"
+        - label: "P.XXX - SOP: corporate profile photography [URL](https://docs.google.com/document/d/1gtpZOwDpy4XzuvEn-3oaxnI9dKWhv_D6G-e-JP8n5LA/edit?usp=sharing)"
+        - label: "Update your photo across our internal platforms"
+
+  - type: checkboxes
+    id: policies
+    attributes:
+      label: Policies
+      options:
+        - label: "PA.010 - Quality policy [URL](https://documentation.embention.net/010/en/latest/index.html)"
+        - label: "PA.196 - Data security guidelines [URL](https://docs.google.com/document/d/12pAoBAegxOCX2NQ7Lzmm_f5eHpuhyTUejTi4_I0Ubv4/edit?usp=sharing)"
+        - label: "PA.285 - Physical access Control Policy [URL](https://docs.google.com/document/d/1QLyuysiS5bIWxMfPMbBqJor1oqVX1msC0VV2jXInn-8/edit?usp=drive_link)"
+        - label: "PA.287 - Access control policy [URL](https://docs.google.com/document/d/1kblutMvLXaDNTC18DfRFhZcTWqdiGIl2iZPTVCLFTD4/edit?usp=drive_link)"
+        - label: "PA.295 - Password policy [URL](https://docs.google.com/document/d/1Q-0KK4ZnfS5y-P9PKdVBdWKrMv8zzTkAqhnfF29IVQk/edit?usp=drive_link)"
+        - label: "PA.442 - Just culture policy [URL](https://docs.google.com/document/d/1CF60w61BYqhKqTzioUHLgQlpkz23MAvOlfZdGn8JDL0/edit?usp=drive_link)"
+        - label: "PA.474 - Operational safety policy [URL](https://docs.google.com/document/d/19AQbxkRufI0Y9Lzsqd-n7SImjHTn-34v9nSbxSlAdV8/edit?usp=drive_link)"
+        - label: "PA.544 - Trade secret policy [URL](https://docs.google.com/document/d/1ibKR6l-ehwJgGyM5HEp2cM6-4wsBp_MCpfXrl8e_YzU/edit?usp=sharing)"
+        - label: "PA.546 - Information asset usage policy [URL](https://docs.google.com/document/d/1RZ36GFqV28THqk0oSypiYLBewOE1YzyneUfxOqyM0zo/edit?usp=drive_link)"
+        - label: "PA.606 - Code of ethics and conduct [URL](https://docs.google.com/document/d/13sD0Jojz9QMGX0TgsR1rawHPAZt73p9sAfxbtSrPn5o/edit?usp=drive_link)"
+        - label: "P.805 - Harassment prevention and response [URL](https://docs.google.com/document/d/1eA_9IUaj0IeLnDRAIfQ_BBy6uawXcoD_iUk8RGoAfFo/edit?usp=drive_link)"
+        - label: "\"Acceptable use of assets policy\" questionnaire [URL](https://embention.net/survey/start/acceptable-use-of-assets-policy-28)"
+
+  - type: checkboxes
+    id: ai_tools
+    attributes:
+      label: AI Tools
+      options:
+        - label: Training - AI tools [URL](https://embention.net/survey/start/training-ia-tools-1-0-79)
+
+  - type: textarea
+    id: to_keep_in_mind
+    attributes:
+      label: To Keep in Mind
+      value: |
+        - All documentation is available at the following [link](https://embention.net/web#action=1236&model=emb.internal.document&view_type=list&menu_id=) 
+        - You can also access the **Documentation module directly from Odoo**, where all internal procedures and policies are centralized.
+        - Most of our documentation is currently in Spanish. If needed, you can translate it directly in Chrome using the Google Translate browser extension.
+
+  - type: textarea
+    id: role_specific
+    attributes:
+      label: Role-Specific
+      value: |
+        - [ ] To be completed by your **Team Leader** and your **TPMO**. Please mention them here: @___________ & @___________  
+        - [ ] ...
+
+  - type: textarea
+    id: buddy_assignment
+    attributes:
+      label: Buddy Assignment
+      value: |
+        - [ ] To support you during your onboarding process, your **Team Leader** (please mention them here: @___________ ) will assign you a buddy. 
+        - **Assigned Buddy:** @____
+        - Your buddy’s role will be:
+            - Help you understand departmental processes and tools
+            - Answer your more technical team-related questions
+            - Provide general support during your adaptation period
+
+  - type: textarea
+    id: closing
+    attributes:
+      label: Closing
+      value: |
+        Don’t forget to close the issue once you’re done and feel free to reach out with any questions :)
+        By closing the issue, we understand that you have reviewed and understood all the information provided above.
+
+        Welcome!
