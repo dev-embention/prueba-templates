@@ -104,18 +104,20 @@ body:
         - You can also access the **Documentation module directly from Odoo**, where all internal procedures and policies are centralized.
         - Most of our documentation is currently in Spanish. If needed, you can translate it directly in Chrome using the Google Translate browser extension.
 
-  - type: markdown
+- type: textarea
+    id: description
     attributes:
+      label: Role-Specific
       value: |
-        ## Role Specific
         
         - [ ] To be completed by your **Team Leader** and your **TPMO**. Please mention them here: @___________ & @___________  
         - [ ] ...
 
-  - type: markdown
+- type: textarea
+    id: description
     attributes:
+      label: Buddy-Assignment
       value: |
-        ## Buddy Assignment
         - [ ] To support you during your onboarding process, your **Team Leader** (please mention them here: @___________ ) will assign you a buddy. 
         - **Assigned Buddy:** @____
         - Your buddy’s role will be:
