@@ -23,10 +23,15 @@ body:
     attributes:
       value: |
         # Description
+        
         Hi!
+        
         Congratulations on creating your first issue with us.
+        
         Below you will find your first tasks. Please check them off once you have completed each one. We want to provide you with the initial training that will help you get up to speed within your team.
+        
         Please note that most of our internal procedures are currently written in Spanish. If needed, you can use your browser’s Google Translate extension to review them in English.
+        
         The same applies to YouTube training videos — please enable English subtitles when required.
 
   - type: checkboxes
