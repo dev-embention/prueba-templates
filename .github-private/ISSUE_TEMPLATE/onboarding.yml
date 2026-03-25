@@ -1,6 +1,6 @@
 name: Onboarding Training
 description: Onboarding Trainging
-title: "[Onboarding] [Job] | USA"
+title: "[Onboarding] [Job] | "
 labels: ["Analysis", "Comment", "RRHH"]
 body:
   - type: markdown
@@ -8,7 +8,7 @@ body:
       value: |
         ```
         Ejemplo:
-        [Onboarding] [QAT] | USA
+        [Onboarding] [QAT] | 
         ```
 
   - type: input
