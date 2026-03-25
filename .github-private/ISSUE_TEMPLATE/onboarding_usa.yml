@@ -1,7 +1,7 @@
-name: Onboarding USA Training
-description: Prueba
+name: Onboarding Training
+description: Onboarding Trainging
 title: "[Onboarding] [Job] | USA"
-labels: ["Analysis", "Comment", "RRHH", "USA"]
+labels: ["Analysis", "Comment", "RRHH"]
 body:
   - type: markdown
     attributes:
