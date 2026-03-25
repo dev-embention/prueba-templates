@@ -44,7 +44,7 @@ body:
     attributes:
       label: Introduction
       options:
-        - label: Embention roadmap [URL](https://www.youtube.com/watch?v=D73jTwAH7y0&list=PLDZoJJnqPj4w80EilJeMwLpYRt2YnfuLp&index=4)
+        - label: Embention roadmap [URL](https://youtu.be/gqpAuGQw-kI)
         - label: Trade secret [URL](https://youtu.be/uZslY-fygBI?si=mYE-4RmySoslyDMF)
         - label: GitHub and SmartGit [URL](https://youtu.be/cNi-NjlZuKU?si=KoMj_pwABODoSjbV)
 
@@ -53,37 +53,46 @@ body:
     attributes:
       label: General Procedures
       options:
-        - label: "P.058 - Welcome guideline [URL](https://docs.google.com/document/d/1xIwboQPKdEwRcDpPaFyZgJUZhDDGPBrvhbBwRYiIMTw/edit?usp=drive_link)"
-        - label: "P.030 - Internal and external communication [URL](https://docs.google.com/document/d/109yjBhR7VUI0GptDksxdJ5yPYQgCl0ytj022pezJL68/edit?usp=drive_link)"
-        - label: "P.050 - Meetings [URL](https://docs.google.com/document/d/1pOT4r91iwsIzORRnnM1aJLplgRzwtqnZPXSaSD_MchI/edit?usp=drive_link)"
-        - label: "P.195 - Odoo absences [URL](https://docs.google.com/document/d/1KbrqHK9TLX_cpd-b8_Ei4qIPo--bdkPWYh0fNkxUdGs/edit?usp=sharing)"
-        - label: "P.062 - Create issue [URL](https://docs.google.com/document/d/12glbqv3pcOgpX_rwoetDCoMK4gZuR3pbpE2RdTtwiqg/edit?usp=drive_link)"
-        - label: "P.072 - Timesheet entry [URL](https://docs.google.com/document/d/1GKyl3m6LcZrjDQPJuXP_zfeI-CKk0HId8qME7pdd37M/edit?usp=drive_link)"
-        - label: "P.541 - IT service request [URL](https://docs.google.com/document/d/19ynfGCuvgDhvvaMG1ZBbikMD97_zxXxzSinmQ3EoxVM/edit?usp=sharing)"
-        - label: "P.569 - Team skills management [URL](https://docs.google.com/document/d/17oH3QAIRy1D-kdQCMB_L5wx2G4w5W-LxCjvp_92fDVU/edit?usp=drive_link)"
+        - label: "P.058 - Welcome guideline [URL](https://documentation.embention.net/058/en/latest/)"
+        - label: "P.030 - Internal and external communication [URL](https://documentation.embention.net/030/en/latest/index.html)"
+        - label: "P.050 - Meetings [URL](https://documentation.embention.net/050/en/latest/)"
+        - label: "P.195 - Odoo absences [URL](https://documentation.embention.net/195/en/latest/)"
+        - label: "P.062 - Create issue [URL](https://documentation.embention.net/062/en/latest/)"
+        - label: "P.072 - Timesheet entry [URL](https://documentation.embention.net/072/en/latest/)"
+        - label: "P.541 - IT service request [URL](https://documentation.embention.net/541/en/latest/)"
+        - label: "P.569 - Team skills management [URL](https://documentation.embention.net/569/en/latest/)"
         - label: "Reflect your skills in your employee profile"
-        - label: "P.192 - Software tool management [URL](https://docs.google.com/document/d/1aN1R3JuyiCA3CfL0zCeMWNNxw1jEd7QcN_k_olurNns/edit?usp=drive_link)"
-        - label: "P.761 - Photo update [URL](https://docs.google.com/document/d/1w6rjh7mxUsmiIUt_YgKqcOvWKvsyU9vfFlTn1WxSGPQ/edit?usp=drive_link)"
-        - label: "P.XXX - SOP: corporate profile photography [URL](https://docs.google.com/document/d/1gtpZOwDpy4XzuvEn-3oaxnI9dKWhv_D6G-e-JP8n5LA/edit?usp=sharing)"
-        - label: "Update your photo across our internal platforms"
+        - label: "P.192 - Software tool management [URL](https://documentation.embention.net/192/en/latest/)"
+        - label: "P.947- Standard operating procedure: corporate profile photography (mobile device) [URL](https://documentation.embention.net/947/en/latest/)"
+        - label: "P.761 - Photo update [URL](https://documentation.embention.net/761/en/latest/)"
+        - label: "Update your photo across our internal platforms."
 
   - type: checkboxes
     id: policies
     attributes:
       label: Policies
       options:
-        - label: "PA.010 - Quality policy [URL](https://documentation.embention.net/010/en/latest/index.html)"
-        - label: "PA.196 - Data security guidelines [URL](https://docs.google.com/document/d/12pAoBAegxOCX2NQ7Lzmm_f5eHpuhyTUejTi4_I0Ubv4/edit?usp=sharing)"
-        - label: "PA.285 - Physical access Control Policy [URL](https://docs.google.com/document/d/1QLyuysiS5bIWxMfPMbBqJor1oqVX1msC0VV2jXInn-8/edit?usp=drive_link)"
-        - label: "PA.287 - Access control policy [URL](https://docs.google.com/document/d/1kblutMvLXaDNTC18DfRFhZcTWqdiGIl2iZPTVCLFTD4/edit?usp=drive_link)"
-        - label: "PA.295 - Password policy [URL](https://docs.google.com/document/d/1Q-0KK4ZnfS5y-P9PKdVBdWKrMv8zzTkAqhnfF29IVQk/edit?usp=drive_link)"
-        - label: "PA.442 - Just culture policy [URL](https://docs.google.com/document/d/1CF60w61BYqhKqTzioUHLgQlpkz23MAvOlfZdGn8JDL0/edit?usp=drive_link)"
-        - label: "PA.474 - Operational safety policy [URL](https://docs.google.com/document/d/19AQbxkRufI0Y9Lzsqd-n7SImjHTn-34v9nSbxSlAdV8/edit?usp=drive_link)"
-        - label: "PA.544 - Trade secret policy [URL](https://docs.google.com/document/d/1ibKR6l-ehwJgGyM5HEp2cM6-4wsBp_MCpfXrl8e_YzU/edit?usp=sharing)"
-        - label: "PA.546 - Information asset usage policy [URL](https://docs.google.com/document/d/1RZ36GFqV28THqk0oSypiYLBewOE1YzyneUfxOqyM0zo/edit?usp=drive_link)"
-        - label: "PA.606 - Code of ethics and conduct [URL](https://docs.google.com/document/d/13sD0Jojz9QMGX0TgsR1rawHPAZt73p9sAfxbtSrPn5o/edit?usp=drive_link)"
-        - label: "P.805 - Harassment prevention and response [URL](https://docs.google.com/document/d/1eA_9IUaj0IeLnDRAIfQ_BBy6uawXcoD_iUk8RGoAfFo/edit?usp=drive_link)"
+        - label: "PA.010 - Quality policy [URL](https://documentation.embention.net/010/en/latest/)"
+        - label: "PA.196 - Data security guidelines [URL](https://documentation.embention.net/196/en/latest/)"
+        - label: "PA.285 - Physical access Control Policy [URL](https://documentation.embention.net/285/en/latest/)"
+        - label: "PA.287 - Access control policy [URL](https://documentation.embention.net/287/en/latest/)"
+        - label: "PA.295 - Password policy [URL](https://documentation.embention.net/295/en/latest/)"
+        - label: "PA.442 - Just culture policy [URL](https://documentation.embention.net/442/en/latest/)"
+        - label: "PA.474 - Operational safety policy [URL](https://documentation.embention.net/474/en/latest/)"
+        - label: "PA.544 - Trade secret policy [URL](https://documentation.embention.net/544/en/latest/)"
+        - label: "PA.546 - Information asset usage policy [URL](https://documentation.embention.net/546/en/latest/)"
+        - label: "PA.606 - Code of ethics and conduct [URL](https://documentation.embention.net/606/en/latest/)"
+        - label: "P.805 - Harassment prevention and response protocol [URL](https://documentation.embention.net/805/en/latest/)"
         - label: "\"Acceptable use of assets policy\" questionnaire [URL](https://embention.net/survey/start/acceptable-use-of-assets-policy-28)"
+
+  - type: checkboxes
+    id: product_development
+    attributes:
+      label: Product Development (R&D)
+      options:
+        - label: "P.711 - Embention APQP [URL](https://documentation.embention.net/711/en/latest/index.html)"
+        - label: "P.715 - APQP Process design & development [URL](https://documentation.embention.net/715/en/latest/index.html)"
+        - label: "P.784 - APQP Planning procedure [URL](https://documentation.embention.net/784/en/latest/index.html)"
 
   - type: checkboxes
     id: ai_tools
@@ -91,13 +100,15 @@ body:
       label: AI Tools
       options:
         - label: Training - AI tools [URL](https://embention.net/survey/start/training-ia-tools-1-0-79)
+        - label: IA Agents - Embention [URL](https://sites.google.com/embention.com/internal-news/agentes-ia)
+        - label: Kia-san - IA Tools [URL](https://notebooklm.google.com/)
 
   - type: textarea
     id: to_keep_in_mind
     attributes:
       label: To Keep in Mind
       value: |
-        - All documentation is available at the following [link](https://embention.net/web#action=1236&model=emb.internal.document&view_type=list&menu_id=) 
+        - All documentation is available at the following [link](https://embention.net/web#action=1236&model=emb.internal.document&view_type=list&menu_id=)
         - You can also access the **Documentation module directly from Odoo**, where all internal procedures and policies are centralized.
         - Most of our documentation is currently in Spanish. If needed, you can translate it directly in Chrome using the Google Translate browser extension.
 
@@ -106,7 +117,7 @@ body:
     attributes:
       label: Role-Specific
       value: |
-        - [ ] To be completed by your **Team Leader** and your **TPMO**. Please mention them here: @___________ & @___________  
+        - [ ] To be completed by your **Team Leader** and your **TPMO**. Please mention them here: @___________ & @___________
         - [ ] ...
 
   - type: textarea
@@ -114,7 +125,7 @@ body:
     attributes:
       label: Buddy Assignment
       value: |
-        - [ ] To support you during your onboarding process, your **Team Leader** (please mention them here: @___________ ) will assign you a buddy. 
+        - [ ] To support you during your onboarding process, your **Team Leader** (please mention them here: @___________ ) will assign you a buddy.
         - **Assigned Buddy:** @____
         - Your buddy’s role will be:
             - Help you understand departmental processes and tools
